@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271055', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271100', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   vatNo: '[PVN Nr.]',
@@ -364,7 +364,7 @@ const PRODUCTS = [
               ['img/15-b.jpg', T('Izmērs: 23 cm','Size: 23 cm','Размер: 23 см')] ] },
 
  { id:'16', cat:'all', brand:'OLFA', tag:'jp', model:'PC-L', price:19, art:'knife', c:[184,150,40], img:'img/16.png',
-   name: T('Plastmasas griezējs OLFA PC-L', 'OLFA PC-L plastic cutter', 'Резак для пластика OLFA PC-L'),
+   name: T('Griezējs plastmasai un laminātam OLFA PC-L', 'OLFA PC-L cutter for plastic and laminate', 'Резак для пластика и ламината OLFA PC-L'),
    hook: T('Akrils un PVC bez zāģa: iegriez, nolauz — mala tīra.', 'Acrylic and PVC without a saw: score, snap — clean edge.', 'Акрил и ПВХ без пилы: надрезал, отломил — кромка чистая.'),
    desc: T('Āķveida asmens negriež, bet izkasa rievu cietā plastmasā. Vairākas reizes pavelc gar lineālu, līdz rieva sasniedz vismaz pusi biezuma, un nolauz plāksni pa malu. Bez putekļiem, bez skaidām un bez kontaktligzdas. Ar asmens muguru nogludini malu. Asmenim ir divas griezējšķautnes, bet rokturī glabājas vēl divi rezerves asmeņi. Liels rokturis spēcīgam satvērienam, ritenītis nofiksē asmeni, lai tas nekustētos.',
             'The hook blade does not slice — it scrapes a groove into hard plastic. Draw it along a ruler a few times until the groove reaches at least half the thickness, then snap the sheet over an edge. No dust, no chips, no socket needed. Smooth the edge with the back of the blade. Each blade has two cutting edges, and two spare blades are stored in the handle. A large handle for a strong grip, and a lock wheel keeps the blade from wobbling.',
@@ -382,7 +382,10 @@ const PRODUCTS = [
    story: T('OLFA 1956. gadā izgudroja nolaužamo asmeni. PC-L ir viņu atbilde uz otru jautājumu: ko darīt ar to, ko nazis nepaņem?',
             'OLFA invented the snap-off blade in 1956. PC-L is their answer to another question: what about the things a knife cannot cut?',
             'OLFA в 1956 году изобрела отламывающееся лезвие. PC-L — их ответ на другой вопрос: что делать с тем, что нож не берёт?'),
-   gallery: [] },
+   gallery: [ ['img/16-a.jpg', T('Iegriež akrila plāksni','Scoring an acrylic sheet','Надрез листа акрила')],
+              ['img/16-b.jpg', T('Nolauz pa iegriezumu — mala tīra','Snap along the score — clean edge','Отломил по надрезу — кромка чистая')],
+              ['img/16-c.jpg', T('Āķveida asmens PBL','PBL hook blade','Крючковое лезвие PBL')],
+              ['img/16-d.jpg', T('Rezerves asmeņi rokturī','Spare blades in the handle','Запасные лезвия в рукоятке')] ] },
 
  { id:'17', cat:'pl', brand:'Fujiya', tag:1923, model:'140-125-BG', price:35, art:'pliers', c:[60,60,56], img:'img/17.png',
    name: T('Mini santehniskās knaibles Kurokin', 'Kurokin mini water pump pliers', 'Мини-клещи сантехнические Kurokin'),
