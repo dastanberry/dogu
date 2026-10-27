@@ -81,17 +81,15 @@
     const map = { all: null, el: 'el', every: 'all', gift: 'gift' };
     const shown = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === map[filter]);
     const consent = store.get('dogu-consent', null);
-    const hero = PRODUCTS[0];
     $('#app').innerHTML = `
 <div class="wrap"><section class="hero">
 <div class="txt"><p class="eyebrow">${u.eyebrow}</p><h1>${u.h1}</h1><p class="lead">${u.lead}</p>
 <div class="row"><a class="btn" href="#/collection">${u.cta1}</a><a class="btn ghost" href="#/showroom">${u.cta2}</a></div></div>
-<div class="art-wrap"><svg viewBox="0 0 480 520" role="img" aria-label="${esc(t(hero.name))}" style="width:100%;height:auto;display:block">
-<line x1="0" y1="392" x2="480" y2="392" stroke="#1B1B1A" stroke-width="1"/><line x1="40" y1="410" x2="300" y2="410" stroke="#1B1B1A" stroke-width=".6"/>
-<circle cx="292" cy="250" r="170" fill="${SUN}"/>
-<g id="heroLine" transform="translate(60 60) scale(1.7)" fill="none" stroke="#1B1B1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="${D.pliers}"/></g>
-<image href="img/hero.png" x="20" y="20" width="420" height="420" preserveAspectRatio="xMidYMid meet" onload="document.getElementById('heroLine').style.display='none'" onerror="this.remove()"/>
-</svg></div></section></div>
+<div class="art-wrap"><svg class="horizon" viewBox="0 0 480 120" aria-hidden="true">
+<defs><clipPath id="sky"><rect x="0" y="0" width="480" height="88"/></clipPath></defs>
+<circle cx="352" cy="88" r="38" fill="${SUN}" clip-path="url(#sky)"/>
+<line x1="0" y1="88.5" x2="480" y2="88.5" stroke="#1B1B1A" stroke-width="1"/>
+<line x1="56" y1="104.5" x2="300" y2="104.5" stroke="#1B1B1A" stroke-width=".6"/></svg></div></section></div>
 
 <section class="band" aria-label="${esc(u.principles[0][0])}">
 <svg class="sun-set" viewBox="0 0 400 200" aria-hidden="true"><circle cx="200" cy="200" r="200" fill="${SUN}"/></svg>
