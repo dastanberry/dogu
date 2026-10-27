@@ -16,9 +16,15 @@ function out(int $code, array $data): void { http_response_code($code); echo jso
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') out(405, ['ok' => false, 'error' => 'method']);
 
 /* ---------- настройки ---------- */
+// Не секретные настройки — здесь. Токен бота — только в файле на сервере (вне сайта и GitHub).
+$cfg = [
+  'telegram_token'   => '',
+  'telegram_chat_id' => '-5582207077',
+  'mail_to'          => 'info@remontriga.lv',
+  'mail_from'        => 'noreply@remontriga.lv',
+];
 $cfgFile = getenv('DOGU_CONFIG') ?: dirname(__DIR__, 2) . '/dogu-config.php';
-if (!is_file($cfgFile)) out(500, ['ok' => false, 'error' => 'config']);
-$cfg = require $cfgFile;
+if (is_file($cfgFile)) { $c = require $cfgFile; if (is_array($c)) $cfg = array_merge($cfg, array_filter($c, static fn($v) => $v !== '')); }
 $tgToken  = trim((string)($cfg['telegram_token'] ?? ''));
 $tgChats  = array_filter(array_map('trim', explode(',', (string)($cfg['telegram_chat_id'] ?? ''))));
 $mailTo   = (string)($cfg['mail_to'] ?? 'info@remontriga.lv');
