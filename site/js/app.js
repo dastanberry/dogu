@@ -43,7 +43,7 @@
   function art(p, opts = {}) {
     const [cx, cy, r] = p.c;
     const img = p.img ? `<img src="${p.img}" alt="${esc(t(p.name))}" loading="lazy" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()">` : '';
-    return `<div class="art">${opts.no ? `<span class="no">${U().no} ${p.id}</span>` : ''}<svg viewBox="0 0 240 240" aria-hidden="true"><circle cx="${cx}" cy="${cy}" r="${r}" fill="${SUN}"/><path d="${D[p.art]}" fill="none" stroke="#1B1B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>${img}</div>`;
+    return `<div class="art${p.cover ? ' photo' : ''}">${opts.no ? `<span class="no">${U().no} ${p.id}</span>` : ''}<svg viewBox="0 0 240 240" aria-hidden="true"><circle cx="${cx}" cy="${cy}" r="${r}" fill="${SUN}"/><path d="${D[p.art]}" fill="none" stroke="#1B1B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>${img}</div>`;
   }
   const card = p => `<a class="card" href="#/p/${p.id}">${art(p, { no: 1 })}<div class="body"><span class="brand">${esc(brandLine(p))}</span><span class="name">${esc(t(p.name))}</span><span class="hook">${esc(t(p.hook))}</span><span class="price">${eur(p.price)}</span></div></a>`;
 
