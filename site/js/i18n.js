@@ -99,6 +99,7 @@ const LEGAL = {
 <p>Visas cenas norādītas euro, ieskaitot PVN. Piegādes izmaksas nav iekļautas preču cenā, un tās paziņojam pirms pasūtījuma apstiprināšanas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
 <h2>3. Apmaksa</h2>
 <p>Apmaksa ar bankas pārskaitījumu pēc rēķina pirms nosūtīšanas vai saņemot preci salonā [precizēt: skaidrā naudā / ar karti].</p>
+<p>Bankas rekvizīti: {company}, IBAN {iban}, BIC {bic} ({bank}). Maksājuma mērķī norādiet rēķina numuru.</p>
 <h2>4. Piegāde</h2>
 <p>Piegāde notiek ar izvēlēto pārvadātāju saskaņā ar tā noteikumiem. Sīkāk — sadaļā „Piegāde un apmaksa".</p>
 <h2>5. Atteikuma tiesības un garantija</h2>
@@ -158,6 +159,7 @@ const LEGAL = {
 <p>All prices are in euro and include VAT. Delivery costs are not included in product prices and are communicated before the order is confirmed. Gift wrapping — €{giftWrap} per item.</p>
 <h2>3. Payment</h2>
 <p>By bank transfer against an invoice before dispatch, or on collection in the showroom [to confirm: cash / card].</p>
+<p>Bank details: {company}, IBAN {iban}, BIC {bic} ({bank}). Please quote the invoice number as the payment reference.</p>
 <h2>4. Delivery</h2>
 <p>Delivery is made by the chosen carrier under its terms. See "Delivery and payment".</p>
 <h2>5. Right of withdrawal and warranty</h2>
@@ -217,6 +219,7 @@ const LEGAL = {
 <p>Все цены указаны в евро с НДС. Стоимость доставки не входит в цену товара и сообщается до подтверждения заказа. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
 <h2>3. Оплата</h2>
 <p>Банковским переводом по счёту до отправки или при получении в шоуруме [уточнить: наличные / карта].</p>
+<p>Банковские реквизиты: {company}, IBAN {iban}, BIC {bic} ({bank}). В назначении платежа укажите номер счёта.</p>
 <h2>4. Доставка</h2>
 <p>Доставка выполняется выбранным перевозчиком по его условиям. Подробнее — в разделе «Доставка и оплата».</p>
 <h2>5. Право отказа и гарантия</h2>

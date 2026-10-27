@@ -5,10 +5,13 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  company: 'Baltic Investments',          // юр. лицо — показывается только в подвале и на юр. страницах
-  regNo: '[Reģ. Nr.]',
+  company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
+  regNo: '50103714581',
   vatNo: '[PVN Nr.]',
-  legalAddress: '[Juridiskā adrese]',
+  legalAddress: 'Ernesta Birznieka-Upīša iela 20B-8, Rīga, LV-1050',
+  iban: 'LT44 3250 0922 4170 9576',
+  bic: 'REVOLT21',
+  bank: 'Revolut Bank UAB',
   email: '[e-pasts]',
   phone: '+371 26858252',
   whatsapp: '37126858252',
