@@ -114,9 +114,8 @@
 </section></div>
 
 <section class="gift" id="gift"><div class="wrap"><div class="split">
-<div><svg viewBox="0 0 400 360" role="img" aria-label="${esc(u.giftTitle)}" style="width:100%;height:auto;display:block">
-<circle cx="250" cy="130" r="110" fill="${SUN}"/><line x1="0" y1="300" x2="400" y2="300" stroke="#1B1B1A" stroke-width="1"/>
-<g transform="translate(40 40) scale(1.1)" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${D.box}"/></g></svg></div>
+<figure class="pack"><img src="img/box.jpg?v=202610270945" alt="${esc(u.packAlt[0])}" width="1200" height="784" loading="lazy">
+<div class="pack-row"><img src="img/box-seal.jpg?v=202610270945" alt="${esc(u.packAlt[1])}" width="700" height="700" loading="lazy"><img src="img/box-top.jpg?v=202610270945" alt="${esc(u.packAlt[2])}" width="866" height="700" loading="lazy"></div></figure>
 <div><h2>${u.giftTitle}</h2><p>${u.giftText}</p><p style="font-size:15px">${u.giftWrap} — ${eur(SHOP.giftWrap)}</p>
 <a class="btn red" href="#/p/12">${u.giftBtn}</a></div>
 </div></div></section>
