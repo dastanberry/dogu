@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271935', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271945', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   legalAddress: 'Ernesta Birznieka-Upīša iela 20B-8, Rīga, LV-1050',
@@ -472,7 +472,7 @@ const PRODUCTS = [
    story: T('Showa Glove ir japāņu uzņēmums, kas specializējas cimdos. 380 ir modelis, ko meistari pērk kastēm.',
             'Showa Glove is a Japanese company that specialises in gloves. The 380 is the model pros buy by the box.',
             'Showa Glove — японская компания, которая специализируется на перчатках. 380 — модель, которую мастера берут коробками.'),
-   gallery: [] },
+   gallery: [ ['img/20-a.jpg', T('Plauksta ar putu nitrilu','Foam nitrile palm','Ладонь со вспененным нитрилом')] ] },
 
  { id:'21', cat:'all', brand:'Tajima', tag:1909, model:'SS20MH', price:17, art:'pencil', c:[150,150,150], img:'img/21.png',
    name: T('Marķēšanas zīmulis Sumitsuke 2 mm', 'Sumitsuke 2 mm marking pencil', 'Разметочный карандаш Sumitsuke 2 мм'),
@@ -490,29 +490,30 @@ const PRODUCTS = [
    story: T('„Sumitsuke" japāņu galdniekiem nozīmē marķēšanu — pirmo un svarīgāko darba soli.',
             'For Japanese carpenters, "sumitsuke" means marking out — the first and most important step of the job.',
             '«Сумицукэ» у японских плотников — это разметка, первый и самый важный шаг работы.'),
-   gallery: [] },
+   gallery: [ ['img/21-a.jpg', T('Rokā','In the hand','В руке')] ] },
 
- { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'160 × 80', price:32, art:'square', c:[190,190,180], img:'img/22.png',
-   name: T('Mini stūrenis Shinwa 160 × 80 mm', 'Shinwa mini square 160 × 80 mm', 'Мини-угольник Shinwa 160 × 80 мм'),
-   hook: T('Kabatas stūrenis ar precizitāti 0,1 mm uz 100 mm.', 'A pocket square accurate to 0.1 mm per 100 mm.', 'Карманный угольник с точностью 0,1 мм на 100 мм.'),
-   desc: T('Viegls nerūsējošā tērauda stūrenis maziem darbiem: piegriešanai, flīzēm, mēbelēm un furnitūrai. Dziļi kodināta skala abās pusēs, tāpēc tā neizdzēšas. Tikai 1 mm biezs — ielien kabatā blakus zīmulim.',
-            'A light stainless-steel square for small jobs: trimming, tiles, furniture and fittings. A deep-etched scale on both sides, so it does not wear off. Only 1 mm thick — it fits in a pocket next to your pencil.',
-            'Лёгкий угольник из нержавеющей стали для мелких работ: подрезка, плитка, мебель, фурнитура. Глубоко вытравленная шкала с обеих сторон, поэтому не стирается. Толщина всего 1 мм — влезает в карман рядом с карандашом.'),
-   why: [ [T('Precīzs','Accurate','Точный'), T('0,1 mm uz 100 mm.','0.1 mm per 100 mm.','0,1 мм на 100 мм.')],
-          [T('Skala neizdzēšas','Scale lasts','Шкала не стирается'), T('Dziļi kodināta abās pusēs.','Deep-etched on both sides.','Глубокое травление с двух сторон.')],
-          [T('Kabatā','In a pocket','В кармане'), T('160 × 80 mm, 1 mm biezs.','160 × 80 mm, 1 mm thick.','160 × 80 мм, толщина 1 мм.')] ],
-   specs: [ [T('Izmērs','Size','Размер'), T('160 × 80 mm','160 × 80 mm','160 × 80 мм')],
-            [T('Platums / biezums','Width / thickness','Ширина / толщина'), T('15 mm / 1 mm','15 mm / 1 mm','15 мм / 1 мм')],
+ { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:32, art:'square', c:[190,190,180], img:'img/22.png',
+   name: T('Mini stūrenis Shinwa 15 × 7 cm', 'Shinwa mini square 15 × 7 cm', 'Мини-угольник Shinwa 15 × 7 см'),
+   hook: T('Īsts japāņu galdnieka stūrenis — kabatas izmērā.', 'A real Japanese carpenter\'s square — pocket-sized.', 'Настоящий японский плотницкий угольник — карманного размера.'),
+   desc: T('Viegls nerūsējošā tērauda stūrenis maziem darbiem: piegriešanai, flīzēm, mēbelēm un furnitūrai. Skala abās pusēs. Plāns un viegls — ielien kabatā blakus zīmulim.',
+            'A light stainless-steel square for small jobs: trimming, tiles, furniture and fittings. A scale on both sides. Thin and light — it fits in a pocket next to your pencil.',
+            'Лёгкий угольник из нержавеющей стали для мелких работ: подрезка, плитка, мебель, фурнитура. Шкала с обеих сторон. Тонкий и лёгкий — влезает в карман рядом с карандашом.'),
+   why: [ [T('Kabatā','In a pocket','В кармане'), T('15 × 7 cm — vienmēr līdzi.','15 × 7 cm — always with you.','15 × 7 см — всегда с собой.')],
+          [T('Divas puses','Two sides','Две стороны'), T('Skala abās pusēs.','A scale on both sides.','Шкала с обеих сторон.')],
+          [T('Nerūsē','Rust-free','Не ржавеет'), T('Nerūsējošais tērauds.','Stainless steel.','Нержавеющая сталь.')] ],
+   specs: [ [T('Modelis','Model','Модель'), T('Shinwa 12103','Shinwa 12103','Shinwa 12103')],
+            [T('Skala','Scale','Шкала'), T('15 cm × 7 cm, abās pusēs','15 cm × 7 cm, both sides','15 см × 7 см, с обеих сторон')],
             [T('Materiāls','Material','Материал'), T('nerūsējošais tērauds','stainless steel','нержавеющая сталь')],
-            [T('Skala','Scale','Шкала'), T('dziļi kodināta, abās pusēs','deep-etched, both sides','глубокое травление, с двух сторон')],
-            [T('Precizitāte','Accuracy','Точность'), T('0,1 mm uz 100 mm','0.1 mm per 100 mm','0,1 мм на 100 мм')],
             [T('Zīmols','Brand','Бренд'), T('Shinwa, Japāna','Shinwa, Japan','Shinwa, Япония')] ],
    story: T('Shinwa no Niigatas specializējas mērinstrumentos — lineālos, stūreņos un līmeņrāžos, ar kuriem strādā japāņu galdnieki.',
             'Shinwa from Niigata specialises in measuring tools — the rules, squares and levels Japanese carpenters work with.',
             'Shinwa из Ниигаты специализируется на измерительном инструменте — линейки, угольники и уровни, которыми работают японские плотники.'),
-   gallery: [] },
+   gallery: [ ['img/22-a.jpg', T('Uz dēļa','On a board','На доске')],
+              ['img/22-b.jpg', T('Otrā puse','The other side','Обратная сторона')],
+              ['img/22-c.jpg', T('Nerūsējošais tērauds','Stainless steel','Нержавеющая сталь')],
+              ['img/22-d.jpg', T('Skala abās pusēs','Scale on both sides','Шкала с двух сторон')] ] },
 
- { id:'23', cat:'all', brand:'Shinwa', tag:'jp', model:'Handy Level 75', price:18, art:'level', c:[60,120,190], img:'img/23.png',
+ { id:'23', cat:'all', brand:'Shinwa', tag:'jp', model:'76228', price:18, art:'level', c:[60,120,190], img:'img/23.jpg', cover:true,
    name: T('Magnētisks mini līmeņrādis 75 mm', 'Magnetic mini level 75 mm', 'Магнитный мини-уровень 75 мм'),
    hook: T('Pielīp pie profila un parāda līmeni, kamēr rokas ir brīvas.', 'Sticks to a profile and shows level while your hands stay free.', 'Прилип к профилю и показывает уровень, пока руки свободны.'),
    desc: T('Tikai 75 mm garš līmeņrādis ar magnētu: pielīp pie metāla profila, caurules, radiatora vai kronšteina. Ērts, kur garais līmeņrādis neietilpst — skapīšos, nišās, pie rozetēm un plauktiem. Ielien jebkurā kabatā.',
@@ -521,15 +522,16 @@ const PRODUCTS = [
    why: [ [T('Magnēts','Magnet','Магнит'), T('Rokas brīvas, līmeņrādis tur pats.','Hands free, the level holds itself.','Руки свободны, уровень держится сам.')],
           [T('75 mm','75 mm','75 мм'), T('Ielien nišās un skapīšos.','Fits into niches and cabinets.','Влезает в ниши и шкафчики.')],
           [T('Kabatā','In a pocket','В кармане'), T('Vienmēr līdzi.','Always with you.','Всегда с собой.')] ],
-   specs: [ [T('Modelis','Model','Модель'), T('Shinwa Handy Level Compact','Shinwa Handy Level Compact','Shinwa Handy Level Compact')],
+   specs: [ [T('Modelis','Model','Модель'), T('Shinwa 76228 Handy Level Compact','Shinwa 76228 Handy Level Compact','Shinwa 76228 Handy Level Compact')],
             [T('Izmērs','Size','Размер'), T('75 × 51 × 16 mm','75 × 51 × 16 mm','75 × 51 × 16 мм')],
             [T('Precizitāte','Accuracy','Точность'), T('±1,0 mm/m','±1.0 mm/m','±1,0 мм/м')],
-            [T('Stiprinājums','Mount','Крепление'), T('magnēts','magnet','магнит')],
+            [T('Mērvirsma','Working face','Рабочая грань'), T('alumīnijs, ar magnētu','aluminium, with magnet','алюминий, с магнитом')],
             [T('Zīmols','Brand','Бренд'), T('Shinwa, Japāna','Shinwa, Japan','Shinwa, Япония')] ],
    story: T('Shinwa ir japāņu mērinstrumentu ražotājs no Niigatas. Handy Level ir viņu mazākais līmeņrādis — tam, kas vienmēr kabatā.',
             'Shinwa is a Japanese maker of measuring tools from Niigata. The Handy Level is their smallest level — the one that is always in your pocket.',
             'Shinwa — японский производитель измерительного инструмента из Ниигаты. Handy Level — их самый маленький уровень, тот, что всегда в кармане.'),
-   gallery: [] }
+   gallery: [ ['img/23-a.jpg', T('Alumīnija mērvirsma ar magnētu','Aluminium face with magnet','Алюминиевая рабочая грань с магнитом')],
+              ['img/23-b.jpg', T('Shinwa 76228','Shinwa 76228','Shinwa 76228')] ] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка
