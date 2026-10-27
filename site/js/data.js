@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271945', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271950', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   legalAddress: 'Ernesta Birznieka-Upīša iela 20B-8, Rīga, LV-1050',
@@ -474,7 +474,7 @@ const PRODUCTS = [
             'Showa Glove — японская компания, которая специализируется на перчатках. 380 — модель, которую мастера берут коробками.'),
    gallery: [ ['img/20-a.jpg', T('Plauksta ar putu nitrilu','Foam nitrile palm','Ладонь со вспененным нитрилом')] ] },
 
- { id:'21', cat:'all', brand:'Tajima', tag:1909, model:'SS20MH', price:17, art:'pencil', c:[150,150,150], img:'img/21.png',
+ { id:'21', cat:'all', brand:'Tajima', tag:1909, model:'SS20MH', price:17, art:'pencil', c:[150,150,150], img:'',
    name: T('Marķēšanas zīmulis Sumitsuke 2 mm', 'Sumitsuke 2 mm marking pencil', 'Разметочный карандаш Sumitsuke 2 мм'),
    hook: T('Metāla zīmulis, kas nelūst un nav jāasina.', 'A metal pencil that does not break or need sharpening.', 'Металлический карандаш, который не ломается и не точится.'),
    desc: T('Japāņu marķēšanas zīmulis ar metāla korpusu un 2 mm grafītu. Nav jāasina ar nazi, grafīts neizdrūp kabatā, līnija vienmēr vienāda. Ērts uz koka, ģipškartona un flīzēm.',
@@ -490,9 +490,9 @@ const PRODUCTS = [
    story: T('„Sumitsuke" japāņu galdniekiem nozīmē marķēšanu — pirmo un svarīgāko darba soli.',
             'For Japanese carpenters, "sumitsuke" means marking out — the first and most important step of the job.',
             '«Сумицукэ» у японских плотников — это разметка, первый и самый важный шаг работы.'),
-   gallery: [ ['img/21-a.jpg', T('Rokā','In the hand','В руке')] ] },
+   gallery: [] },
 
- { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:16, art:'square', c:[190,190,180], img:'img/22.png',
+ { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:16, art:'square', c:[190,190,180], img:'',
    name: T('Mini stūrenis Shinwa 15 × 7 cm', 'Shinwa mini square 15 × 7 cm', 'Мини-угольник Shinwa 15 × 7 см'),
    hook: T('Īsts japāņu galdnieka stūrenis — kabatas izmērā.', 'A real Japanese carpenter\'s square — pocket-sized.', 'Настоящий японский плотницкий угольник — карманного размера.'),
    desc: T('Viegls nerūsējošā tērauda stūrenis maziem darbiem: piegriešanai, flīzēm, mēbelēm un furnitūrai. Skala abās pusēs. Plāns un viegls — ielien kabatā blakus zīmulim.',
@@ -513,7 +513,7 @@ const PRODUCTS = [
               ['img/22-c.jpg', T('Nerūsējošais tērauds','Stainless steel','Нержавеющая сталь')],
               ['img/22-d.jpg', T('Skala abās pusēs','Scale on both sides','Шкала с двух сторон')] ] },
 
- { id:'23', cat:'all', brand:'Shinwa', tag:'jp', model:'76228', price:18, art:'level', c:[60,120,190], img:'img/23.jpg', cover:true,
+ { id:'23', cat:'all', brand:'Shinwa', tag:'jp', model:'76228', price:18, art:'level', c:[60,120,190], img:'',
    name: T('Magnētisks mini līmeņrādis 75 mm', 'Magnetic mini level 75 mm', 'Магнитный мини-уровень 75 мм'),
    hook: T('Pielīp pie profila un parāda līmeni, kamēr rokas ir brīvas.', 'Sticks to a profile and shows level while your hands stay free.', 'Прилип к профилю и показывает уровень, пока руки свободны.'),
    desc: T('Tikai 75 mm garš līmeņrādis ar magnētu: pielīp pie metāla profila, caurules, radiatora vai kronšteina. Ērts, kur garais līmeņrādis neietilpst — skapīšos, nišās, pie rozetēm un plauktiem. Ielien jebkurā kabatā.',
@@ -530,8 +530,7 @@ const PRODUCTS = [
    story: T('Shinwa ir japāņu mērinstrumentu ražotājs no Niigatas. Handy Level ir viņu mazākais līmeņrādis — tam, kas vienmēr kabatā.',
             'Shinwa is a Japanese maker of measuring tools from Niigata. The Handy Level is their smallest level — the one that is always in your pocket.',
             'Shinwa — японский производитель измерительного инструмента из Ниигаты. Handy Level — их самый маленький уровень, тот, что всегда в кармане.'),
-   gallery: [ ['img/23-a.jpg', T('Alumīnija mērvirsma ar magnētu','Aluminium face with magnet','Алюминиевая рабочая грань с магнитом')],
-              ['img/23-b.jpg', T('Shinwa 76228','Shinwa 76228','Shinwa 76228')] ] }
+   gallery: [ ['img/23-a.jpg', T('Alumīnija mērvirsma ar magnētu','Aluminium face with magnet','Алюминиевая рабочая грань с магнитом')] ] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка
