@@ -113,7 +113,7 @@
 </section></div>
 
 <section class="gift" id="gift"><div class="wrap"><div class="split">
-<figure class="pack"><img src="${im('img/box-top.jpg')}" alt="${esc(u.packAlt[0])}" width="640" height="440" loading="lazy"></figure>
+<figure class="pack"><img src="${im('img/box-top.png')}" alt="${esc(u.packAlt[0])}" width="640" height="465" loading="lazy"></figure>
 <div><h2>${u.giftTitle}</h2><p>${u.giftText}</p><p style="font-size:15px">${u.giftWrap} — ${eur(SHOP.giftWrap)}</p>
 <a class="btn red" href="#/p/12">${u.giftBtn}</a></div>
 </div></div></section>
