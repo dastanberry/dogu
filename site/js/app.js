@@ -38,11 +38,12 @@
   const brandLine = p => p.tag === 'jp' ? `${p.brand} · ${U().jp}` : (typeof p.tag === 'number' ? `${p.brand} · ${U().since} ${p.tag}` : p.brand);
   const fill = s => s.replace(/\{(\w+)\}/g, (m, k) => k === 'giftWrap' ? SHOP.giftWrap : (SHOP[k] !== undefined ? esc(t(SHOP[k])) : m));
   const tel = SHOP.phone.replace(/\s/g, '');
+  const im = u => u + (u.includes('?') ? '&' : '?') + 'v=' + (SHOP.ver || '1');
   const catLabel = c => ({ el: U().cats.el, all: U().cats.every, gift: U().cats.gift })[c];
 
   function art(p, opts = {}) {
     const [cx, cy, r] = p.c;
-    const img = p.img ? `<img src="${p.img}" alt="${esc(t(p.name))}" loading="lazy" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()">` : '';
+    const img = p.img ? `<img src="${im(p.img)}" alt="${esc(t(p.name))}" loading="lazy" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()">` : '';
     return `<div class="art${p.cover ? ' photo' : ''}">${opts.no ? `<span class="no">${U().no} ${p.id}</span>` : ''}<svg viewBox="0 0 240 240" aria-hidden="true"><circle cx="${cx}" cy="${cy}" r="${r}" fill="${SUN}"/><path d="${D[p.art]}" fill="none" stroke="#1B1B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>${img}</div>`;
   }
   const card = p => `<a class="card" href="#/p/${p.id}">${art(p, { no: 1 })}<div class="body"><span class="brand">${esc(brandLine(p))}</span><span class="name">${esc(t(p.name))}</span><span class="hook">${esc(t(p.hook))}</span><span class="price">${eur(p.price)}</span></div></a>`;
@@ -141,7 +142,7 @@
 <div class="wrap"><a class="back" href="#/collection">${u.back}</a>
 <section class="pp">
 <div class="media"><div id="mainMedia">${art(p)}</div>${gal.length ? `<div class="thumbs" role="group">
-<button type="button" data-g="-1" aria-pressed="true" aria-label="${esc(t(p.name))}">${art(p)}</button>${gal.map((g, i) => `<button type="button" data-g="${i}" aria-pressed="false" aria-label="${esc(t(g[1]))}"><img class="t" src="${g[0]}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}</div>
+<button type="button" data-g="-1" aria-pressed="true" aria-label="${esc(t(p.name))}">${art(p)}</button>${gal.map((g, i) => `<button type="button" data-g="${i}" aria-pressed="false" aria-label="${esc(t(g[1]))}"><img class="t" src="${im(g[0])}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}</div>
 <div class="info">
 <p class="eyebrow" style="margin:0">${u.no} ${p.id} · ${esc(brandLine(p))}</p>
 <h1>${esc(t(p.name))}</h1>
@@ -167,7 +168,7 @@ ${rel.length ? `<section style="padding-bottom:88px"><h2 style="font-size:28px;m
     $('#addBtn').addEventListener('click', () => addToCart(p.id, !!($('#giftBox') && $('#giftBox').checked)));
     $$('[data-g]').forEach(b => b.addEventListener('click', () => {
       const i = +b.dataset.g;
-      $('#mainMedia').innerHTML = i < 0 ? art(p) : `<div class="art photo"><img src="${gal[i][0]}" alt="${esc(t(gal[i][1]))}"></div>`;
+      $('#mainMedia').innerHTML = i < 0 ? art(p) : `<div class="art photo"><img src="${im(gal[i][0])}" alt="${esc(t(gal[i][1]))}"></div>`;
       $$('[data-g]').forEach(x => x.setAttribute('aria-pressed', x === b));
     }));
     window.scrollTo(0, 0);
