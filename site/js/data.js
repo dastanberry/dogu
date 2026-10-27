@@ -338,22 +338,26 @@ const PRODUCTS = [
               ['img/14-c.jpg', T('Stieples grieznis','Wire cutter','Кусачки для проволоки')],
               ['img/14-d.jpg', T('Savilcēju nogriešana vienā līmenī','Flush-cutting cable ties','Срез стяжек вровень')] ] },
 
- { id:'15', cat:'all', brand:'Tajima', tag:1909, model:'SEF', price:29, art:'holder', c:[160,170,50], img:'img/15.png',
-   name: T('Divvietīgs nažu maksts SEF', 'SEF double knife holster', 'Двойной держатель для ножей SEF'),
-   hook: T('Divi naži uz jostas, katrs savā ligzdā.', 'Two knives on the belt, each in its own slot.', 'Два ножа на поясе, каждый в своём гнезде.'),
-   desc: T('Vertikāls divvietīgs maksts nolaužamo asmeņu nažiem no Tajima ātri noņemamās SEF sistēmas. Nazis ieiet un iznāk ar vienu roku, asmens nesaduras ar citiem instrumentiem.',
-            'A vertical two-slot holster for snap-off knives from Tajima\'s quick-release SEF system. The knife goes in and out with one hand, and the blade never knocks against other tools.',
-            'Вертикальный двойной держатель для ножей с отламывающимися лезвиями из быстросъёмной системы Tajima SEF. Нож вставляется и достаётся одной рукой, лезвие не бьётся о другие инструменты.'),
-   why: [ [T('Divi naži','Two knives','Два ножа'), T('Piemēram, liels un mazs — abi pie rokas.','e.g. a large and a small one — both at hand.','Например, большой и маленький — оба под рукой.')],
-          [T('Ar vienu roku','One-handed','Одной рукой'), T('Ielikt un izņemt — bez skatīšanās.','In and out without looking.','Вставил и достал не глядя.')],
-          [T('Droši','Safe','Безопасно'), T('Asmens neskrāpē somu un rokas.','The blade does not scratch the pouch or your hands.','Лезвие не режет сумку и руки.')] ],
-   specs: [ [T('Modelis','Model','Модель'), T('[precizēt kodu]','[code to confirm]','[уточнить код]')],
-            [T('Sistēma','System','Система'), T('Tajima SEF; vajadzīgs SEF turētājs uz jostas [precizēt, vai komplektā]','Tajima SEF; needs an SEF belt holder [confirm if included]','Tajima SEF; нужен держатель SEF на ремне [уточнить, входит ли]')],
+ { id:'15', cat:'all', brand:'Tajima', tag:1909, model:'DK-SFHS2', price:29, art:'holder', c:[160,170,50], img:'img/15.png',
+   name: T('Divvietīgs maksts SEF: nazis + šķēres', 'SEF double holster: knife + scissors', 'Двойной держатель SEF: нож + ножницы'),
+   hook: T('Nazis un šķēres uz jostas — katrs savā ligzdā.', 'Knife and scissors on the belt — each in its own slot.', 'Нож и ножницы на поясе — каждый в своём гнезде.'),
+   desc: T('Vertikāls divvietīgs maksts no Tajima ātri noņemamās SEF sistēmas. Aizmugurējā ligzdā — nolaužamo asmeņu nazis, priekšējā kabatā — šķēres vai izolācijas noņēmējs. Stiprinājums uzliekams uz jostas, to nenoņemot, un maksts noņemams ar vienu kustību. Ciets plastmasas korpuss: asmens neskrāpē somu un rokas.',
+            'A vertical two-slot holster from Tajima\'s quick-release SEF system. The rear slot takes a snap-off knife, the front pocket — scissors or a wire stripper. The mount slides onto your belt without taking the belt off, and the holster detaches in one move. Hard plastic body: blades do not cut the pouch or your hands.',
+            'Вертикальный двойной держатель из быстросъёмной системы Tajima SEF. В заднее гнездо — нож с отламывающимися лезвиями, в передний карман — ножницы или стриппер. Крепление надевается на ремень, не снимая его, а сам держатель снимается одним движением. Жёсткий пластиковый корпус: лезвие не режет сумку и руки.'),
+   why: [ [T('Divi instrumenti','Two tools','Два инструмента'), T('Nazis aizmugurē, šķēres vai noņēmējs priekšā.','Knife at the back, scissors or stripper in front.','Нож сзади, ножницы или стриппер спереди.')],
+          [T('Uz jostas bez noņemšanas','Fits without unbuckling','Без снятия ремня'), T('SEF stiprinājums uzliekams uz jau uzvilktas jostas.','The SEF mount goes onto a belt you are already wearing.','Крепление SEF надевается на уже надетый ремень.')],
+          [T('Ciets korpuss','Hard shell','Жёсткий корпус'), T('Asmeņi neiegriež somā un rokās.','Blades do not cut into the pouch or your hands.','Лезвия не режут сумку и руки.')] ],
+   specs: [ [T('Modelis','Model','Модель'), T('DK-SFHS2','DK-SFHS2','DK-SFHS2')],
+            [T('Ligzdas','Slots','Гнёзда'), T('2: nazis (aizmugurē), šķēres / noņēmējs (priekšā)','2: knife (rear), scissors / stripper (front)','2: нож (сзади), ножницы / стриппер (спереди)')],
+            [T('Augstums','Height','Высота'), T('23 cm','23 cm','23 см')],
+            [T('Stiprinājums','Mount','Крепление'), T('SEF, uzliekams uz jostas to nenoņemot','SEF, fits on without removing the belt','SEF, надевается без снятия ремня')],
+            [T('Instrumenti','Tools','Инструменты'), T('komplektā neietilpst','not included','в комплект не входят')],
             [T('Zīmols','Brand','Бренд'), T('Tajima, Japāna','Tajima, Japan','Tajima, Япония')] ],
    story: T('SEF ir Tajima ātri noņemamā jostas sistēma: katrs instruments savā ligzdā, ko pārvieto sekundē.',
             'SEF is Tajima\'s quick-release belt system: every tool in its own slot, rearranged in a second.',
             'SEF — быстросъёмная поясная система Tajima: каждый инструмент в своём гнезде, переставляется за секунду.'),
-   gallery: [] }
+   gallery: [ ['img/15-a.jpg', T('Iepakojumā ar nazi','In the package with a knife','В упаковке с ножом')],
+              ['img/15-b.jpg', T('Izmērs: 23 cm','Size: 23 cm','Размер: 23 см')] ] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка
