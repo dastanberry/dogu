@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271950', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271958', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   legalAddress: 'Ernesta Birznieka-Upīša iela 20B-8, Rīga, LV-1050',
@@ -474,7 +474,7 @@ const PRODUCTS = [
             'Showa Glove — японская компания, которая специализируется на перчатках. 380 — модель, которую мастера берут коробками.'),
    gallery: [ ['img/20-a.jpg', T('Plauksta ar putu nitrilu','Foam nitrile palm','Ладонь со вспененным нитрилом')] ] },
 
- { id:'21', cat:'all', brand:'Tajima', tag:1909, model:'SS20MH', price:17, art:'pencil', c:[150,150,150], img:'',
+ { id:'21', cat:'all', brand:'Tajima', tag:1909, model:'SS20MH', price:17, art:'pencil', c:[150,150,150], img:'img/21.png',
    name: T('Marķēšanas zīmulis Sumitsuke 2 mm', 'Sumitsuke 2 mm marking pencil', 'Разметочный карандаш Sumitsuke 2 мм'),
    hook: T('Metāla zīmulis, kas nelūst un nav jāasina.', 'A metal pencil that does not break or need sharpening.', 'Металлический карандаш, который не ломается и не точится.'),
    desc: T('Japāņu marķēšanas zīmulis ar metāla korpusu un 2 mm grafītu. Nav jāasina ar nazi, grafīts neizdrūp kabatā, līnija vienmēr vienāda. Ērts uz koka, ģipškartona un flīzēm.',
@@ -485,12 +485,14 @@ const PRODUCTS = [
           [T('Vienāda līnija','Even line','Ровная линия'), T('2 mm visu dienu.','2 mm all day long.','2 мм весь день.')] ],
    specs: [ [T('Modelis','Model','Модель'), T('Tajima SS20MH','Tajima SS20MH','Tajima SS20MH')],
             [T('Grafīts','Lead','Грифель'), T('2,0 mm','2.0 mm','2,0 мм')],
-            [T('Korpuss','Body','Корпус'), T('metāls','metal','металл')],
+            [T('Cietība','Grade','Твёрдость'), T('HB','HB','HB')],
+            [T('Korpuss','Body','Корпус'), T('metāls, metāla uzgalis, rievots satvēriens','metal, metal tip, knurled grip','металл, металлический наконечник, рифлёный хват')],
+            [T('Komplektā','In the box','В комплекте'), T('1 rezerves grafīts HB','1 spare HB lead','1 запасной грифель HB')],
             [T('Ražots','Made in','Производство'), T('Japāna','Japan','Япония')] ],
    story: T('„Sumitsuke" japāņu galdniekiem nozīmē marķēšanu — pirmo un svarīgāko darba soli.',
             'For Japanese carpenters, "sumitsuke" means marking out — the first and most important step of the job.',
             '«Сумицукэ» у японских плотников — это разметка, первый и самый важный шаг работы.'),
-   gallery: [] },
+   gallery: [ ['img/21-a.jpg', T('Iepakojums','Package','Упаковка')] ] },
 
  { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:16, art:'square', c:[190,190,180], img:'',
    name: T('Mini stūrenis Shinwa 15 × 7 cm', 'Shinwa mini square 15 × 7 cm', 'Мини-угольник Shinwa 15 × 7 см'),
