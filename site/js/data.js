@@ -281,7 +281,7 @@ const PRODUCTS = [
               ['img/11-e.jpg', T('Drošības auklas stiprinājumi','Tether points','Крепления страховочного шнура')],
               ['img/11-f.jpg', T('Iepakojumā','In the package','В упаковке')] ] },
 
- { id:'12', cat:'gift', brand:'DŌGU', tag:null, model:'—', price:35, art:'box', c:[120,84,60], img:null,
+ { id:'12', cat:'gift', brand:'DŌGU', tag:null, model:'No.270BW + GS5P-01', price:35, art:'box', c:[120,84,60], img:'img/12.png',
    name: T('Komplekts „Pirmais asmens"', '"First Blade" gift set', 'Набор «Первый клинок»'),
    hook: T('Rokturis Cushion Stubby + uzgaļi Gosai melnā kastē.', 'Cushion Stubby handle + Gosai bits in a black box.', 'Рукоятка Cushion Stubby + биты Gosai в чёрной коробке.'),
    desc: T('Gatava dāvana meistaram: īsais Vessel rokturis un Gosai uzgaļu komplekts — kopā tie dod piecus īsus skrūvgriežus. Melnā kastē ar sarkanu apli un kartīti: kas tas ir un kāpēc patiks.',
@@ -293,7 +293,8 @@ const PRODUCTS = [
    specs: [ [T('Sastāvs','Contents','Состав'), T('Cushion Stubby rokturis + Gosai uzgaļi (5 gab.)','Cushion Stubby handle + Gosai bits (5 pcs)','рукоятка Cushion Stubby + биты Gosai (5 шт)')],
             [T('Iepakojums','Packaging','Упаковка'), T('zīmola dāvanu kaste','branded gift box','фирменная подарочная коробка')] ],
    story: T('Vienkāršākais veids, kā iepriecināt meistaru.', 'The simplest way to make a pro happy.', 'Самый простой способ сделать мастеру приятно.'),
-   gallery: [] }
+   gallery: [ ['img/06.png', T('Rokturis Cushion Stubby No.270BW','Cushion Stubby handle No.270BW','Рукоятка Cushion Stubby No.270BW')],
+              ['img/05.png', T('Uzgaļi Gosai GS5P-01, 5 gab.','Gosai bits GS5P-01, 5 pcs','Биты Gosai GS5P-01, 5 шт')] ] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка

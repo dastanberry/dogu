@@ -149,7 +149,7 @@
 <p class="promise">${esc(t(p.hook))}</p>
 <p class="desc">${esc(t(p.desc))}</p>
 <div class="price-row"><b>${eur(p.price)}</b><span>${u.vat}</span></div>
-<label class="check"><input type="checkbox" id="giftBox"> ${u.wrapCheck} (+${eur(SHOP.giftWrap)})</label>
+${p.cat !== 'gift' ? `<label class="check"><input type="checkbox" id="giftBox"> ${u.wrapCheck} (+${eur(SHOP.giftWrap)})</label>` : ''}
 <div class="row"><button class="btn" type="button" id="addBtn">${u.add}</button><a class="btn ghost" href="#/showroom">${u.seeShowroom}</a></div>
 <ul><li>— ${u.pickupFree}</li><li>— ${esc(u.deliveryShort)}</li></ul>
 </div></section></div>
@@ -165,7 +165,7 @@
 ${rel.length ? `<section style="padding-bottom:88px"><h2 style="font-size:28px;margin-bottom:24px">${u.related}</h2><div class="cards">${rel.map(card).join('')}</div></section>` : ''}
 </div>`;
     document.title = t(p.name) + ' — DŌGU';
-    $('#addBtn').addEventListener('click', () => addToCart(p.id, $('#giftBox').checked));
+    $('#addBtn').addEventListener('click', () => addToCart(p.id, !!($('#giftBox') && $('#giftBox').checked)));
     $$('[data-g]').forEach(b => b.addEventListener('click', () => {
       const i = +b.dataset.g;
       $('#mainMedia').innerHTML = i < 0 ? art(p) : `<div class="art photo"><img src="${gal[i][0]}" alt="${esc(t(gal[i][1]))}"></div>`;
