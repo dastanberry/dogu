@@ -365,7 +365,7 @@ const PRODUCTS = [
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка
-  { title: T('Bojāta skrūve 10 sekundēs', 'A stripped screw in 10 seconds', 'Сорванный винт за 10 секунд'), cx: 30, src: '' },
-  { title: T('Sprūdrats sadalnē', 'Ratchet in the distribution board', 'Трещотка в электрощитке'), cx: 60, src: '' },
-  { title: T('Karabīne uz jostas visu maiņu', 'A carabiner on the belt all shift', 'Карабин на поясе за смену'), cx: 45, src: '' }
+  { title: T('Apskats no objekta', 'Review on site', 'Обзор с объекта'), cx: 30, src: 'https://www.youtube-nocookie.com/embed/wQg41hUynLw' },
+  { title: T('Apskats no objekta', 'Review on site', 'Обзор с объекта'), cx: 60, src: 'https://www.youtube-nocookie.com/embed/YplEylr5nx0' },
+  { title: T('Vessel Ball Grip sprūdrata skrūvgriezis', 'Vessel Ball Grip ratchet screwdriver', 'Отвёртка-трещотка Vessel Ball Grip'), cx: 45, src: 'https://www.youtube-nocookie.com/embed/qixubbdbyD4' }
 ];
