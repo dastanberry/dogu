@@ -8,3 +8,10 @@
   </FilesMatch>
 </IfModule>
 DirectoryIndex index.html
+
+# Языковые адреса: /dogu/lv/, /dogu/ru/, /dogu/en/ открывают тот же сайт.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(?:lv|ru|en)/?$ index.html [L]
+  RewriteRule ^(?:lv|ru|en)/(.+)$ $1 [L]
+</IfModule>

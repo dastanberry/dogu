@@ -31,12 +31,19 @@
     get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   };
+  /* Язык живёт в адресе: /dogu/lv/, /dogu/ru/, /dogu/en/ — такую ссылку можно отправить человеку. */
+  const pathLang = (location.pathname.match(/\/(lv|ru|en)\/?$/) || [])[1];
+  const basePath = location.pathname.replace(/(index\.html)?$/, '').replace(/(lv|ru|en)\/?$/, '');
   let lang = (() => {
+    if (LANGS.includes(pathLang)) return pathLang;
     const q = new URLSearchParams(location.search).get('lang');
     if (LANGS.includes(q)) return q;
     const s = store.get('dogu-lang', null);
     return LANGS.includes(s) ? s : 'lv';
   })();
+  store.set('dogu-lang', lang);
+  const syncUrl = () => { try { history.replaceState(null, '', basePath + lang + '/' + location.hash); } catch (e) {} };
+  syncUrl();
   const U = () => UI[lang];
   const t = o => (o && typeof o === 'object') ? (o[lang] || o.lv) : (o ?? '');
   const eur = n => '€' + (Math.round(n * 100) / 100).toFixed(Number.isInteger(n) ? 0 : 2).replace('.', lang === 'en' ? '.' : ',');
@@ -74,7 +81,7 @@
   }
 
   function setLang(l) {
-    lang = l; store.set('dogu-lang', l);
+    lang = l; store.set('dogu-lang', l); syncUrl();
     renderChrome(); renderCart(); showCookie(false); route();
   }
 
