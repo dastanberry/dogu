@@ -492,7 +492,7 @@ const PRODUCTS = [
             '«Сумицукэ» у японских плотников — это разметка, первый и самый важный шаг работы.'),
    gallery: [ ['img/21-a.jpg', T('Rokā','In the hand','В руке')] ] },
 
- { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:32, art:'square', c:[190,190,180], img:'img/22.png',
+ { id:'22', cat:'all', brand:'Shinwa', tag:'jp', model:'12103', price:16, art:'square', c:[190,190,180], img:'img/22.png',
    name: T('Mini stūrenis Shinwa 15 × 7 cm', 'Shinwa mini square 15 × 7 cm', 'Мини-угольник Shinwa 15 × 7 см'),
    hook: T('Īsts japāņu galdnieka stūrenis — kabatas izmērā.', 'A real Japanese carpenter\'s square — pocket-sized.', 'Настоящий японский плотницкий угольник — карманного размера.'),
    desc: T('Viegls nerūsējošā tērauda stūrenis maziem darbiem: piegriešanai, flīzēm, mēbelēm un furnitūrai. Skala abās pusēs. Plāns un viegls — ielien kabatā blakus zīmulim.',
