@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271040', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271055', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   vatNo: '[PVN Nr.]',
@@ -382,7 +382,52 @@ const PRODUCTS = [
    story: T('OLFA 1956. gadā izgudroja nolaužamo asmeni. PC-L ir viņu atbilde uz otru jautājumu: ko darīt ar to, ko nazis nepaņem?',
             'OLFA invented the snap-off blade in 1956. PC-L is their answer to another question: what about the things a knife cannot cut?',
             'OLFA в 1956 году изобрела отламывающееся лезвие. PC-L — их ответ на другой вопрос: что делать с тем, что нож не берёт?'),
-   gallery: [] }
+   gallery: [] },
+
+ { id:'17', cat:'pl', brand:'Fujiya', tag:1923, model:'140-125-BG', price:35, art:'pliers', c:[60,60,56], img:'img/17.png',
+   name: T('Mini santehniskās knaibles Kurokin', 'Kurokin mini water pump pliers', 'Мини-клещи сантехнические Kurokin'),
+   hook: T('Plaukstas izmērā, bet satver uzgriezni ar vienu pogas spiedienu.', 'Palm-sized, and they lock onto a nut with one press of a button.', 'Размером с ладонь, а гайку берут одним нажатием кнопки.'),
+   desc: T('Fujiya melni zelta sērija Kurokin. Žokļu platumu maina ar pogu PUSH: nospied, pabīdi, atlaid — un platums ir fiksēts, nekas nepārslīd darba laikā. Rombveida robojums cieši tur caurules, uzgriežņus un plāksnes. Tikai 125 mm — ielien zem izlietnes, aiz sifona un kolektorā, kur parastās santehniskās knaibles neiet. Melns matēts pārklājums un neslīdoši rokturi.',
+            'Fujiya\'s black-and-gold Kurokin series. The jaw width is set with the PUSH button: press, slide, release — and it is locked, nothing slips while you work. Diamond-pattern serrations grip pipes, nuts and plates firmly. Only 125 mm — they get under a sink, behind a trap and into a manifold where ordinary water pump pliers will not go. Black matte finish and non-slip grips.',
+            'Чёрно-золотая серия Kurokin от Fujiya. Ширина зева меняется кнопкой PUSH: нажал, сдвинул, отпустил — и зафиксировано, в работе ничего не соскакивает. Ромбовидная насечка крепко держит трубы, гайки и пластины. Всего 125 мм — залезают под раковину, за сифон и в коллектор, куда обычные переставные клещи не проходят. Чёрное матовое покрытие и нескользящие рукояти.'),
+   why: [ [T('Viena poga','One button','Одна кнопка'), T('Platums mainās ar PUSH un nepārslīd.','Width changes with PUSH and does not slip.','Ширина меняется кнопкой PUSH и не соскакивает.')],
+          [T('125 mm','125 mm','125 мм'), T('Ielien zem izlietnes un kolektorā.','Fit under a sink and into a manifold.','Пролезают под раковину и в коллектор.')],
+          [T('Kurokin','Kurokin','Kurokin'), T('Melni zelta sērija — instruments, ko nav kauns dāvināt.','The black-and-gold series — a tool you are proud to give.','Чёрно-золотая серия — инструмент, который не стыдно подарить.')] ],
+   specs: [ [T('Modelis','Model','Модель'), T('Fujiya 140-125-BG (Kurokin)','Fujiya 140-125-BG (Kurokin)','Fujiya 140-125-BG (Kurokin)')],
+            [T('Garums','Length','Длина'), T('125 mm','125 mm','125 мм')],
+            [T('Regulēšana','Adjustment','Регулировка'), T('ātrā, ar pogu PUSH','quick, PUSH button','быстрая, кнопкой PUSH')],
+            [T('Žokļi','Jaws','Губки'), T('rombveida robojums','diamond-pattern serrations','ромбовидная насечка')],
+            [T('Maks. atvērums','Max opening','Макс. раскрытие'), T('[precizēt]','[to confirm]','[уточнить]')],
+            [T('Svars','Weight','Вес'), T('[precizēt]','[to confirm]','[уточнить]')],
+            [T('Ražots','Made in','Производство'), T('Japāna','Japan','Япония')] ],
+   story: T('Fujiya kopš 1923. gada Osakā kaļ knaibles. Kurokin — „melnais zelts" — ir viņu sērija meistariem, kas vērtē instrumentu ne mazāk kā darbu.',
+            'Fujiya has been forging pliers in Osaka since 1923. Kurokin — "black gold" — is their series for pros who value the tool as much as the work.',
+            'Fujiya куёт клещи в Осаке с 1923 года. Kurokin — «чёрное золото» — их серия для мастеров, которые ценят инструмент не меньше работы.'),
+   gallery: [ ['img/17-a.jpg', T('Rokā','In the hand','В руке')],
+              ['img/17-b.jpg', T('Satver uzgriezni','Gripping a nut','Захват гайки')],
+              ['img/17-c.jpg', T('Poga PUSH','PUSH button','Кнопка PUSH')] ] },
+
+ { id:'18', cat:'pl', brand:'TOP', tag:'jp', model:'HY-38S', price:42, art:'holder', c:[70,90,170], img:'img/18.png',
+   name: T('Īsā platā uzgriežņu atslēga 8–38 mm', 'Short wide adjustable wrench 8–38 mm', 'Короткий разводной ключ 8–38 мм'),
+   hook: T('Plaukstas garumā, bet atveras līdz 38 mm.', 'Palm-length, yet it opens to 38 mm.', 'Длиной в ладонь, а раскрывается до 38 мм.'),
+   desc: T('Tikai 157 mm gara, bet atveras no 8 līdz 38 mm: amerikānis, sifona uzgrieznis, maisītāja pievads un ūdens skaitītājs — viena atslēga. Galvas biezums tikai 6,5 mm, žokļos nav izvirzījumu, tāpēc tā ielien starp caurulēm un pie sienas. Pirksta āķis precīzam tvērienam, izturīgs vinila rokturis ar atveri auklai.',
+            'Only 157 mm long, yet it opens from 8 to 38 mm: union, trap nut, mixer hose and water meter — one wrench. The head is just 6.5 mm thick and the jaws have no protruding lip, so it slips between pipes and up against the wall. A finger hook for precise control, a durable vinyl grip with a lanyard hole.',
+            'Всего 157 мм в длину, а раскрывается от 8 до 38 мм: американка, гайка сифона, подводка смесителя и счётчик воды — один ключ. Толщина головы всего 6,5 мм, на губках нет выступов, поэтому он пролезает между трубами и вплотную к стене. Упор под палец для точной работы, прочная виниловая рукоять с отверстием под шнурок.'),
+   why: [ [T('8–38 mm','8–38 mm','8–38 мм'), T('No maza uzgriežņa līdz amerikānim.','From a small nut to a union fitting.','От мелкой гайки до американки.')],
+          [T('157 mm','157 mm','157 мм'), T('Īsa — strādā tur, kur garā neapgriežas.','Short — works where a long one cannot turn.','Короткий — работает там, где длинный не провернуть.')],
+          [T('6,5 mm galva','6.5 mm head','Голова 6,5 мм'), T('Plāna, bez izvirzījumiem — līdz pašai sienai.','Thin, no lip — right up to the wall.','Тонкая, без выступов — вплотную к стене.')] ],
+   specs: [ [T('Modelis','Model','Модель'), T('TOP HY-38S (Short Eco Wide)','TOP HY-38S (Short Eco Wide)','TOP HY-38S (Short Eco Wide)')],
+            [T('Atvērums','Opening','Раскрытие'), T('8–38 mm','8–38 mm','8–38 мм')],
+            [T('Garums','Length','Длина'), T('157 mm','157 mm','157 мм')],
+            [T('Galvas biezums','Head thickness','Толщина головы'), T('6,5 mm (13 mm pie skrūves)','6.5 mm (13 mm at the worm)','6,5 мм (13 мм у червяка)')],
+            [T('Svars','Weight','Вес'), T('215 g','215 g','215 г')],
+            [T('Rokturis','Grip','Рукоять'), T('ciets vinils, atvere auklai','hard vinyl, lanyard hole','жёсткий винил, отверстие под шнурок')],
+            [T('Ražots','Made in','Производство'), T('Japāna','Japan','Япония')] ],
+   story: T('TOP Kogyo Niigatā ražo uzgriežņu atslēgas. Short Eco Wide sērija radās santehniķiem, kam jāstrādā zem izlietnes, nevis darbnīcā.',
+            'TOP Kogyo makes wrenches in Niigata. The Short Eco Wide series was born for plumbers who work under a sink, not in a workshop.',
+            'TOP Kogyo делает ключи в Ниигате. Серия Short Eco Wide появилась для сантехников, которые работают под раковиной, а не в мастерской.'),
+   gallery: [ ['img/18-a.jpg', T('Plāni žokļi bez izvirzījumiem','Thin jaws with no lip','Тонкие губки без выступов')],
+              ['img/18-b.jpg', T('Darbā: šļūtenes savienojums','At work: hose connection','В работе: соединение шланга')] ] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка

@@ -39,7 +39,7 @@
   const fill = s => s.replace(/\{(\w+)\}/g, (m, k) => k === 'giftWrap' ? SHOP.giftWrap : (SHOP[k] !== undefined ? esc(t(SHOP[k])) : m));
   const tel = SHOP.phone.replace(/\s/g, '');
   const im = u => u + (u.includes('?') ? '&' : '?') + 'v=' + (SHOP.ver || '1');
-  const catLabel = c => ({ el: U().cats.el, all: U().cats.every, gift: U().cats.gift })[c];
+  const catLabel = c => ({ el: U().cats.el, pl: U().cats.pl, all: U().cats.every, gift: U().cats.gift })[c];
 
   function art(p, opts = {}) {
     const [cx, cy, r] = p.c;
@@ -77,8 +77,8 @@
   let filter = 'all';
   function home(anchor) {
     const u = U();
-    const cats = ['all', 'el', 'every', 'gift'];
-    const map = { all: null, el: 'el', every: 'all', gift: 'gift' };
+    const cats = ['all', 'el', 'pl', 'every', 'gift'];
+    const map = { all: null, el: 'el', pl: 'pl', every: 'all', gift: 'gift' };
     const shown = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === map[filter]);
     const consent = store.get('dogu-consent', null);
     $('#app').innerHTML = `
