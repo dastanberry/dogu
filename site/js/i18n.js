@@ -19,14 +19,14 @@ const UI = {
   giftWrap:'Dāvanu iesaiņojums', giftBtn:'Izvēlēties dāvanu',
   shEyebrow:'Salons', shTitle:'Instruments jāpatur rokā',
   shText:'Nāc uz mūsu biroju Rīgā: parādīsim katru lietu darbībā un ļausim izmēģināt uz parauga.',
-  shBtn:'Vienoties par apmeklējumu',
+  shBtn:'Zvanīt',
   info:{address:'Adrese', hours:'Darba laiks', phone:'Tālrunis', delivery:'Piegāde'},
-  deliveryShort:'Omniva, DPD, Venipak, Smartposti, Latvijas Pasts, kurjers — pēc izvēlētā pārvadātāja noteikumiem',
+  deliveryShort:'Pakomāts visā Latvijā — €3,99. Saņemšana birojā — bez maksas',
   footer:'DŌGU — japāņu instrumenti meistariem. Rīga.',
   back:'← Visa kolekcija', vat:'ar PVN', wrapCheck:'Iesaiņot dāvanai', add:'Ielikt grozā', addMore:'Grozā · pievienot vēl', seeShowroom:'Apskatīt salonā',
   pickupFree:'Saņemšana salonā — bez maksas', whyTitle:'Kāpēc meistars priecāsies', storyTitle:'No kurienes', related:'Der kopā ar', added:'Pievienots grozam',
   since:'kopš', jp:'Japāna', no:'Nr.',
-  cart:{title:'Grozs', empty:'Grozs ir tukšs.', goods:'Preces', wrap:'Dāvanu iesaiņojums', delivery:'Piegāde', tbd:'pēc tarifa — apstiprināsim', total:'Kopā', name:'Vārds', phone:'Tālrunis', method:'Saņemšanas veids', locker:'Pakomāts / punkts vai adrese', lockerPh:'piem., Omniva, Purvciema iela 1', send:'Nosūtīt pasūtījumu', note:'Pēc pasūtījuma sazināsimies, lai apstiprinātu pieejamību, piegādes cenu un laiku. Apmaksa pēc rēķina vai saņemot.', pickupOpt:'Saņemšana birojā — bez maksas', deliveryOpt:'Piegāde', carrier:'Pārvadātājs', address:'Piegādes adrese vai pakomāts', addressPh:'iela, māja, pilsēta vai pakomāta nosaukums', comment:'Komentārs (nav obligāts)', sending:'Sūta…', okTitle:'Paldies! Pasūtījums saņemts', okText:'Drīzumā sazināsimies pa tālruni, lai apstiprinātu pasūtījumu, piegādi un apmaksu.', err:'Neizdevās nosūtīt pasūtījumu. Lūdzu, mēģiniet vēlreiz vai zvaniet:', agree:'Esmu iepazinies ar', terms:'lietošanas noteikumiem', and:'un', privacy:'privātuma politiku', less:'Mazāk', more:'Vairāk', inWrap:'dāvanu iesaiņojumā', orderTitle:'Pasūtījums DŌGU', itemsWord:'Preces'},
+  cart:{title:'Grozs', empty:'Grozs ir tukšs.', goods:'Preces', wrap:'Dāvanu iesaiņojums', delivery:'Piegāde', tbd:'pēc tarifa — apstiprināsim', total:'Kopā', name:'Vārds', phone:'Tālrunis', method:'Saņemšanas veids', locker:'Pakomāts / punkts vai adrese', lockerPh:'piem., Omniva, Purvciema iela 1', send:'Noformēt pasūtījumu', note:'Pēc pasūtījuma sazināsimies, lai apstiprinātu pieejamību un piegādi. Apmaksa pēc rēķina vai saņemot.', pickupOpt:'Saņemšana birojā — bez maksas', deliveryOpt:'Piegāde uz pakomātu', lockerNote:'Visā Latvijā. Tuvāko pakomātu jūsu adresei izvēlēsimies paši.', carrier:'Pārvadātājs', address:'Piegādes adrese', addressPh:'Adrese', comment:'Komentārs (nav obligāts)', sending:'Sūta…', okTitle:'Paldies! Pasūtījums saņemts', okText:'Drīzumā sazināsimies pa tālruni, lai apstiprinātu pasūtījumu, piegādi un apmaksu.', err:'Neizdevās nosūtīt pasūtījumu. Lūdzu, mēģiniet vēlreiz vai zvaniet:', agree:'Esmu iepazinies ar', terms:'lietošanas noteikumiem', and:'un', privacy:'privātuma politiku', less:'Mazāk', more:'Vairāk', inWrap:'dāvanu iesaiņojumā', orderTitle:'Pasūtījums DŌGU', itemsWord:'Preces'},
   cookie:{text:'Mēs izmantojam tikai nepieciešamo pārlūka krātuvi (grozs, valoda, jūsu izvēle). Ārējais saturs (piem., YouTube video) ielādējas tikai ar jūsu piekrišanu.', essential:'Tikai nepieciešamās', all:'Pieņemt visas', more:'Uzzināt vairāk', settings:'Sīkdatņu iestatījumi'},
   legal:{terms:'Lietošanas noteikumi', delivery:'Piegāde un apmaksa', returns:'Atgriešana un garantija', privacy:'Privātuma politika', cookies:'Sīkdatņu politika'},
   seller:'Pārdevējs'
@@ -47,14 +47,14 @@ const UI = {
   giftWrap:'Gift wrapping', giftBtn:'Choose a gift',
   shEyebrow:'Showroom', shTitle:'A tool has to be held',
   shText:'Visit our office in Riga: we will show every piece in action and let you try it on a sample.',
-  shBtn:'Book a visit',
+  shBtn:'Call',
   info:{address:'Address', hours:'Opening hours', phone:'Phone', delivery:'Delivery'},
-  deliveryShort:'Omniva, DPD, Venipak, Smartposti, Latvijas Pasts, courier — under the chosen carrier\'s terms',
+  deliveryShort:'Parcel locker anywhere in Latvia — €3.99. Office pickup — free',
   footer:'DŌGU — Japanese tools for professionals. Riga.',
   back:'← All products', vat:'incl. VAT', wrapCheck:'Gift wrap it', add:'Add to cart', addMore:'In cart · add another', seeShowroom:'See it in the showroom',
   pickupFree:'Showroom pickup — free', whyTitle:'Why a pro will love it', storyTitle:'Where it comes from', related:'Goes well with', added:'Added to cart',
   since:'since', jp:'Japan', no:'No.',
-  cart:{title:'Cart', empty:'Your cart is empty.', goods:'Products', wrap:'Gift wrapping', delivery:'Delivery', tbd:'carrier rate — we will confirm', total:'Total', name:'Name', phone:'Phone', method:'Delivery method', locker:'Parcel locker / point or address', lockerPh:'e.g. Omniva, Purvciema iela 1', send:'Send order', note:'After you order, we will contact you to confirm availability, delivery price and time. Payment by invoice or on collection.', pickupOpt:'Pickup at the office — free', deliveryOpt:'Delivery', carrier:'Carrier', address:'Delivery address or parcel locker', addressPh:'street, house, city or locker name', comment:'Comment (optional)', sending:'Sending…', okTitle:'Thank you! Order received', okText:'We will call you shortly to confirm the order, delivery and payment.', err:'The order could not be sent. Please try again or call:', agree:'I have read the', terms:'terms of use', and:'and', privacy:'privacy policy', less:'Less', more:'More', inWrap:'gift wrapped', orderTitle:'DŌGU order', itemsWord:'Items'},
+  cart:{title:'Cart', empty:'Your cart is empty.', goods:'Products', wrap:'Gift wrapping', delivery:'Delivery', tbd:'carrier rate — we will confirm', total:'Total', name:'Name', phone:'Phone', method:'Delivery method', locker:'Parcel locker / point or address', lockerPh:'e.g. Omniva, Purvciema iela 1', send:'Place order', note:'After you order, we will contact you to confirm availability and delivery. Payment by invoice or on collection.', pickupOpt:'Pickup at the office — free', deliveryOpt:'Delivery to a parcel locker', lockerNote:'Anywhere in Latvia. We will choose the locker nearest to your address.', carrier:'Carrier', address:'Delivery address', addressPh:'Address', comment:'Comment (optional)', sending:'Sending…', okTitle:'Thank you! Order received', okText:'We will call you shortly to confirm the order, delivery and payment.', err:'The order could not be sent. Please try again or call:', agree:'I have read the', terms:'terms of use', and:'and', privacy:'privacy policy', less:'Less', more:'More', inWrap:'gift wrapped', orderTitle:'DŌGU order', itemsWord:'Items'},
   cookie:{text:'We only use necessary browser storage (cart, language, your choice). External content (e.g. YouTube videos) loads only with your consent.', essential:'Necessary only', all:'Accept all', more:'Learn more', settings:'Cookie settings'},
   legal:{terms:'Terms of use', delivery:'Delivery and payment', returns:'Returns and warranty', privacy:'Privacy policy', cookies:'Cookie policy'},
   seller:'Seller'
@@ -75,14 +75,14 @@ const UI = {
   giftWrap:'Подарочная упаковка', giftBtn:'Выбрать подарок',
   shEyebrow:'Шоурум', shTitle:'Инструмент надо подержать в руке',
   shText:'Приходи в наш офис в Риге: покажем каждую вещь в деле, дадим попробовать на образце.',
-  shBtn:'Договориться о визите',
+  shBtn:'Позвонить',
   info:{address:'Адрес', hours:'Часы работы', phone:'Телефон', delivery:'Доставка'},
-  deliveryShort:'Omniva, DPD, Venipak, Smartposti, Latvijas Pasts, курьер — по условиям выбранного перевозчика',
+  deliveryShort:'Пакомат по всей Латвии — €3,99. Самовывоз из офиса — бесплатно',
   footer:'DŌGU — японский инструмент для мастеров. Рига.',
   back:'← Вся коллекция', vat:'с НДС', wrapCheck:'Упаковать в подарок', add:'В корзину', addMore:'В корзине · добавить ещё', seeShowroom:'Посмотреть в шоуруме',
   pickupFree:'Самовывоз из шоурума — бесплатно', whyTitle:'Почему мастер будет рад', storyTitle:'Откуда он', related:'В пару к нему', added:'Добавлено в корзину',
   since:'с', jp:'Япония', no:'№',
-  cart:{title:'Корзина', empty:'Корзина пуста.', goods:'Товары', wrap:'Подарочная упаковка', delivery:'Доставка', tbd:'по тарифу — подтвердим', total:'Итого', name:'Имя', phone:'Телефон', method:'Способ получения', locker:'Пакомат / пункт или адрес', lockerPh:'напр., Omniva, Purvciema iela 1', send:'Отправить заказ', note:'После заказа мы свяжемся с вами, чтобы подтвердить наличие, стоимость и срок доставки. Оплата по счёту или при получении.', pickupOpt:'Самовывоз из офиса — бесплатно', deliveryOpt:'Доставка', carrier:'Перевозчик', address:'Адрес доставки или пакомат', addressPh:'улица, дом, город или название пакомата', comment:'Комментарий (необязательно)', sending:'Отправляем…', okTitle:'Спасибо! Заказ принят', okText:'Скоро позвоним, чтобы подтвердить заказ, доставку и оплату.', err:'Не удалось отправить заказ. Попробуйте ещё раз или позвоните:', agree:'Я ознакомлен(а) с', terms:'правилами', and:'и', privacy:'политикой конфиденциальности', less:'Меньше', more:'Больше', inWrap:'в подарочной упаковке', orderTitle:'Заказ DŌGU', itemsWord:'Товары'},
+  cart:{title:'Корзина', empty:'Корзина пуста.', goods:'Товары', wrap:'Подарочная упаковка', delivery:'Доставка', tbd:'по тарифу — подтвердим', total:'Итого', name:'Имя', phone:'Телефон', method:'Способ получения', locker:'Пакомат / пункт или адрес', lockerPh:'напр., Omniva, Purvciema iela 1', send:'Оформить заказ', note:'После заказа мы свяжемся с вами, чтобы подтвердить наличие и доставку. Оплата по счёту или при получении.', pickupOpt:'Самовывоз из офиса — бесплатно', deliveryOpt:'Доставка в пакомат', lockerNote:'По всей Латвии. Ближайший к вашему адресу пакомат выберем сами.', carrier:'Перевозчик', address:'Адрес доставки', addressPh:'Адрес', comment:'Комментарий (необязательно)', sending:'Отправляем…', okTitle:'Спасибо! Заказ принят', okText:'Скоро позвоним, чтобы подтвердить заказ, доставку и оплату.', err:'Не удалось отправить заказ. Попробуйте ещё раз или позвоните:', agree:'Я ознакомлен(а) с', terms:'правилами', and:'и', privacy:'политикой конфиденциальности', less:'Меньше', more:'Больше', inWrap:'в подарочной упаковке', orderTitle:'Заказ DŌGU', itemsWord:'Товары'},
   cookie:{text:'Мы используем только необходимое хранилище браузера (корзина, язык, ваш выбор). Внешний контент (например, видео YouTube) загружается только с вашего согласия.', essential:'Только необходимые', all:'Принять все', more:'Подробнее', settings:'Настройки куки'},
   legal:{terms:'Правила пользования', delivery:'Доставка и оплата', returns:'Возврат и гарантия', privacy:'Политика конфиденциальности', cookies:'Политика куки'},
   seller:'Продавец'
@@ -96,7 +96,7 @@ const LEGAL = {
 <h2>1. Pasūtījums un līgums</h2>
 <p>Pasūtījumu var veikt vietnē (pasūtījums tiek nosūtīts mums caur vietnes formu), pa tālruni vai salonā. Līgums tiek noslēgts brīdī, kad apstiprinām pasūtījumu, preču pieejamību, cenu un piegādes izmaksas.</p>
 <h2>2. Cenas</h2>
-<p>Visas cenas norādītas euro, ieskaitot PVN. Piegādes izmaksas nav iekļautas preču cenā, un tās paziņojam pirms pasūtījuma apstiprināšanas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
+<p>Visas cenas norādītas euro, ieskaitot PVN. Piegāde uz pakomātu — €3,99, saņemšana birojā — bez maksas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
 <h2>3. Apmaksa</h2>
 <p>Apmaksa ar bankas pārskaitījumu pēc rēķina pirms nosūtīšanas vai saņemot preci salonā [precizēt: skaidrā naudā / ar karti].</p>
 <p>Bankas rekvizīti: {company}, IBAN {iban}, BIC {bic} ({bank}). Maksājuma mērķī norādiet rēķina numuru.</p>
@@ -108,17 +108,17 @@ const LEGAL = {
 <p>Pretenzijas izskatām 15 dienu laikā. Ja vienošanos panākt neizdodas, patērētājs var vērsties Patērētāju tiesību aizsardzības centrā (www.ptac.gov.lv). Piemērojami Latvijas Republikas normatīvie akti.</p>`,
   delivery: `<h1>Piegāde un apmaksa</h1>
 <h2>Saņemšanas veidi</h2>
-<ul><li>Saņemšana salonā — {address}, bez maksas, pēc saskaņošanas.</li>
-<li>Omniva pakomāti</li><li>DPD Pickup pakomāti un punkti</li><li>Venipak pakomāti</li><li>Smartposti pakomāti</li><li>Latvijas Pasts — pakomāti un nodaļas</li><li>Kurjers Rīgā un Pierīgā</li></ul>
-<h2>Termiņi un cena</h2>
-<p>Pēc pasūtījuma apstiprināšanas un apmaksas preci nododam pārvadātājam parasti 1–2 darba dienu laikā [precizēt]. Piegādes termiņš, cena un nosacījumi — saskaņā ar izvēlētā pārvadātāja tarifiem un noteikumiem. Precīzu piegādes cenu paziņojam, apstiprinot pasūtījumu.</p>
+<ul><li><b>Saņemšana birojā</b> — {address}, bez maksas, pēc saskaņošanas.</li>
+<li><b>Piegāde uz pakomātu visā Latvijā — €3,99.</b> Pasūtījumā norādiet adresi — tuvāko pakomātu izvēlēsimies paši un nosūtīsim jums saņemšanas kodu.</li></ul>
+<h2>Termiņi</h2>
+<p>Pēc pasūtījuma apstiprināšanas un apmaksas sūtījumu nododam pārvadātājam parasti 1–2 darba dienu laikā [precizēt]. Piegādes termiņš — saskaņā ar pārvadātāja noteikumiem.</p>
 <h2>Saņemot sūtījumu</h2>
-<p>Lūdzam pārbaudīt iepakojumu. Ja tas ir bojāts, to atzīmējiet pārvadātāja dokumentos un sazinieties ar mums.</p>
+<p>Lūdzam pārbaudīt iepakojumu. Ja tas ir bojāts, sazinieties ar mums.</p>
 <h2>Apmaksa</h2>
-<p>Ar bankas pārskaitījumu pēc rēķina vai saņemot salonā. Cenas ietver PVN.</p>`,
+<p>Ar bankas pārskaitījumu pēc rēķina vai saņemot birojā. Cenas ietver PVN.</p>`,
   returns: `<h1>Atgriešana un garantija</h1>
 <h2>14 dienu atteikuma tiesības</h2>
-<p>Ja pasūtījums veikts attālināti (vietnē, pa tālruni vai WhatsApp), patērētājam ir tiesības atteikties no līguma 14 dienu laikā no preces saņemšanas dienas, nenorādot iemeslu, saskaņā ar Patērētāju tiesību aizsardzības likumu un MK noteikumiem Nr. 255 „Noteikumi par distances līgumu".</p>
+<p>Ja pasūtījums veikts attālināti (vietnē vai pa tālruni), patērētājam ir tiesības atteikties no līguma 14 dienu laikā no preces saņemšanas dienas, nenorādot iemeslu, saskaņā ar Patērētāju tiesību aizsardzības likumu un MK noteikumiem Nr. 255 „Noteikumi par distances līgumu".</p>
 <ul><li>Par atteikumu paziņojiet uz {email} vai pa tālruni {phone}.</li>
 <li>Preci atgrieziet 14 dienu laikā pēc paziņojuma, nelietotu, ar visām sastāvdaļām un oriģinālajā iepakojumā.</li>
 <li>Tiešās preces atpakaļ nosūtīšanas izmaksas sedz pircējs.</li>
@@ -136,7 +136,7 @@ const LEGAL = {
 <ul><li>Pasūtījuma pieņemšana, izpilde un piegāde — līguma izpilde (VDAR 6. panta 1. punkta b) apakšpunkts).</li>
 <li>Grāmatvedība un nodokļi — juridisks pienākums (c) apakšpunkts).</li></ul>
 <h2>Saņēmēji</h2>
-<p>Izvēlētais pārvadātājs (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts vai kurjers), grāmatvedības pakalpojumu sniedzējs, vietnes mitināšanas pakalpojumu sniedzējs. Pasūtījums no vietnes tiek nosūtīts uz mūsu e-pastu un mūsu darba kanālu Telegram (Telegram Messenger Inc.); Telegram serveri var atrasties ārpus ES.</p>
+<p>Pārvadātājs, kas piegādā sūtījumu uz pakomātu, grāmatvedības pakalpojumu sniedzējs, vietnes mitināšanas pakalpojumu sniedzējs. Pasūtījums no vietnes tiek nosūtīts uz mūsu e-pastu un mūsu darba kanālu Telegram (Telegram Messenger Inc.); Telegram serveri var atrasties ārpus ES.</p>
 <h2>Glabāšana</h2>
 <p>Pasūtījuma datus glabājam tik ilgi, cik nepieciešams līguma izpildei un pretenziju izskatīšanai, bet grāmatvedības dokumentus — normatīvajos aktos noteikto termiņu.</p>
 <h2>Jūsu tiesības</h2>
@@ -156,7 +156,7 @@ const LEGAL = {
 <h2>1. Order and contract</h2>
 <p>You can order on the website (the order is sent to us via the website form), by phone or in the showroom. The contract is concluded when we confirm the order, availability, price and delivery cost.</p>
 <h2>2. Prices</h2>
-<p>All prices are in euro and include VAT. Delivery costs are not included in product prices and are communicated before the order is confirmed. Gift wrapping — €{giftWrap} per item.</p>
+<p>All prices are in euro and include VAT. Delivery to a parcel locker — €3.99, office pickup — free. Gift wrapping — €{giftWrap} per item.</p>
 <h2>3. Payment</h2>
 <p>By bank transfer against an invoice before dispatch, or on collection in the showroom [to confirm: cash / card].</p>
 <p>Bank details: {company}, IBAN {iban}, BIC {bic} ({bank}). Please quote the invoice number as the payment reference.</p>
@@ -168,17 +168,17 @@ const LEGAL = {
 <p>We review complaints within 15 days. If no agreement is reached, consumers may contact the Consumer Rights Protection Centre of Latvia (www.ptac.gov.lv). The laws of the Republic of Latvia apply.</p>`,
   delivery: `<h1>Delivery and payment</h1>
 <h2>Delivery methods</h2>
-<ul><li>Showroom pickup — {address}, free, by arrangement.</li>
-<li>Omniva parcel lockers</li><li>DPD Pickup lockers and points</li><li>Venipak parcel lockers</li><li>Smartposti parcel lockers</li><li>Latvijas Pasts — lockers and post offices</li><li>Courier in Riga and surroundings</li></ul>
-<h2>Times and cost</h2>
-<p>After the order is confirmed and paid, we usually hand it to the carrier within 1–2 working days [to confirm]. Delivery time, cost and conditions follow the chosen carrier's rates and terms. We confirm the exact delivery price when confirming your order.</p>
+<ul><li><b>Office pickup</b> — {address}, free, by arrangement.</li>
+<li><b>Delivery to a parcel locker anywhere in Latvia — €3.99.</b> Give us your address in the order — we choose the nearest locker and send you the pickup code.</li></ul>
+<h2>Times</h2>
+<p>After the order is confirmed and paid, we usually hand it to the carrier within 1–2 working days [to confirm]. Delivery time follows the carrier's terms.</p>
 <h2>On receipt</h2>
-<p>Please check the packaging. If it is damaged, note it in the carrier's documents and contact us.</p>
+<p>Please check the packaging. If it is damaged, contact us.</p>
 <h2>Payment</h2>
-<p>By bank transfer against an invoice, or on collection in the showroom. Prices include VAT.</p>`,
+<p>By bank transfer against an invoice, or on collection at the office. Prices include VAT.</p>`,
   returns: `<h1>Returns and warranty</h1>
 <h2>14-day right of withdrawal</h2>
-<p>If you ordered remotely (website, phone or WhatsApp), as a consumer you may withdraw from the contract within 14 days of receiving the goods without giving a reason, under the Latvian Consumer Rights Protection Law and Cabinet Regulation No. 255 on distance contracts.</p>
+<p>If you ordered remotely (website or phone), as a consumer you may withdraw from the contract within 14 days of receiving the goods without giving a reason, under the Latvian Consumer Rights Protection Law and Cabinet Regulation No. 255 on distance contracts.</p>
 <ul><li>Notify us at {email} or by phone {phone}.</li>
 <li>Return the item within 14 days of your notice, unused, complete and in its original packaging.</li>
 <li>The direct cost of returning the goods is borne by the buyer.</li>
@@ -196,7 +196,7 @@ const LEGAL = {
 <ul><li>Fulfilling and delivering your order — performance of a contract (GDPR Art. 6(1)(b)).</li>
 <li>Accounting and tax — legal obligation (Art. 6(1)(c)).</li></ul>
 <h2>Recipients</h2>
-<p>The chosen carrier (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts or courier), our accounting service provider and website hosting provider. Orders from the website are sent to our e-mail and to our internal Telegram channel (Telegram Messenger Inc.); Telegram servers may be located outside the EU.</p>
+<p>The carrier delivering to the parcel locker, our accounting service provider and website hosting provider. Orders from the website are sent to our e-mail and to our internal Telegram channel (Telegram Messenger Inc.); Telegram servers may be located outside the EU.</p>
 <h2>Retention</h2>
 <p>Order data is kept as long as needed to fulfil the contract and handle claims; accounting records for the period required by law.</p>
 <h2>Your rights</h2>
@@ -216,7 +216,7 @@ const LEGAL = {
 <h2>1. Заказ и договор</h2>
 <p>Заказать можно на сайте (заказ отправляется нам через форму на сайте), по телефону или в шоуруме. Договор заключается, когда мы подтверждаем заказ, наличие, цену и стоимость доставки.</p>
 <h2>2. Цены</h2>
-<p>Все цены указаны в евро с НДС. Стоимость доставки не входит в цену товара и сообщается до подтверждения заказа. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
+<p>Все цены указаны в евро с НДС. Доставка в пакомат — €3,99, самовывоз из офиса — бесплатно. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
 <h2>3. Оплата</h2>
 <p>Банковским переводом по счёту до отправки или при получении в шоуруме [уточнить: наличные / карта].</p>
 <p>Банковские реквизиты: {company}, IBAN {iban}, BIC {bic} ({bank}). В назначении платежа укажите номер счёта.</p>
@@ -228,17 +228,17 @@ const LEGAL = {
 <p>Претензии рассматриваем в течение 15 дней. Если договориться не удалось, потребитель может обратиться в Центр защиты прав потребителей Латвии (www.ptac.gov.lv). Применяется законодательство Латвийской Республики.</p>`,
   delivery: `<h1>Доставка и оплата</h1>
 <h2>Способы получения</h2>
-<ul><li>Самовывоз из шоурума — {address}, бесплатно, по договорённости.</li>
-<li>Пакоматы Omniva</li><li>Пакоматы и пункты DPD Pickup</li><li>Пакоматы Venipak</li><li>Пакоматы Smartposti</li><li>Latvijas Pasts — пакоматы и отделения</li><li>Курьер по Риге и окрестностям</li></ul>
-<h2>Сроки и стоимость</h2>
-<p>После подтверждения и оплаты заказа мы обычно передаём его перевозчику в течение 1–2 рабочих дней [уточнить]. Срок, стоимость и условия доставки — по тарифам и правилам выбранного перевозчика. Точную стоимость доставки сообщаем при подтверждении заказа.</p>
+<ul><li><b>Самовывоз из офиса</b> — {address}, бесплатно, по договорённости.</li>
+<li><b>Доставка в пакомат по всей Латвии — €3,99.</b> Укажите в заказе адрес — ближайший пакомат мы выберем сами и пришлём вам код получения.</li></ul>
+<h2>Сроки</h2>
+<p>После подтверждения и оплаты заказа мы обычно передаём его перевозчику в течение 1–2 рабочих дней [уточнить]. Срок доставки — по правилам перевозчика.</p>
 <h2>При получении</h2>
-<p>Пожалуйста, проверьте упаковку. Если она повреждена, отметьте это в документах перевозчика и свяжитесь с нами.</p>
+<p>Пожалуйста, проверьте упаковку. Если она повреждена, свяжитесь с нами.</p>
 <h2>Оплата</h2>
-<p>Банковским переводом по счёту или при получении в шоуруме. Цены включают НДС.</p>`,
+<p>Банковским переводом по счёту или при получении в офисе. Цены включают НДС.</p>`,
   returns: `<h1>Возврат и гарантия</h1>
 <h2>14 дней на отказ от покупки</h2>
-<p>Если заказ сделан дистанционно (на сайте, по телефону или в WhatsApp), потребитель вправе отказаться от договора в течение 14 дней со дня получения товара без объяснения причин — согласно Закону о защите прав потребителей Латвии и правилам Кабинета министров № 255 о дистанционных договорах.</p>
+<p>Если заказ сделан дистанционно (на сайте или по телефону), потребитель вправе отказаться от договора в течение 14 дней со дня получения товара без объяснения причин — согласно Закону о защите прав потребителей Латвии и правилам Кабинета министров № 255 о дистанционных договорах.</p>
 <ul><li>Сообщите об отказе на {email} или по телефону {phone}.</li>
 <li>Верните товар в течение 14 дней после уведомления — неиспользованным, в комплекте и в оригинальной упаковке.</li>
 <li>Прямые расходы на обратную отправку несёт покупатель.</li>
@@ -256,7 +256,7 @@ const LEGAL = {
 <ul><li>Выполнение и доставка заказа — исполнение договора (ст. 6(1)(b) GDPR).</li>
 <li>Бухгалтерия и налоги — юридическая обязанность (ст. 6(1)(c)).</li></ul>
 <h2>Получатели</h2>
-<p>Выбранный перевозчик (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts или курьер), бухгалтерская служба, хостинг сайта. Заказ с сайта отправляется на нашу почту и в наш рабочий канал Telegram (Telegram Messenger Inc.); серверы Telegram могут находиться за пределами ЕС.</p>
+<p>Перевозчик, доставляющий заказ в пакомат, бухгалтерская служба, хостинг сайта. Заказ с сайта отправляется на нашу почту и в наш рабочий канал Telegram (Telegram Messenger Inc.); серверы Telegram могут находиться за пределами ЕС.</p>
 <h2>Срок хранения</h2>
 <p>Данные заказа храним столько, сколько нужно для исполнения договора и рассмотрения претензий, бухгалтерские документы — в течение срока, установленного законом.</p>
 <h2>Ваши права</h2>

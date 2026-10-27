@@ -44,7 +44,6 @@ $clean = static function ($v, int $max): string {
 $name     = $clean($in['name'] ?? '', 80);
 $phone    = $clean($in['phone'] ?? '', 40);
 $method   = $clean($in['method'] ?? '', 20);      // pickup | delivery
-$carrier  = $clean($in['carrier'] ?? '', 60);
 $address  = $clean($in['address'] ?? '', 200);
 $comment  = $clean($in['comment'] ?? '', 500);
 $lang     = $clean($in['lang'] ?? 'lv', 2);
@@ -82,14 +81,16 @@ foreach ($items as $it) {
   if ($it['gift']) $l .= ' + подарочная упаковка ' . $eur($it['wrap'] * $it['q']);
   $lines[] = $l;
 }
+const LOCKER_PRICE = 3.99;
+$deliveryPrice = $method === 'pickup' ? 0.0 : LOCKER_PRICE;
 $deliveryText = $method === 'pickup'
   ? 'Самовывоз из офиса (Purvciema iela 18)'
-  : 'Доставка: ' . ($carrier !== '' ? $carrier : '—') . "\nАдрес / пакомат: " . $address;
+  : 'Доставка в пакомат ' . $eur(LOCKER_PRICE) . " — выбрать ближайший к адресу\nАдрес: " . $address;
 
 $text = "🛒 Новый заказ {$orderId}\n"
       . $now->format('d.m.Y H:i') . " · язык сайта: " . strtoupper($lang) . "\n\n"
       . implode("\n", $lines) . "\n\n"
-      . 'Итого по товарам: ' . $eur($sum) . ($method === 'delivery' ? ' + доставка по тарифу' : '') . "\n\n"
+      . 'Товары: ' . $eur($sum) . ($deliveryPrice > 0 ? "\nДоставка: " . $eur($deliveryPrice) : '') . "\nИТОГО: " . $eur($sum + $deliveryPrice) . "\n\n"
       . "Имя: {$name}\nТелефон: {$phone}\n{$deliveryText}"
       . ($comment !== '' ? "\nКомментарий: {$comment}" : '')
       . "\n\n(цены — по данным сайта, проверить перед подтверждением)";

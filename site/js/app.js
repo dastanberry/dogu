@@ -123,7 +123,7 @@
 
 <div class="wrap"><section class="split" id="showroom">
 <div><p class="eyebrow">${u.shEyebrow}</p><h2>${u.shTitle}</h2><p>${u.shText}</p>
-<a class="btn ghost" href="https://wa.me/${SHOP.whatsapp}" target="_blank" rel="noopener">${u.shBtn}</a></div>
+<a class="btn ghost" href="tel:${tel}">${u.shBtn} · ${esc(SHOP.phone)}</a></div>
 <dl class="info"><dt>${u.info.address}</dt><dd>${esc(SHOP.address)}</dd><dt>${u.info.hours}</dt><dd>${esc(t(SHOP.hours))}</dd>
 <dt>${u.info.phone}</dt><dd><a href="tel:${tel}">${esc(SHOP.phone)}</a></dd><dt>${u.info.delivery}</dt><dd>${esc(u.deliveryShort)}</dd></dl>
 </section></div>`;
@@ -209,8 +209,7 @@ ${rel.length ? `<section style="padding-bottom:88px"><h2 style="font-size:28px;m
     const form = $('#orderForm');
     const keep = form ? { name: form.name.value, phone: form.phone.value, address: form.address ? form.address.value : '', comment: form.comment.value, agree: form.agree.checked } : {};
     const isPickup = deliveryId === 'pickup';
-    const carriers = SHOP.delivery.filter(d => d.id !== 'pickup');
-    if (!isPickup && !carriers.some(d => d.id === deliveryId)) deliveryId = carriers[0].id;
+    const dSel = SHOP.delivery.find(x => x.id === deliveryId) || SHOP.delivery[0];
     $('#drawer').innerHTML = `
 <header><h2 id="cartTitle">${c.title}</h2><button class="icon-btn" type="button" id="cartClose" aria-label="×">×</button></header>
 <div class="scroll">
@@ -218,15 +217,14 @@ ${rel.length ? `<section style="padding-bottom:88px"><h2 style="font-size:28px;m
 ${cart.length ? `<form id="orderForm" novalidate>
 <fieldset class="ways"><legend class="f">${c.method}</legend>
 <label class="check"><input type="radio" name="way" value="pickup"${isPickup ? ' checked' : ''}> <span>${c.pickupOpt}<br><span class="note">${esc(SHOP.address)} · ${esc(t(SHOP.hours))}</span></span></label>
-<label class="check"><input type="radio" name="way" value="delivery"${!isPickup ? ' checked' : ''}> <span>${c.deliveryOpt}</span></label>
+<label class="check"><input type="radio" name="way" value="locker"${!isPickup ? ' checked' : ''}> <span>${c.deliveryOpt} — ${eur(SHOP.delivery[1].price)}<br><span class="note">${c.lockerNote}</span></span></label>
 </fieldset>
-${!isPickup ? `<label class="f">${c.carrier}<select name="carrier" id="carrierSel">${carriers.map(d => `<option value="${d.id}"${d.id === deliveryId ? ' selected' : ''}>${esc(t(d.name))}</option>`).join('')}</select></label>
-<label class="f">${c.address}<input type="text" name="address" placeholder="${esc(c.addressPh)}" autocomplete="street-address" required></label>` : ''}
+${!isPickup ? `<label class="f">${c.address}<input type="text" name="address" placeholder="${esc(c.addressPh)}" autocomplete="street-address" required></label>` : ''}
 <label class="f">${c.name}<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
 <label class="f">${c.phone}<input type="tel" name="phone" autocomplete="tel" maxlength="40" placeholder="+371" required></label>
 <label class="f">${c.comment}<input type="text" name="comment" maxlength="500"></label>
 <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-<div class="sum"><span>${c.goods}</span><span>${eur(T_.goods)}</span>${T_.wrap ? `<span>${c.wrap}</span><span>${eur(T_.wrap)}</span>` : ''}<span>${c.delivery}</span><span>${isPickup ? '€0' : c.tbd}</span><span class="total">${c.total}</span><span class="total">${eur(T_.goods + T_.wrap)}${isPickup ? '' : ' +'}</span></div>
+<div class="sum"><span>${c.goods}</span><span>${eur(T_.goods)}</span>${T_.wrap ? `<span>${c.wrap}</span><span>${eur(T_.wrap)}</span>` : ''}<span>${c.delivery}</span><span>${eur(dSel.price)}</span><span class="total">${c.total}</span><span class="total">${eur(T_.goods + T_.wrap + dSel.price)}</span></div>
 <label class="check" style="font-size:13px"><input type="checkbox" name="agree" required> <span>${c.agree} <a href="#/info/terms">${c.terms}</a> ${c.and} <a href="#/info/privacy">${c.privacy}</a>.</span></label>
 <p class="note" id="orderErr" role="alert" style="margin:0;color:var(--sun-btn)"></p>
 <button class="btn red" type="submit" id="orderSend">${c.send}</button>
@@ -239,8 +237,7 @@ ${!isPickup ? `<label class="f">${c.carrier}<select name="carrier" id="carrierSe
     const f = $('#orderForm');
     if (f) {
       if (keep.name !== undefined) { f.name.value = keep.name; f.phone.value = keep.phone; if (f.address) f.address.value = keep.address; f.comment.value = keep.comment; f.agree.checked = keep.agree; }
-      $$('input[name="way"]', f).forEach(r => r.addEventListener('change', () => { deliveryId = r.value === 'pickup' ? 'pickup' : (carriers[0].id); renderCart(); const x = $(`input[name="way"][value="${r.value}"]`); if (x) x.focus(); }));
-      const cs = $('#carrierSel'); if (cs) cs.addEventListener('change', e => { deliveryId = e.target.value; });
+      $$('input[name="way"]', f).forEach(r => r.addEventListener('change', () => { deliveryId = r.value; renderCart(); const x = $(`input[name="way"][value="${r.value}"]`); if (x) x.focus(); }));
       f.addEventListener('submit', sendOrder);
     }
   }
@@ -254,7 +251,7 @@ ${!isPickup ? `<label class="f">${c.carrier}<select name="carrier" id="carrierSe
     const d = SHOP.delivery.find(x => x.id === deliveryId);
     const payload = {
       name: f.name.value, phone: f.phone.value, comment: f.comment.value, website: f.website.value,
-      method: isPickup ? 'pickup' : 'delivery', carrier: !isPickup && d ? d.name.ru : '', address: f.address ? f.address.value : '',
+      method: isPickup ? 'pickup' : 'delivery', address: f.address ? f.address.value : '',
       agree: f.agree.checked, lang, elapsed: Date.now() - pageLoaded,
       items: cart.map(l => { const p = PRODUCTS.find(x => x.id === l.id); return { id: p.id, name: p.name.ru + (p.model && p.model !== '—' ? ' · ' + p.model : ''), q: l.q, price: p.price, gift: !!l.gift, wrap: l.gift ? SHOP.giftWrap : 0 }; })
     };

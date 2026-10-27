@@ -14,21 +14,15 @@ const SHOP = {
   bank: 'Revolut Bank UAB',
   email: '[e-pasts]',
   phone: '+371 26858252',
-  whatsapp: '37126858252',
   address: 'Purvciema iela 18, Rīga',
   hours: T('P.–Pk. 9:00–18:00, S. 10:00–15:00, Sv. slēgts',
            'Mon–Fri 9:00–18:00, Sat 10:00–15:00, Sun closed',
            'Пн–Пт 9:00–18:00, Сб 10:00–15:00, Вс выходной'),
   giftWrap: 7,                             // € за подарочную упаковку одной позиции
-  // Доставка: price = null → «по тарифу перевозчика, подтвердим при заказе»
+  // Доставка: самовывоз или пакомат (ближайший к адресу клиента выбираем сами)
   delivery: [
-    { id: 'pickup',  price: 0,    locker: false, name: T('Saņemšana salonā — Purvciema iela 18', 'Pickup at the showroom — Purvciema iela 18', 'Самовывоз из шоурума — Purvciema iela 18') },
-    { id: 'omniva',  price: null, locker: true,  name: T('Omniva pakomāts', 'Omniva parcel locker', 'Пакомат Omniva') },
-    { id: 'dpd',     price: null, locker: true,  name: T('DPD Pickup pakomāts / punkts', 'DPD Pickup locker / point', 'DPD Pickup — пакомат / пункт') },
-    { id: 'venipak', price: null, locker: true,  name: T('Venipak pakomāts', 'Venipak parcel locker', 'Пакомат Venipak') },
-    { id: 'smartposti', price: null, locker: true, name: T('Smartposti pakomāts', 'Smartposti parcel locker', 'Пакомат Smartposti') },
-    { id: 'lpasts',  price: null, locker: true,  name: T('Latvijas Pasts — pakomāts vai nodaļa', 'Latvijas Pasts — locker or post office', 'Latvijas Pasts — пакомат или отделение') },
-    { id: 'courier', price: null, locker: false, name: T('Kurjers (Rīga un Pierīga)', 'Courier (Riga and surroundings)', 'Курьер (Рига и окрестности)') }
+    { id: 'pickup', price: 0,    name: T('Saņemšana birojā — bez maksas', 'Pickup at the office — free', 'Самовывоз из офиса — бесплатно') },
+    { id: 'locker', price: 3.99, name: T('Piegāde uz pakomātu', 'Delivery to a parcel locker', 'Доставка в пакомат') }
   ]
 };
 
