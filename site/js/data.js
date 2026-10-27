@@ -361,7 +361,28 @@ const PRODUCTS = [
             'SEF is Tajima\'s quick-release belt system: every tool in its own slot, rearranged in a second.',
             'SEF — быстросъёмная поясная система Tajima: каждый инструмент в своём гнезде, переставляется за секунду.'),
    gallery: [ ['img/15-a.jpg', T('Iepakojumā ar nazi','In the package with a knife','В упаковке с ножом')],
-              ['img/15-b.jpg', T('Izmērs: 23 cm','Size: 23 cm','Размер: 23 см')] ] }
+              ['img/15-b.jpg', T('Izmērs: 23 cm','Size: 23 cm','Размер: 23 см')] ] },
+
+ { id:'16', cat:'all', brand:'OLFA', tag:'jp', model:'PC-L', price:19, art:'knife', c:[184,150,40], img:'img/16.png',
+   name: T('Plastmasas griezējs OLFA PC-L', 'OLFA PC-L plastic cutter', 'Резак для пластика OLFA PC-L'),
+   hook: T('Akrils un PVC bez zāģa: iegriez, nolauz — mala tīra.', 'Acrylic and PVC without a saw: score, snap — clean edge.', 'Акрил и ПВХ без пилы: надрезал, отломил — кромка чистая.'),
+   desc: T('Āķveida asmens negriež, bet izkasa rievu cietā plastmasā. Vairākas reizes pavelc gar lineālu, līdz rieva sasniedz vismaz pusi biezuma, un nolauz plāksni pa malu. Bez putekļiem, bez skaidām un bez kontaktligzdas. Ar asmens muguru nogludini malu. Asmenim ir divas griezējšķautnes, bet rokturī glabājas vēl divi rezerves asmeņi. Liels rokturis spēcīgam satvērienam, ritenītis nofiksē asmeni, lai tas nekustētos.',
+            'The hook blade does not slice — it scrapes a groove into hard plastic. Draw it along a ruler a few times until the groove reaches at least half the thickness, then snap the sheet over an edge. No dust, no chips, no socket needed. Smooth the edge with the back of the blade. Each blade has two cutting edges, and two spare blades are stored in the handle. A large handle for a strong grip, and a lock wheel keeps the blade from wobbling.',
+            'Крючковое лезвие не режет, а выбирает канавку в твёрдом пластике. Несколько раз провёл вдоль линейки, пока канавка не дойдёт хотя бы до половины толщины, — и отломил лист по краю. Без пыли, без стружки и без розетки. Обратной стороной лезвия зачистил кромку. У лезвия две режущие кромки, а в рукоятке хранятся ещё два запасных. Большая рукоять для сильного хвата, колёсико фиксирует лезвие, чтобы не болталось.'),
+   why: [ [T('Bez zāģa','No saw','Без пилы'), T('Akrils un PVC tiek sadalīti ar iegriezumu un nolaušanu.','Acrylic and PVC are split by scoring and snapping.','Акрил и ПВХ делятся надрезом и отломом.')],
+          [T('Tīra mala','Clean edge','Чистая кромка'), T('Nav skaidu, mala nogludināma ar asmens muguru.','No chips; smooth the edge with the back of the blade.','Без стружки, кромка зачищается обухом лезвия.')],
+          [T('Rezerve rokturī','Spares in the handle','Запас в рукоятке'), T('Divi rezerves asmeņi vienmēr līdzi.','Two spare blades always with you.','Два запасных лезвия всегда с собой.')] ],
+   specs: [ [T('Modelis','Model','Модель'), T('OLFA PC-L','OLFA PC-L','OLFA PC-L')],
+            [T('Materiāli','Materials','Материалы'), T('akrils, PVC un citas cietās plastmasas plāksnes, lamināti','acrylic, PVC and other hard plastic sheets, laminates','акрил, ПВХ и другие твёрдые пластиковые листы, ламинаты')],
+            [T('Asmens','Blade','Лезвие'), T('āķveida PBL, divas griezējšķautnes','PBL hook blade, two cutting edges','крючковое PBL, две режущие кромки')],
+            [T('Komplektā','Included','В комплекте'), T('2 rezerves asmeņi PBL (rokturī)','2 spare PBL blades (in the handle)','2 запасных лезвия PBL (в рукоятке)')],
+            [T('Rezerves asmeņi','Spare blades','Запасные лезвия'), T('OLFA PBL-2','OLFA PBL-2','OLFA PBL-2')],
+            [T('Fiksācija','Lock','Фиксация'), T('ritenītis, asmens ievelkams','lock wheel, retractable blade','колёсико, лезвие убирается')],
+            [T('Zīmols','Brand','Бренд'), T('OLFA, Japāna','OLFA, Japan','OLFA, Япония')] ],
+   story: T('OLFA 1956. gadā izgudroja nolaužamo asmeni. PC-L ir viņu atbilde uz otru jautājumu: ko darīt ar to, ko nazis nepaņem?',
+            'OLFA invented the snap-off blade in 1956. PC-L is their answer to another question: what about the things a knife cannot cut?',
+            'OLFA в 1956 году изобрела отламывающееся лезвие. PC-L — их ответ на другой вопрос: что делать с тем, что нож не берёт?'),
+   gallery: [] }
 ];
 
 const VIDEOS = [ // src — ссылка на YouTube embed (https://www.youtube-nocookie.com/embed/ID); пусто — заглушка
