@@ -1,5 +1,5 @@
 /* ===== Тексты интерфейса и юридические страницы: lv (основной), en, ru =====
-   В юр. текстах {company}, {regNo}, {vatNo}, {legalAddress}, {email}, {phone}, {address}
+   В юр. текстах {company}, {regNo}, {legalAddress}, {email}, {phone}, {address}
    подставляются из SHOP (js/data.js). */
 
 const UI = {
@@ -23,7 +23,7 @@ const UI = {
   info:{address:'Adrese', hours:'Darba laiks', phone:'Tālrunis', delivery:'Piegāde'},
   deliveryShort:'Pakomāts visā Latvijā — €3,99. Saņemšana birojā — bez maksas',
   footer:'DŌGU — japāņu instrumenti meistariem. Rīga.',
-  back:'← Visa kolekcija', vat:'ar PVN', wrapCheck:'Iesaiņot dāvanai', add:'Ielikt grozā', addMore:'Grozā · pievienot vēl', seeShowroom:'Apskatīt salonā',
+  back:'← Visa kolekcija', vat:'', wrapCheck:'Iesaiņot dāvanai', add:'Ielikt grozā', addMore:'Grozā · pievienot vēl', seeShowroom:'Apskatīt salonā',
   pickupFree:'Saņemšana salonā — bez maksas', whyTitle:'Kāpēc meistars priecāsies', storyTitle:'No kurienes', related:'Der kopā ar', added:'Pievienots grozam',
   since:'kopš', jp:'Japāna', no:'Nr.',
   cart:{title:'Grozs', empty:'Grozs ir tukšs.', goods:'Preces', wrap:'Dāvanu iesaiņojums', delivery:'Piegāde', tbd:'pēc tarifa — apstiprināsim', total:'Kopā', name:'Vārds', phone:'Tālrunis', method:'Saņemšanas veids', locker:'Pakomāts / punkts vai adrese', lockerPh:'piem., Omniva, Purvciema iela 1', send:'Noformēt pasūtījumu', note:'Pēc pasūtījuma sazināsimies, lai apstiprinātu pieejamību un piegādi. Apmaksa pēc rēķina vai saņemot.', pickupOpt:'Saņemšana birojā — bez maksas', deliveryOpt:'Piegāde uz pakomātu', lockerNote:'Visā Latvijā.', carrier:'Pārvadātājs', address:'Piegādes adrese', addressPh:'Adrese', comment:'Komentārs (nav obligāts)', sending:'Sūta…', okTitle:'Paldies! Pasūtījums saņemts', okText:'Drīzumā sazināsimies pa tālruni, lai apstiprinātu pasūtījumu, piegādi un apmaksu.', err:'Neizdevās nosūtīt pasūtījumu. Lūdzu, mēģiniet vēlreiz vai zvaniet:', agree:'Esmu iepazinies ar', terms:'lietošanas noteikumiem', and:'un', privacy:'privātuma politiku', less:'Mazāk', more:'Vairāk', inWrap:'dāvanu iesaiņojumā', orderTitle:'Pasūtījums DŌGU', itemsWord:'Preces'},
@@ -51,7 +51,7 @@ const UI = {
   info:{address:'Address', hours:'Opening hours', phone:'Phone', delivery:'Delivery'},
   deliveryShort:'Parcel locker anywhere in Latvia — €3.99. Office pickup — free',
   footer:'DŌGU — Japanese tools for professionals. Riga.',
-  back:'← All products', vat:'incl. VAT', wrapCheck:'Gift wrap it', add:'Add to cart', addMore:'In cart · add another', seeShowroom:'See it in the showroom',
+  back:'← All products', vat:'', wrapCheck:'Gift wrap it', add:'Add to cart', addMore:'In cart · add another', seeShowroom:'See it in the showroom',
   pickupFree:'Showroom pickup — free', whyTitle:'Why a pro will love it', storyTitle:'Where it comes from', related:'Goes well with', added:'Added to cart',
   since:'since', jp:'Japan', no:'No.',
   cart:{title:'Cart', empty:'Your cart is empty.', goods:'Products', wrap:'Gift wrapping', delivery:'Delivery', tbd:'carrier rate — we will confirm', total:'Total', name:'Name', phone:'Phone', method:'Delivery method', locker:'Parcel locker / point or address', lockerPh:'e.g. Omniva, Purvciema iela 1', send:'Place order', note:'After you order, we will contact you to confirm availability and delivery. Payment by invoice or on collection.', pickupOpt:'Pickup at the office — free', deliveryOpt:'Delivery to a parcel locker', lockerNote:'Anywhere in Latvia.', carrier:'Carrier', address:'Delivery address', addressPh:'Address', comment:'Comment (optional)', sending:'Sending…', okTitle:'Thank you! Order received', okText:'We will call you shortly to confirm the order, delivery and payment.', err:'The order could not be sent. Please try again or call:', agree:'I have read the', terms:'terms of use', and:'and', privacy:'privacy policy', less:'Less', more:'More', inWrap:'gift wrapped', orderTitle:'DŌGU order', itemsWord:'Items'},
@@ -79,7 +79,7 @@ const UI = {
   info:{address:'Адрес', hours:'Часы работы', phone:'Телефон', delivery:'Доставка'},
   deliveryShort:'Пакомат по всей Латвии — €3,99. Самовывоз из офиса — бесплатно',
   footer:'DŌGU — японский инструмент для мастеров. Рига.',
-  back:'← Вся коллекция', vat:'с НДС', wrapCheck:'Упаковать в подарок', add:'В корзину', addMore:'В корзине · добавить ещё', seeShowroom:'Посмотреть в шоуруме',
+  back:'← Вся коллекция', vat:'', wrapCheck:'Упаковать в подарок', add:'В корзину', addMore:'В корзине · добавить ещё', seeShowroom:'Посмотреть в шоуруме',
   pickupFree:'Самовывоз из шоурума — бесплатно', whyTitle:'Почему мастер будет рад', storyTitle:'Откуда он', related:'В пару к нему', added:'Добавлено в корзину',
   since:'с', jp:'Япония', no:'№',
   cart:{title:'Корзина', empty:'Корзина пуста.', goods:'Товары', wrap:'Подарочная упаковка', delivery:'Доставка', tbd:'по тарифу — подтвердим', total:'Итого', name:'Имя', phone:'Телефон', method:'Способ получения', locker:'Пакомат / пункт или адрес', lockerPh:'напр., Omniva, Purvciema iela 1', send:'Оформить заказ', note:'После заказа мы свяжемся с вами, чтобы подтвердить наличие и доставку. Оплата по счёту или при получении.', pickupOpt:'Самовывоз из офиса — бесплатно', deliveryOpt:'Доставка в пакомат', lockerNote:'По всей Латвии.', carrier:'Перевозчик', address:'Адрес доставки', addressPh:'Адрес', comment:'Комментарий (необязательно)', sending:'Отправляем…', okTitle:'Спасибо! Заказ принят', okText:'Скоро позвоним, чтобы подтвердить заказ, доставку и оплату.', err:'Не удалось отправить заказ. Попробуйте ещё раз или позвоните:', agree:'Я ознакомлен(а) с', terms:'правилами', and:'и', privacy:'политикой конфиденциальности', less:'Меньше', more:'Больше', inWrap:'в подарочной упаковке', orderTitle:'Заказ DŌGU', itemsWord:'Товары'},
@@ -92,13 +92,13 @@ const UI = {
 const LEGAL = {
  lv: {
   terms: `<h1>Lietošanas un pirkšanas noteikumi</h1>
-<p>Šie noteikumi attiecas uz pirkumiem DŌGU interneta veikalā un salonā. Pārdevējs: <b>{company}</b>, reģ. Nr. {regNo}, PVN Nr. {vatNo}, juridiskā adrese: {legalAddress}. Salons: {address}. Tālrunis: {phone}, e-pasts: {email}.</p>
+<p>Šie noteikumi attiecas uz pirkumiem DŌGU interneta veikalā un salonā. Pārdevējs: <b>{company}</b>, reģ. Nr. {regNo}, juridiskā adrese: {legalAddress}. Salons: {address}. Tālrunis: {phone}, e-pasts: {email}.</p>
 <h2>1. Pasūtījums un līgums</h2>
 <p>Pasūtījumu var veikt vietnē (pasūtījums tiek nosūtīts mums caur vietnes formu), pa tālruni vai salonā. Līgums tiek noslēgts brīdī, kad apstiprinām pasūtījumu, preču pieejamību, cenu un piegādes izmaksas.</p>
 <h2>2. Cenas</h2>
-<p>Visas cenas norādītas euro, ieskaitot PVN. Piegāde uz pakomātu — €3,99, saņemšana birojā — bez maksas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
+<p>Visas cenas norādītas euro. Piegāde uz pakomātu — €3,99, saņemšana birojā — bez maksas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
 <h2>3. Apmaksa</h2>
-<p>Apmaksa ar bankas pārskaitījumu pēc rēķina pirms nosūtīšanas vai saņemot preci salonā [precizēt: skaidrā naudā / ar karti].</p>
+<p>Apmaksa ar bankas pārskaitījumu pēc rēķina pirms nosūtīšanas vai saņemot preci salonā.</p>
 <p>Bankas rekvizīti: {company}, IBAN {iban}, BIC {bic} ({bank}). Maksājuma mērķī norādiet rēķina numuru.</p>
 <h2>4. Piegāde</h2>
 <p>Piegāde notiek ar izvēlēto pārvadātāju saskaņā ar tā noteikumiem. Sīkāk — sadaļā „Piegāde un apmaksa".</p>
@@ -111,11 +111,11 @@ const LEGAL = {
 <ul><li><b>Saņemšana birojā</b> — {address}, bez maksas, pēc saskaņošanas.</li>
 <li><b>Piegāde uz pakomātu visā Latvijā — €3,99.</b> Pasūtījumā norādiet adresi — pēc nosūtīšanas saņemsiet pakomāta saņemšanas kodu.</li></ul>
 <h2>Termiņi</h2>
-<p>Pēc pasūtījuma apstiprināšanas un apmaksas sūtījumu nododam pārvadātājam parasti 1–2 darba dienu laikā [precizēt]. Piegādes termiņš — saskaņā ar pārvadātāja noteikumiem.</p>
+<p>Pēc pasūtījuma apstiprināšanas un apmaksas sūtījumu nododam pārvadātājam parasti 1–2 darba dienu laikā. Piegādes termiņš — saskaņā ar pārvadātāja noteikumiem.</p>
 <h2>Saņemot sūtījumu</h2>
 <p>Lūdzam pārbaudīt iepakojumu. Ja tas ir bojāts, sazinieties ar mums.</p>
 <h2>Apmaksa</h2>
-<p>Ar bankas pārskaitījumu pēc rēķina vai saņemot birojā. Cenas ietver PVN.</p>`,
+<p>Ar bankas pārskaitījumu pēc rēķina vai saņemot birojā.</p>`,
   returns: `<h1>Atgriešana un garantija</h1>
 <h2>14 dienu atteikuma tiesības</h2>
 <p>Ja pasūtījums veikts attālināti (vietnē vai pa tālruni), patērētājam ir tiesības atteikties no līguma 14 dienu laikā no preces saņemšanas dienas, nenorādot iemeslu, saskaņā ar Patērētāju tiesību aizsardzības likumu un MK noteikumiem Nr. 255 „Noteikumi par distances līgumu".</p>
@@ -152,13 +152,13 @@ const LEGAL = {
  },
  en: {
   terms: `<h1>Terms of use and sale</h1>
-<p>These terms apply to purchases in the DŌGU online store and showroom. Seller: <b>{company}</b>, reg. no. {regNo}, VAT no. {vatNo}, registered address: {legalAddress}. Showroom: {address}. Phone: {phone}, e-mail: {email}.</p>
+<p>These terms apply to purchases in the DŌGU online store and showroom. Seller: <b>{company}</b>, reg. no. {regNo}, registered address: {legalAddress}. Showroom: {address}. Phone: {phone}, e-mail: {email}.</p>
 <h2>1. Order and contract</h2>
 <p>You can order on the website (the order is sent to us via the website form), by phone or in the showroom. The contract is concluded when we confirm the order, availability, price and delivery cost.</p>
 <h2>2. Prices</h2>
-<p>All prices are in euro and include VAT. Delivery to a parcel locker — €3.99, office pickup — free. Gift wrapping — €{giftWrap} per item.</p>
+<p>All prices are in euro. Delivery to a parcel locker — €3.99, office pickup — free. Gift wrapping — €{giftWrap} per item.</p>
 <h2>3. Payment</h2>
-<p>By bank transfer against an invoice before dispatch, or on collection in the showroom [to confirm: cash / card].</p>
+<p>By bank transfer against an invoice before dispatch, or on collection in the showroom.</p>
 <p>Bank details: {company}, IBAN {iban}, BIC {bic} ({bank}). Please quote the invoice number as the payment reference.</p>
 <h2>4. Delivery</h2>
 <p>Delivery is made by the chosen carrier under its terms. See "Delivery and payment".</p>
@@ -171,11 +171,11 @@ const LEGAL = {
 <ul><li><b>Office pickup</b> — {address}, free, by arrangement.</li>
 <li><b>Delivery to a parcel locker anywhere in Latvia — €3.99.</b> Give your address in the order — after dispatch you will receive the locker pickup code.</li></ul>
 <h2>Times</h2>
-<p>After the order is confirmed and paid, we usually hand it to the carrier within 1–2 working days [to confirm]. Delivery time follows the carrier's terms.</p>
+<p>After the order is confirmed and paid, we usually hand it to the carrier within 1–2 working days. Delivery time follows the carrier's terms.</p>
 <h2>On receipt</h2>
 <p>Please check the packaging. If it is damaged, contact us.</p>
 <h2>Payment</h2>
-<p>By bank transfer against an invoice, or on collection at the office. Prices include VAT.</p>`,
+<p>By bank transfer against an invoice, or on collection at the office.</p>`,
   returns: `<h1>Returns and warranty</h1>
 <h2>14-day right of withdrawal</h2>
 <p>If you ordered remotely (website or phone), as a consumer you may withdraw from the contract within 14 days of receiving the goods without giving a reason, under the Latvian Consumer Rights Protection Law and Cabinet Regulation No. 255 on distance contracts.</p>
@@ -212,13 +212,13 @@ const LEGAL = {
  },
  ru: {
   terms: `<h1>Правила пользования и покупки</h1>
-<p>Эти правила действуют для покупок в интернет-магазине и шоуруме DŌGU. Продавец: <b>{company}</b>, рег. № {regNo}, № плательщика НДС {vatNo}, юридический адрес: {legalAddress}. Шоурум: {address}. Телефон: {phone}, e-mail: {email}.</p>
+<p>Эти правила действуют для покупок в интернет-магазине и шоуруме DŌGU. Продавец: <b>{company}</b>, рег. № {regNo}, юридический адрес: {legalAddress}. Шоурум: {address}. Телефон: {phone}, e-mail: {email}.</p>
 <h2>1. Заказ и договор</h2>
 <p>Заказать можно на сайте (заказ отправляется нам через форму на сайте), по телефону или в шоуруме. Договор заключается, когда мы подтверждаем заказ, наличие, цену и стоимость доставки.</p>
 <h2>2. Цены</h2>
-<p>Все цены указаны в евро с НДС. Доставка в пакомат — €3,99, самовывоз из офиса — бесплатно. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
+<p>Все цены указаны в евро. Доставка в пакомат — €3,99, самовывоз из офиса — бесплатно. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
 <h2>3. Оплата</h2>
-<p>Банковским переводом по счёту до отправки или при получении в шоуруме [уточнить: наличные / карта].</p>
+<p>Банковским переводом по счёту до отправки или при получении в шоуруме.</p>
 <p>Банковские реквизиты: {company}, IBAN {iban}, BIC {bic} ({bank}). В назначении платежа укажите номер счёта.</p>
 <h2>4. Доставка</h2>
 <p>Доставка выполняется выбранным перевозчиком по его условиям. Подробнее — в разделе «Доставка и оплата».</p>
@@ -231,11 +231,11 @@ const LEGAL = {
 <ul><li><b>Самовывоз из офиса</b> — {address}, бесплатно, по договорённости.</li>
 <li><b>Доставка в пакомат по всей Латвии — €3,99.</b> Укажите в заказе адрес — после отправки вы получите код для получения в пакомате.</li></ul>
 <h2>Сроки</h2>
-<p>После подтверждения и оплаты заказа мы обычно передаём его перевозчику в течение 1–2 рабочих дней [уточнить]. Срок доставки — по правилам перевозчика.</p>
+<p>После подтверждения и оплаты заказа мы обычно передаём его перевозчику в течение 1–2 рабочих дней. Срок доставки — по правилам перевозчика.</p>
 <h2>При получении</h2>
 <p>Пожалуйста, проверьте упаковку. Если она повреждена, свяжитесь с нами.</p>
 <h2>Оплата</h2>
-<p>Банковским переводом по счёту или при получении в офисе. Цены включают НДС.</p>`,
+<p>Банковским переводом по счёту или при получении в офисе.</p>`,
   returns: `<h1>Возврат и гарантия</h1>
 <h2>14 дней на отказ от покупки</h2>
 <p>Если заказ сделан дистанционно (на сайте или по телефону), потребитель вправе отказаться от договора в течение 14 дней со дня получения товара без объяснения причин — согласно Закону о защите прав потребителей Латвии и правилам Кабинета министров № 255 о дистанционных договорах.</p>
