@@ -1,147 +1,166 @@
 <!doctype html>
-<html lang="ru">
+<html lang="lv">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>DŌGU — японский инструмент для мастеров · Рига</title>
-<meta name="description" content="Японские инженерные решения для мастеров. Vessel, Engineer, Tajima. Шоурум в Риге.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<title>DŌGU — japāņu instrumenti meistariem · Rīga</title>
+<meta name="description" content="Japāņu inženiertehniskie risinājumi meistariem. Vessel, Engineer, Tajima. Salons Rīgā.">
 <style>
-:root{--bg:#F4F1EA;--paper:#FBFAF6;--sand:#EDE8DD;--line:#E0DACE;--ink:#1B1B1A;--ink2:#3D3A34;--muted:#5B574F;--sun:#C8381F;--sun-btn:#B8321F;--sun-soft:#E26A55;--dark-text:#C8C2B5}
+:root{--bg:#F4F1EA;--paper:#FBFAF6;--sand:#EDE8DD;--line:#E0DACE;--ink:#1B1B1A;--ink2:#3D3A34;--muted:#5B574F;--sun:#C8381F;--sun-btn:#B8321F;--sun-soft:#E26A55;--dark-text:#C8C2B5;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
 a:hover{color:var(--sun-btn)}
-h1,h2,h3,.disp{font-family:Manrope,Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
+h1,h2,h3{font-family:var(--sans);font-weight:650;letter-spacing:-.02em;line-height:1.08;margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.eyebrow{margin:0 0 10px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);font:500 15px Inter,sans-serif;text-decoration:none;cursor:pointer}
+.eyebrow{margin:0 0 10px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);font:500 15px var(--sans);text-decoration:none;cursor:pointer;text-align:center}
 .btn:hover{color:var(--bg);opacity:.9}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.red{background:var(--sun-btn);border-color:var(--sun-btn);color:#fff}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
 .btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
 
-/* header */
-header.top{position:sticky;top:0;z-index:20;background:rgba(244,241,234,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(244,241,234,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo span{font-family:Manrope,sans-serif;font-weight:700;font-size:22px;letter-spacing:.2em}
-nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:22px;font-size:14px}
+.logo span{font-weight:700;font-size:21px;letter-spacing:.2em}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:20px;font-size:14px}
 nav.main a{text-decoration:none}
-.cart-btn{border:1px solid var(--ink);background:transparent;min-height:44px;padding:0 16px;font:600 14px Inter,sans-serif;cursor:pointer;color:var(--ink)}
+.langs{display:flex;gap:2px}
+.langs button{min-width:40px;min-height:40px;border:1px solid transparent;background:transparent;font:600 13px var(--sans);color:var(--muted);cursor:pointer}
+.langs button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.cart-btn{border:1px solid var(--ink);background:transparent;min-height:44px;padding:0 16px;font:600 14px var(--sans);cursor:pointer;color:var(--ink)}
 
-/* hero */
 .hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:56px 0 88px}
 .hero .txt{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:24px}
-.hero h1{font-size:clamp(38px,5.4vw,60px);font-weight:600}
-.hero p.lead{margin:0;font-size:18px;color:var(--ink2);max-width:500px}
+.hero h1{font-size:clamp(36px,5.2vw,58px)}
+.hero p.lead{margin:0;font-size:18px;color:var(--ink2);max-width:520px}
 .hero .art-wrap{flex:1 1 420px;min-width:0}
 .row{display:flex;flex-wrap:wrap;gap:12px}
 
-/* dark band */
 .band{position:relative;background:var(--ink);color:var(--bg);overflow:hidden}
 .band .sun-set{position:absolute;right:-40px;bottom:-120px;width:420px;height:210px}
 .band .grid{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;padding:64px 0 72px}
 .band .item{border-top:1px solid var(--muted);padding-top:18px;display:flex;flex-direction:column;gap:10px}
-.band .num{font-family:Manrope,sans-serif;font-size:14px;color:var(--sun-soft)}
-.band h3{font-size:22px;font-weight:600}
+.band .num{font-size:14px;color:var(--sun-soft)}
+.band h3{font-size:22px}
 .band p{margin:0;font-size:15px;color:var(--dark-text)}
 
-/* collection */
 section.block{padding:88px 0 40px}
 .head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:36px}
-.head-row h2{font-size:clamp(32px,4vw,48px);font-weight:600}
+.head-row h2{font-size:clamp(30px,4vw,46px)}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
-.filters button{min-height:44px;padding:0 18px;border:1px solid #B9B2A4;background:transparent;color:var(--ink);font:500 14px Inter,sans-serif;cursor:pointer}
+.filters button{min-height:44px;padding:0 18px;border:1px solid #B9B2A4;background:transparent;color:var(--ink);font:500 14px var(--sans);cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
 .card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:transform .2s ease}
 .card:hover{transform:translateY(-3px);color:var(--ink)}
 .card .body{padding:20px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
 .card .brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.card .name{font-family:Manrope,sans-serif;font-size:21px;font-weight:600;line-height:1.2}
+.card .name{font-size:20px;font-weight:650;line-height:1.2;letter-spacing:-.01em}
 .card .hook{font-size:14px;line-height:1.5;color:#48443D;flex-grow:1}
-.card .price{font-size:18px;font-weight:600;margin-top:6px}
+.card .price{font-size:18px;font-weight:650;margin-top:6px}
 
-/* art: photo over line drawing */
 .art{position:relative;background:var(--sand);aspect-ratio:1/1;overflow:hidden}
 .art svg{position:absolute;inset:0;width:100%;height:100%}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8%}
 .art.has-photo path{display:none}
 .art.photo img{padding:0;object-fit:cover}
+.art .no{position:absolute;top:14px;left:16px;font-size:12px;letter-spacing:.16em;color:var(--muted);z-index:2}
 .thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
 .thumbs button{padding:0;border:1px solid var(--line);background:var(--sand);cursor:pointer;aspect-ratio:1/1;overflow:hidden}
 .thumbs button[aria-pressed="true"]{border:2px solid var(--ink)}
 .thumbs button .art{aspect-ratio:auto;height:100%}
 .thumbs img.t{width:100%;height:100%;object-fit:cover;display:block}
-.art .no{position:absolute;top:14px;left:16px;font-size:12px;letter-spacing:.16em;color:var(--muted);z-index:2}
 
-/* video */
 .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
 .video{position:relative;aspect-ratio:9/16;max-height:520px;background:var(--ink);overflow:hidden}
 .video svg{position:absolute;inset:0;width:100%;height:100%}
 .video p{position:absolute;left:20px;right:20px;bottom:20px;margin:0;color:var(--bg);font-size:15px;line-height:1.4}
-.video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video .consent{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;color:var(--dark-text);font-size:14px}
 
-/* gift + showroom */
 .gift{background:var(--sand);overflow:hidden}
 .split{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:88px 0}
 .split>*{flex:1 1 380px;min-width:0}
-.split h2{font-size:clamp(30px,3.6vw,44px);font-weight:600;margin-bottom:18px}
+.split h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px}
 .split p{margin:0 0 16px;font-size:17px;color:var(--ink2)}
-dl.info{margin:0;display:grid;grid-template-columns:120px 1fr;gap:12px 20px;align-content:start}
+dl.info{margin:0;display:grid;grid-template-columns:130px 1fr;gap:12px 20px;align-content:start}
 dl.info dt{color:var(--muted)}
 dl.info dd{margin:0}
-footer{border-top:1px solid #D8D2C5;font-size:13px;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:28px;padding-bottom:28px}
 
-/* product page */
-.pp{display:flex;flex-wrap:wrap;gap:56px;padding:40px 0 80px}
+footer{border-top:1px solid #D8D2C5;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-top:28px;padding-bottom:28px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer nav a,footer button.linklike{color:var(--muted);text-decoration:none}
+footer nav a:hover,footer button.linklike:hover{color:var(--ink)}
+button.linklike{background:none;border:0;padding:0;font:inherit;cursor:pointer}
+
+.pp{display:flex;flex-wrap:wrap;gap:56px;padding:32px 0 80px}
 .pp .media{flex:1 1 480px;min-width:0}
 .pp .info{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
-.pp h1{font-size:clamp(38px,5vw,56px);font-weight:600}
-.pp .promise{font-family:Manrope,sans-serif;font-size:23px;font-weight:500;line-height:1.3;color:var(--ink2);margin:0}
+.pp h1{font-size:clamp(32px,4.4vw,50px)}
+.pp .promise{font-size:22px;font-weight:500;line-height:1.3;color:var(--ink2);margin:0}
 .pp .desc{margin:0;color:var(--ink2)}
 .pp .price-row{display:flex;align-items:baseline;gap:14px;padding-top:16px;border-top:1px solid #D8D2C5}
-.pp .price-row b{font-family:Manrope,sans-serif;font-size:36px}
+.pp .price-row b{font-size:36px;font-weight:650}
 .pp .price-row span{font-size:14px;color:var(--muted)}
 .pp ul{margin:0;padding:0;list-style:none;color:var(--ink2);font-size:15px}
-.gift-toggle{display:flex;align-items:center;gap:10px;font-size:15px;cursor:pointer}
-.gift-toggle input{width:20px;height:20px;accent-color:var(--sun-btn)}
-.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:14px;margin-top:24px}
+.check{display:flex;align-items:flex-start;gap:10px;font-size:15px;cursor:pointer}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--sun-btn);flex:none}
+.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:14px;margin-top:20px}
 .specs{display:flex;flex-wrap:wrap;gap:48px;padding:72px 0}
 .specs>*{flex:1 1 360px;min-width:0}
-.specs h2{font-size:30px;font-weight:600;margin-bottom:18px}
-.why .grid{padding:64px 0 88px}
+.specs h2{font-size:30px;margin-bottom:18px}
+.why .grid{padding:36px 0 88px}
 .note{font-size:13px;color:var(--muted)}
 
-/* cart drawer */
+.legal{max-width:760px;padding:40px 0 96px}
+.legal h1{font-size:clamp(30px,4vw,42px);margin-bottom:24px}
+.legal h2{font-size:20px;margin:32px 0 10px}
+.legal p,.legal li{color:var(--ink2)}
+.legal ul{padding-left:20px}
+.legal-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.legal-nav a{padding:8px 14px;border:1px solid #B9B2A4;text-decoration:none;font-size:14px}
+.legal-nav a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
 .overlay{position:fixed;inset:0;background:rgba(27,27,26,.45);z-index:40;display:none}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:50;display:none;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
-.open .overlay{display:block}
-.open .drawer{display:flex}
-.drawer header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--bg);z-index:50;display:none;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+body.open .overlay{display:block}
+body.open .drawer{display:flex}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line)}
 .drawer header h2{font-size:22px}
-.icon-btn{min-width:44px;min-height:44px;border:none;background:transparent;font-size:22px;cursor:pointer;color:var(--ink)}
-.drawer .items{flex:1;overflow:auto;padding:12px 24px}
+.icon-btn{min-width:44px;min-height:44px;border:none;background:transparent;font-size:24px;cursor:pointer;color:var(--ink)}
+.drawer .scroll{flex:1;overflow:auto}
+.drawer .items{padding:8px 24px}
 .ci{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
 .ci .art{width:64px;flex:none}
 .ci .meta{flex:1;min-width:0}
-.ci .meta b{display:block;font-family:Manrope,sans-serif;font-size:15px}
+.ci .meta b{display:block;font-size:15px;line-height:1.3}
 .qty{display:flex;align-items:center;gap:4px}
 .qty button{width:36px;height:36px;border:1px solid #B9B2A4;background:transparent;cursor:pointer;font-size:16px;color:var(--ink)}
-.drawer form{padding:20px 24px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
-.drawer label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
-.drawer input[type=text],.drawer input[type=tel],.drawer select{min-height:44px;border:1px solid #B9B2A4;background:var(--paper);padding:0 12px;font:16px Inter,sans-serif;color:var(--ink)}
-.total{display:flex;justify-content:space-between;font-family:Manrope,sans-serif;font-size:20px;font-weight:600}
+.drawer form{padding:16px 24px 24px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.drawer label.f{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.drawer input[type=text],.drawer input[type=tel],.drawer select{min-height:44px;border:1px solid #B9B2A4;background:var(--paper);padding:0 12px;font:16px var(--sans);color:var(--ink);width:100%}
+.sum{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:14px;color:var(--ink2)}
+.sum .total{font-size:20px;font-weight:650;color:var(--ink)}
 .empty{padding:40px 0;color:var(--muted)}
+
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:70;max-width:720px;margin:0 auto;background:var(--ink);color:var(--bg);padding:20px;display:none;flex-wrap:wrap;gap:14px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.cookie.show{display:flex}
+.cookie p{margin:0;flex:1 1 320px;font-size:14px;line-height:1.5;color:#E9E4DA}
+.cookie a{color:#fff}
+.cookie .row{flex:0 0 auto}
+.cookie .btn{min-height:44px;padding:0 18px;font-size:14px}
+.cookie .btn.ghost{color:var(--bg);border-color:#8A857B}
+
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 20px;font-size:14px;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
 .toast.show{opacity:1}
-@media (max-width:640px){nav.main .hide-sm{display:none}.hero{padding-top:32px}}
+@media (max-width:760px){nav.main .hide-sm{display:none}.hero{padding-top:32px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
 </head>
@@ -149,325 +168,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 
 <header class="top">
 <div class="wrap">
-<a class="logo" href="#/" aria-label="DŌGU — на главную">
+<a class="logo" href="#/" aria-label="DŌGU">
 <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#C8381F"/></svg>
 <span>DŌGU</span>
 </a>
-<nav class="main" aria-label="Основное меню">
-<a class="hide-sm" href="#/collection">Коллекция</a>
-<a class="hide-sm" href="#/video">Обзоры</a>
-<a class="hide-sm" href="#/gift">Подарок мастеру</a>
-<a class="hide-sm" href="#/showroom">Шоурум</a>
-<button class="cart-btn" type="button" id="cartOpen" aria-haspopup="dialog">Корзина · <span id="cartCount">0</span></button>
-</nav>
+<nav class="main" aria-label="Main" id="mainNav"></nav>
 </div>
 </header>
 
 <main id="app"></main>
 
-<footer>
-<div class="wrap">
-<span>DŌGU — японский инструмент для мастеров. Рига.</span>
-<span>+371 27437777</span>
-</div>
-</footer>
+<footer><div class="wrap" id="footer"></div></footer>
 
-<div id="cartRoot">
 <div class="overlay" id="overlay"></div>
-<aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
-<header><h2 id="cartTitle">Корзина</h2><button class="icon-btn" type="button" id="cartClose" aria-label="Закрыть корзину">×</button></header>
-<div class="items" id="cartItems"></div>
-<form id="orderForm">
-<div class="total"><span>Итого</span><span id="cartTotal">€0</span></div>
-<label>Имя<input type="text" name="name" autocomplete="name" required></label>
-<label>Телефон<input type="tel" name="phone" autocomplete="tel" required></label>
-<label>Получение
-<select name="delivery">
-<option>Самовывоз из шоурума в Риге</option>
-<option>Omniva — пакомат</option>
-<option>Курьер по Риге</option>
-</select></label>
-<button class="btn red" type="submit">Отправить заказ в WhatsApp</button>
-<p class="note" style="margin:0">Заказ откроется в WhatsApp — мы подтвердим наличие и время. Оплата при получении или переводом.</p>
-</form>
-</aside>
-</div>
+<aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" id="drawer"></aside>
+<div class="cookie" id="cookie" role="region" aria-label="Cookies"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script>
-/* ===== НАСТРОЙКИ — меняй здесь ===== */
-const SHOP = {
-  whatsapp: '37127437777',            // номер для заказов без "+"
-  phone: '+371 27437777',
-  address: '[АДРЕС ОФИСА], Рига',
-  hours: '[ДНИ И ЧАСЫ]',
-  delivery: 'Omniva / курьер по Риге — [СРОК И ЦЕНА]',
-  giftWrap: '[ЦЕНА или бесплатно до Рождества]'
-};
-const SUN = '#C8381F';
-
-/* Линейные рисунки (показываются, пока нет фото в папке img/) */
-const D = {
-  pliers:'M114 110 C108 80 112 55 118 40 M126 110 C132 80 128 55 122 40 M118 40 L122 40 M114 112 C100 150 88 180 80 214 M126 112 C140 150 152 180 160 214 M114 110 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 M116 50 L124 50 M115 60 L125 60 M114 70 L126 70',
-  small:'M116 110 C112 86 114 66 118 54 M124 110 C128 86 126 66 122 54 M118 54 L122 54 M116 112 C106 146 98 172 92 204 M124 112 C134 146 142 172 148 204 M116 110 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0',
-  ratchet:'M100 132 Q100 120 112 120 L128 120 Q140 120 140 132 L140 204 Q140 216 128 216 L112 216 Q100 216 100 204 Z M112 136 L112 200 M120 136 L120 200 M128 136 L128 200 M108 120 L108 110 L132 110 L132 120 M116 110 L116 48 L120 36 L124 48 L124 110',
-  bits:'M74 204 L74 104 L78 92 L82 104 L82 204 Z M102 204 L102 84 L106 72 L110 84 L110 204 Z M130 204 L130 96 L134 84 L138 96 L138 204 Z M158 204 L158 112 L162 100 L166 112 L166 204 Z M60 204 L180 204',
-  stubby:'M92 150 Q92 134 108 134 L132 134 Q148 134 148 150 L148 196 Q148 212 132 212 L108 212 Q92 212 92 196 Z M108 150 L108 196 M120 150 L120 196 M132 150 L132 196 M116 134 L116 100 L120 90 L124 100 L124 134',
-  scissors:'M80 182 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 M124 182 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 M108 166 L140 40 M132 166 L100 40 M116 118 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0',
-  knife:'M40 140 L158 140 Q168 140 168 150 L168 158 Q168 168 158 168 L40 168 Q30 168 30 158 L30 150 Q30 140 40 140 Z M168 146 L212 146 L198 162 L168 162 M80 140 L80 132 L98 132 L98 140 M50 154 L140 154',
-  chalk:'M78 150 a42 42 0 1 0 84 0 a42 42 0 1 0 -84 0 M112 150 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0 M120 150 L148 118 L158 126 M162 150 L216 150 M210 142 L218 158',
-  plane:'M44 172 L196 172 L184 150 L56 150 Z M72 150 Q72 108 120 108 Q168 108 168 150 M96 150 L96 128 M144 150 L144 128 M60 172 L60 180 M180 172 L180 180',
-  carabiner:'M94 62 Q94 40 116 40 L128 40 Q150 40 150 62 L150 180 Q150 206 124 206 L120 206 Q94 206 94 180 Z M106 72 L106 156 M150 120 L176 120 L176 150',
-  holder:'M88 64 L152 64 L152 196 L88 196 Z M88 104 L152 104 M104 196 L104 220 M136 196 L136 220 M104 84 L136 84',
-  box:'M70 112 L170 112 L170 204 L70 204 Z M62 92 L178 92 L178 112 L62 112 Z M120 92 L120 204 M120 92 Q96 56 84 76 Q82 92 120 92 Q144 56 156 76 Q158 92 120 92'
-};
-
-/* ===== ТОВАРЫ — меняй цены и тексты здесь. Фото: img/01.jpg, img/02.jpg … ===== */
-const PRODUCTS = [
- {id:'01',cat:'Электрику',brand:'Engineer · Япония',name:'Nejisaurus GT',model:'PZ-58',price:29,art:'pliers',c:[160,92,58],
-  hook:'Откручивает винт, который уже не откручивается.',
-  desc:'Сорванный шлиц, ржавчина, «лизнутая» головка — обычно это конец. Губки с вертикальной насечкой вгрызаются в головку снаружи и проворачивают её. В Японии их продали миллионами — у нас их не найти на полке.',
-  why:[['Спасает объект','Не надо высверливать и искать экстрактор.'],['Низкие головки тоже','Берёт винты φ3–9,5 мм, включая плоские головки.'],['Ещё и обычные клещи','Держит, гнёт, тянет — каждый день.']],
-  specs:[['Модель','PZ-58'],['Винты','φ3–9,5 мм'],['Длина / вес','[проверить по коробке]']],
-  story:'Engineer — японская инструментальная компания, основана в 1948 году. Первые Nejisaurus вышли в 2002-м; губки, похожие на челюсть ящера, дали им имя.',
-  img:'img/01.png', gallery:[['img/01-a.jpg','В работе: ржавчина, мебель, электроника'],['img/01-b.jpg','В работе: авто, мото, улица'],['img/01-c.jpg','Как устроены губки']]},
- {id:'02',cat:'Электрику',brand:'Engineer · Япония',name:'Nejisaurus M2',model:'PZ-57',price:27,art:'small',c:[86,150,44],
-  hook:'То же спасение — для мелких винтов в технике.',
-  desc:'Младший брат GT длиной всего 120 мм — для маленьких винтов в розетках, щитках, бытовой технике и электронике. Кончик губок ловит головки от 2 мм, середина — до 5,5 мм. Там, где обычные клещи соскальзывают, M2 держит.',
-  why:[['Две зоны захвата','Кончик — головки φ2–3,5 мм, середина — φ3,5–5,5 мм.'],['Для электроники','Антистатические рукояти (ESD safe grip).'],['Пара к GT','Вместе закрывают почти любой сорванный винт.']],
-  specs:[['Модель','PZ-57'],['Длина','120 мм'],['Кончик губок','головки φ2–3,5 мм'],['Середина губок','головки φ3,5–5,5 мм'],['Рукояти','антистатические (ESD)'],['Производство','Япония']],
-  story:'Серия Nejisaurus от Engineer — один из самых известных японских инструментов последних двадцати лет. M2 сделана для тех, кто работает с мелочью: электрики, сервисные мастера, ремонт техники.',
-  img:'img/02.png', gallery:[['img/02-a.jpg','В работе: электроника и мелкие винты'],['img/02-b.jpg','Размеры и зоны захвата'],['img/02-c.jpg','Отверстие для страховочного шнура']]},
- {id:'03',cat:'Каждому',brand:'Engineer · Япония',name:'Ножницы Tetsuwan',model:'PH-55',price:19,art:'scissors',c:[170,70,40],
-  hook:'Кабель, верёвка, проволока, картон — одними ножницами.',
-  desc:'Четыре инструмента в одном. Микрозубчатое лезвие режет кабель в оболочке, верёвку, кожу и пластик. Выемка у оси перекусывает медную и стальную проволоку. Обух лезвия вскрывает скотч на коробке, не задевая содержимое. Упор между кольцами не даёт защемить пальцы.',
-  why:[['Режет то, что не берут ножницы','Кабель в оболочке до φ9 мм, верёвка до φ10 мм, кожаный ремень 4 мм.'],['Кусачки внутри','Медь до φ1,6 мм, стальная проволока до φ1,2 мм.'],['Безопасно в сумке','Чехол на лезвие в комплекте, упор от защемления пальцев.']],
-  specs:[['Модель','PH-55'],['Длина','160 мм'],['Лезвие','56 мм, микрозубчатое'],['Чехол','в комплекте'],['Медная проволока','до φ1,6 мм'],['Стальная проволока','до φ1,2 мм'],['Кабель в оболочке','до φ9 мм'],['Производство','Япония']],
-  story:'«Тэцуван» по-японски — «железная рука». Engineer делает их для тех, кто за смену режет всё подряд: стяжки, кабель, упаковку, проволоку. Предельные значения — справочные данные производителя.',
-  img:'img/03.png', gallery:[['img/03-a.jpg','В работе: стяжка, ветка, проволока, коробка'],['img/03-b.jpg','Что и какой толщины режет'],['img/03-c.jpg','Микрозубчатое лезвие'],['img/03-d.jpg','Выемка для проволоки'],['img/03-e.jpg','Обух для вскрытия коробок'],['img/03-f.jpg','Размеры и чехол']]},
- {id:'04',cat:'Электрику',brand:'Vessel · с 1916',name:'Ball Grip трещотки, пара: крест + шлиц',model:'No.2200 × 2',price:49,art:'ratchet',c:[120,160,66],
-  hook:'Две отвёртки, которые не хочется класть обратно в сумку.',
-  desc:'Пара отвёрток для электрощитка: красная с крестом и оранжевая со шлицем — обе, что нужны на автоматах и клеммах. По цвету рукояти нужную видно сразу. Рукоять-шар ложится в ладонь даже в перчатке, трещотка крутит без перехвата руки. Тонкий стержень покрыт защитной оболочкой почти до самого наконечника — меньше шансов случайно замкнуть соседние клеммы. Сам стержень закалён по всей длине, из той же стали, что и биты Vessel.',
-  why:[['Полный комплект','Крест и шлиц — всё, что нужно для щитка.'],['Трещотка','Затягиваешь клеммы автоматов, не перехватывая руку.'],['Работает в перчатке','Рукоять-шар с крупным рельефом не выскальзывает.'],['Защитная оболочка','Тонкий стержень в оболочке против случайного замыкания.']],
-  specs:[['Модель','No.2200 [уточнить размер по прайсу]'],['В комплекте','2 отвёртки'],['Наконечники','крест (красная рукоять) и шлиц (оранжевая)'],['Выгода','дешевле, чем по одной'],['Стержень','закалён по всей длине, в защитной оболочке'],['Важно','не диэлектрический инструмент, не для работы под напряжением'],['Бренд','Vessel, Осака']],
-  story:'Vessel — семейная компания из Осаки с 1916 года. В 1961-м первой в мире начала выпускать двусторонние биты. Ball Grip — их самая узнаваемая рукоять.',
-  img:'img/04.png', gallery:[['img/04-a.jpg','В электрощитке, в перчатке'],['img/04-b.jpg','Затяжка клемм автомата'],['img/04-c.jpg','Стержень в защитной оболочке']]},
- {id:'05',cat:'Каждому',brand:'Vessel · с 1916',name:'Биты Gosai, набор 5 шт',model:'GS5P-01',price:16,art:'bits',c:[184,64,34],
-  hook:'Биты, которые не слизываются на пятом шурупе.',
-  desc:'«Госай» — новая линейка бит Vessel из стали Die-Hard: твёрдость до 62 HRC и при этом вязкость, чтобы бита не ломалась на ударном шуруповёрте. Рассчитаны на мощные 18 и 40 В инструменты. Цветные отметки — чтобы нужная бита находилась с первого взгляда, покрытие от ржавчины не облезает.',
-  why:[['Твёрдые и вязкие','Сталь Die-Hard: до 62 HRC, не крошатся под импактом.'],['Для 18 и 40 В','Рассчитаны на самые мощные шуруповёрты.'],['Ходовой набор','5 бит: крест 1, 2, 3, шлиц 6, длинные и короткие.']],
-  specs:[['Модель','GS5P-01'],['Состав','+1, +2, +2/−6, +2/+2, +3/+3'],['Длина','65, 100 и 110 мм'],['Хвостовик','шестигранник 6,35 мм (1/4")'],['Твёрдость','до HRC 62'],['Магнит','да'],['Сталь','Die-Hard'],['Производство','Япония']],
-  story:'Биты — то, с чего Vessel стала известна во всём мире: в 1961 году они первыми выпустили двусторонние биты. «Госай» — их нынешний флагман.',
-  img:'img/05.png', gallery:[['img/05-a.jpg','Упаковка: лицевая сторона'],['img/05-b.jpg','Упаковка: обратная сторона']]},
- {id:'06',cat:'Каждому',brand:'Vessel · с 1916',name:'Рукоятка Cushion Stubby',model:'No.270BW',price:12,art:'stubby',c:[74,84,46],
-  hook:'Короткая. Влезает туда, куда не лезет ничто.',
-  desc:'Короткая мягкая рукоятка, в которую вставляется любая бита от шуруповёрта с хвостовиком 1/4". За холодильником, под мойкой, в нише мебели — там, где длинная отвёртка не разворачивается, а шуруповёрт не пролезает. Вставил биту Gosai — и у тебя короткая отвёртка нужного размера.',
-  why:[['Коротко','Работает в нишах и тесных местах.'],['Любая бита','Подходят биты от шуруповёрта 1/4" (6,35 мм).'],['Мягкий хват','Резиновая рукоять, удобно давить ладонью.']],
-  specs:[['Модель','No.270BW'],['Тип','рукоятка под сменные биты'],['Под биты','шестигранник 6,35 мм (1/4")'],['Бита','в комплект не входит'],['Производство','Япония']],
-  story:'Самая недорогая вещь коллекции — и лучший способ понять, что такое японский инструмент. Идеальна в паре с битами Gosai.',
-  img:'img/06.png', gallery:[['img/06-a.jpg','В упаковке']]},
- {id:'07',cat:'Каждому',brand:'Tajima · с 1909',name:'Нож Tajima Aluminist',model:'AC700S',price:25,art:'knife',c:[150,110,62],
-  hook:'Литой алюминий и лезвие 25 мм. Нож, который не стыдно достать.',
-  desc:'Тяжёлый строительный нож для гипсокартона, утеплителя, ковролина и линолеума. Корпус литой алюминиевый, направляющая лезвия из толстой нержавейки — нож не люфтит и не гнётся. Лезвие Rock Hard 25 мм фиксируется автоматически, запасные лезвия хранятся прямо в рукоятке, а колпачок на торце служит для отламывания сегментов.',
-  why:[['Металл, а не пластик','Литой алюминиевый корпус, нержавеющая направляющая.'],['Лезвие не уезжает','Автофиксация Auto Blade Lock под нагрузкой.'],['Всё с собой','Запасные лезвия внутри, отламыватель в колпачке.']],
-  specs:[['Модель','AC700S (для ЕС: AC700S-EUR)'],['Лезвие','25 мм, Rock Hard'],['Лезвий в комплекте','3'],['Фиксация','автоматическая'],['Корпус','литой алюминий'],['Хранение лезвий','в рукоятке'],['Бренд','Tajima, Япония']],
-  story:'Tajima начинала в 1909 году с рулеток и сегодня — крупнейший производитель ручного инструмента в Японии. Aluminist — их металлическая линейка ножей для тех, кто режет каждый день.',
-  img:'img/07.png', gallery:[['img/07-a.jpg','Запасные лезвия в рукоятке'],['img/07-b.jpg','Колпачок-отламыватель сегментов'],['img/07-c.jpg','В упаковке']]},
- {id:'08',cat:'Каждому',brand:'Tajima · с 1909',name:'Отбивка Chalk-Rite Auto Wind',model:'CR101S',price:29,art:'chalk',c:[178,88,38],
-  hook:'Отбил линию, отпустил — шнур смотался сам.',
-  desc:'Малярная отбивка, которая сматывает шнур автоматически, как рулетка: крутить ручку не нужно. Плетёный шнур 1 мм даёт чёткую жирную линию. Колба прозрачная — сразу видно, сколько осталось мела, а дозатор внутри не даёт мелу сбиваться комками. Для плитки, гипсокартона, разметки стен, пола и кровли.',
-  why:[['Сама сматывается','Автоматическая смотка шнура — без ручки.'],['Жирная чёткая линия','Плетёный шнур 1 мм.'],['Видно мел','Прозрачная колба и дозатор мела.']],
-  specs:[['Модель','CR101S'],['Шнур','плетёный, 1 мм × 7 м'],['Смотка','автоматическая'],['Колба','прозрачная, с дозатором мела'],['Бренд','Tajima, Япония']],
-  story:'Разметка — то, с чего Tajima начинала больше ста лет назад. Auto Wind — та самая вещь, которую мастер достаёт, а напарник спрашивает: «а это что такое?»',
-  img:'img/08.png', gallery:[['img/08-a.jpg','Засыпка мела в прозрачную колбу'],['img/08-b.jpg','Дозатор мела внутри колбы']]},
- {id:'09',cat:'Каждому',brand:'Tajima · с 1909',name:'Фаскосниматель 45° с керамическим лезвием',model:'TMK-KV45',price:35,art:'plane',c:[120,112,56],
-  hook:'Ровная фаска 45° на гипсокартоне за один проход.',
-  desc:'Ведёшь вдоль кромки листа — и получаешь чистую фаску 45° под шпаклёвку, без рваных краёв. Лезвие керамическое: не ржавеет и, по данным Tajima, служит в 16 раз дольше их стального. Ширина фаски регулируется плавно. Корпус литой алюминиевый, подошва из нержавейки, три запасных лезвия хранятся внутри.',
-  why:[['Керамика','Лезвие не ржавеет и служит в разы дольше стального.'],['Правильный шов','Ровная фаска 45° — шпаклёвка ложится и не трескается.'],['Не только ГКЛ','Фанера, кальций-силикатные и негорючие декоративные панели.']],
-  specs:[['Модель','TMK-KV45'],['Угол фаски','45°, ширина регулируется'],['Лезвие','керамическое; подходят лезвия 18 и 22 мм'],['Запасные лезвия','хранятся внутри (до 3 шт)'],['Корпус','литой алюминий, подошва из нержавейки'],['Размер сечения','58 × 35 мм'],['Бренд','Tajima, Япония']],
-  story:'Маленький инструмент, который отличает аккуратного мастера: по фаске на стыке сразу видно, кто собирал стену.',
-  img:'img/09.png', gallery:[['img/09-a.jpg','В работе по кромке листа'],['img/09-b.jpg','Фаска 45°'],['img/09-c.jpg','Замена лезвия'],['img/09-d.jpg','Подошва из нержавейки'],['img/09-e.jpg','Размеры'],['img/09-f.jpg','В упаковке']]},
- {id:'10',cat:'Каждому',brand:'SK11 · Япония',name:'Кованый карабин на ремень',model:'SK11 SAC-TFA',price:25,art:'carabiner',c:[90,170,60],
-  hook:'Толстый кованый карабин, который сразу живёт на ремне.',
-  desc:'Карабин и крепление на ремень — одно целое: надел на рабочий ремень, и он на месте, без отдельных держателей. Карабин кованый из алюминия, профиль 10 × 10 мм — лёгкий, но очень прочный. Стоит перпендикулярно ремню, поэтому молоток, рулетку или ключи вешаешь и снимаешь одной рукой. Защёлка яркая оранжевая — видно даже в темноте щитовой.',
-  why:[['Сразу на ремень','Крепление встроено — ничего докупать не нужно.'],['Кованый алюминий','Толстый профиль 10 × 10 мм, при весе всего 100 г.'],['Одной рукой','Стоит перпендикулярно ремню: повесил, снял, работаешь.']],
-  specs:[['Модель','SAC-TFA (чёрный)'],['Материал','кованый алюминий'],['Профиль карабина','10 × 10 мм'],['Размер','40 × 120 × 80 мм'],['Вес','100 г'],['Ремень','до 50 мм [уточнить]'],['Важно','для подвешивания инструмента; не страховочное снаряжение'],['Бренд','SK11 (Fujiwara Sangyo), Япония']],
-  story:'SK11 — японский бренд компании Fujiwara Sangyo из префектуры Хёго. На упаковке он назван «высокопрочным кованым сверхтолстым карабином для подвешивания инструмента».',
-  img:'img/10.png', gallery:[['img/10-a.jpg','В упаковке']]},
- {id:'11',cat:'Каждому',brand:'Tajima · с 1909',name:'Рулетка Sigma Stop с держателем на пояс',model:'SSSF (метрическая версия — уточнить)',price:35,art:'holder',c:[60,180,46],
-  hook:'Рулетка, которая сама прыгает в руку с пояса.',
-  desc:'Рулетка шириной 25 мм на быстросъёмном держателе SEF: держатель стоит на поясе, рулетка защёлкивается в него и снимается одной рукой — даже в перчатке. Двойной замок: лента стопорится сама, а кнопкой фиксируется намертво. Лента утолщённая, с разметкой с двух сторон, крюк толщиной 1,5 мм. Есть точки крепления страховочного шнура для работы на высоте.',
-  why:[['Снял одной рукой','Держатель SEF на поясе — щёлк, и рулетка в руке.'],['Двойной замок','Автостоп ленты плюс жёсткая фиксация кнопкой.'],['Не сломаешь','Утолщённая лента, крюк 1,5 мм, разметка с двух сторон.']],
-  specs:[['Лента','25 мм, утолщённая, разметка с двух сторон'],['Вылет ленты','до 2,5 м без прогиба'],['Крюк','Strong Hook, 1,5 мм'],['Замок','двойной: автостоп + кнопка'],['Держатель','SEF, ремень до 60 мм шириной и 5,5 мм толщиной'],['Шкала','для Латвии — метрическая версия [уточнить код у поставщика]'],['Бренд','Tajima, Япония']],
-  story:'Tajima начинала в 1909 году именно с рулеток — это их родной инструмент. Sigma Stop — флагманская серия, а держатель SEF превращает её в часть быстросъёмного пояса.',
-  img:'img/11.png', gallery:[['img/11-a.jpg','С пояса в руку за секунду'],['img/11-b.jpg','Держатель SEF сбоку'],['img/11-c.jpg','В руке, в перчатке'],['img/11-d.jpg','Разметка с двух сторон'],['img/11-e.jpg','Крепления страховочного шнура'],['img/11-f.jpg','В упаковке']]},
- {id:'12',cat:'Подарок',brand:'DŌGU',name:'Набор «Первый клинок»',model:'набор',price:35,art:'box',c:[120,84,60],
-  hook:'Трещотка Ball Grip + биты Gosai в чёрной коробке.',
-  desc:'Готовый подарок мастеру: отвёртка-трещотка Vessel и набор бит Gosai в чёрной коробке с красным кругом и карточкой — что это и почему понравится.',
-  why:[['Готово к дарению','Коробка и карточка внутри.'],['Не промахнёшься','Нужно каждому мастеру.'],['Японское','Такого нет в сетевых магазинах.']],
-  specs:[['Состав','Ball Grip трещотка + биты Gosai'],['Упаковка','фирменная коробка']],
-  story:'Самый простой способ сделать мастеру приятно.'}
-];
-
-const VIDEOS = [ // вставь ссылку YouTube/Instagram embed в src, когда снимешь
-  {title:'Сорванный винт за 10 секунд',cx:30,src:''},
-  {title:'Трещотка в электрощитке',cx:60,src:''},
-  {title:'Карабины на поясе за смену',cx:45,src:''}
-];
-
-/* ===== дальше трогать не нужно ===== */
-const $ = (s, r=document) => r.querySelector(s);
-const esc = s => String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const eur = n => '€' + (Math.round(n*100)/100).toString().replace('.', ',');
-
-function art(p, opts={}) {
-  const [cx,cy,r] = p.c;
-  return `<div class="art">${opts.no?`<span class="no">№ ${p.id}</span>`:''}
-<svg viewBox="0 0 240 240" aria-hidden="true"><circle cx="${cx}" cy="${cy}" r="${r}" fill="${SUN}"/><path d="${D[p.art]}" fill="none" stroke="#1B1B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<img src="${p.img||'img/'+p.id+'.jpg'}" alt="${esc(p.name)}" loading="lazy" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()"></div>`;
-}
-
-let filter = 'Все';
-function home(anchor) {
-  const cats = ['Все','Электрику','Каждому','Подарок'];
-  const shown = filter==='Все' ? PRODUCTS : PRODUCTS.filter(p=>p.cat===filter);
-  $('#app').innerHTML = `
-<div class="wrap"><section class="hero">
-<div class="txt">
-<p class="eyebrow">Японский инструмент · Рига</p>
-<h1>Каждая вещь — как клинок. Выбрана мастером для мастера.</h1>
-<p class="lead">Маленькие японские инженерные решения, которых нет в строительных сетях. Каждое мы сначала проверили на своих объектах.</p>
-<div class="row"><a class="btn" href="#/collection">Смотреть коллекцию</a><a class="btn ghost" href="#/showroom">Подержать в руках в шоуруме</a></div>
-</div>
-<div class="art-wrap"><svg viewBox="0 0 480 520" role="img" aria-label="Клещи Nejisaurus на фоне красного солнца" style="width:100%;height:auto;display:block">
-<line x1="0" y1="392" x2="480" y2="392" stroke="#1B1B1A" stroke-width="1"/><line x1="40" y1="410" x2="300" y2="410" stroke="#1B1B1A" stroke-width=".6"/>
-<circle cx="292" cy="250" r="170" fill="${SUN}"/>
-<g id="heroLine" transform="translate(60 60) scale(1.7)" fill="none" stroke="#1B1B1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="${D.pliers}"/></g>
-<image href="img/hero.png" x="20" y="20" width="420" height="420" preserveAspectRatio="xMidYMid meet" onload="document.getElementById('heroLine').style.display='none'" onerror="this.remove()"/>
-</svg></div>
-</section></div>
-
-<section class="band" aria-label="Принципы">
-<svg class="sun-set" viewBox="0 0 400 200" aria-hidden="true"><circle cx="200" cy="200" r="200" fill="${SUN}"/></svg>
-<div class="wrap"><div class="grid">
-<div class="item"><span class="num">01</span><h3>Только Япония</h3><p>Бренды с вековой историей: Vessel, Engineer, Tajima.</p></div>
-<div class="item"><span class="num">02</span><h3>Проверено на объекте</h3><p>У каждого товара — видео, как он работает на настоящем ремонте.</p></div>
-<div class="item"><span class="num">03</span><h3>До €50</h3><p>Достаточно, чтобы купить себе. Идеально, чтобы подарить.</p></div>
-</div></div>
-</section>
-
-<div class="wrap"><section class="block" id="collection">
-<div class="head-row"><div><p class="eyebrow">Первая коллекция · зима 2026</p><h2>Двенадцать клинков</h2></div>
-<div class="filters" role="group" aria-label="Фильтр">${cats.map(c=>`<button type="button" data-cat="${c}" aria-pressed="${c===filter}">${c}</button>`).join('')}</div></div>
-<div class="cards">${shown.map(p=>`<a class="card" href="#/p/${p.id}">${art(p,{no:1})}<div class="body"><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span><span class="hook">${esc(p.hook)}</span><span class="price">${eur(p.price)}</span></div></a>`).join('')}</div>
-</section>
-
-<section class="block" id="video">
-<p class="eyebrow">Обзоры с объекта</p><h2 style="font-size:clamp(28px,3.4vw,40px);font-weight:600;margin-bottom:28px">Смотри, как это работает, прежде чем купить</h2>
-<div class="videos">${VIDEOS.map(v=>`<div class="video">${v.src?`<iframe src="${esc(v.src)}" title="${esc(v.title)}" allowfullscreen loading="lazy"></iframe>`:`<svg viewBox="0 0 90 160" aria-hidden="true"><line x1="0" y1="118" x2="90" y2="118" stroke="#5B574F" stroke-width=".4"/><circle cx="${v.cx}" cy="118" r="22" fill="${SUN}"/><path d="M40 70 L54 80 L40 90 Z" fill="#F4F1EA"/></svg><p>${esc(v.title)}</p>`}</div>`).join('')}</div>
-</section></div>
-
-<section class="gift" id="gift"><div class="wrap"><div class="split">
-<div><svg viewBox="0 0 400 360" role="img" aria-label="Подарочная коробка под красным солнцем" style="width:100%;height:auto;display:block">
-<circle cx="250" cy="130" r="110" fill="${SUN}"/><line x1="0" y1="300" x2="400" y2="300" stroke="#1B1B1A" stroke-width="1"/>
-<g transform="translate(40 40) scale(1.1)" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${D.box}"/></g></svg></div>
-<div><h2>Подарок мастеру</h2>
-<p>Любая вещь из коллекции — в чёрной коробке с красным кругом и карточкой: что это, откуда и почему ему понравится. Он оценит, даже если у него «уже всё есть».</p>
-<p style="font-size:15px">Подарочная упаковка — ${esc(SHOP.giftWrap)}</p>
-<a class="btn red" href="#/p/12">Выбрать подарок</a></div>
-</div></div></section>
-
-<div class="wrap"><section class="split" id="showroom">
-<div><p class="eyebrow">Шоурум</p><h2>Инструмент надо подержать в руке</h2>
-<p>Приходи в наш офис в Риге: покажем каждую вещь в деле, дадим попробовать на образце.</p>
-<a class="btn ghost" href="https://wa.me/${SHOP.whatsapp}" target="_blank" rel="noopener">Договориться о визите</a></div>
-<dl class="info"><dt>Адрес</dt><dd>${esc(SHOP.address)}</dd><dt>Часы</dt><dd>${esc(SHOP.hours)}</dd><dt>Телефон</dt><dd><a href="tel:${SHOP.phone.replace(/\s/g,'')}">${esc(SHOP.phone)}</a></dd><dt>Доставка</dt><dd>${esc(SHOP.delivery)}</dd></dl>
-</section></div>`;
-  document.title = 'DŌGU — японский инструмент для мастеров · Рига';
-  $('#app').querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.cat;home('collection');}));
-  if (anchor) { const el = document.getElementById(anchor); if (el) el.scrollIntoView(); } else window.scrollTo(0,0);
-}
-
-function product(id) {
-  const p = PRODUCTS.find(x=>x.id===id); if (!p) return home();
-  const rel = PRODUCTS.filter(x=>x.id!==p.id && (x.cat===p.cat||x.brand===p.brand)).slice(0,3);
-  $('#app').innerHTML = `
-<div class="wrap"><a class="back" href="#/collection">← Вся коллекция</a>
-<section class="pp">
-<div class="media"><div id="mainMedia">${art(p)}</div>${p.gallery?`<div class="thumbs" role="group" aria-label="Фото товара"><button type="button" data-g="-1" aria-pressed="true" aria-label="Товар">${art(p)}</button>${p.gallery.map((g,i)=>`<button type="button" data-g="${i}" aria-pressed="false" aria-label="${esc(g[1])}"><img class="t" src="${g[0]}" alt="" loading="lazy"></button>`).join('')}</div>`:''}</div>
-<div class="info">
-<p class="eyebrow" style="margin:0">№ ${p.id} · ${esc(p.brand)}</p>
-<h1>${esc(p.name)}</h1>
-<p class="promise">${esc(p.hook)}</p>
-<p class="desc">${esc(p.desc)}</p>
-<div class="price-row"><b>${eur(p.price)}</b><span>с НДС</span></div>
-<label class="gift-toggle"><input type="checkbox" id="giftBox"> Упаковать в подарок</label>
-<div class="row"><button class="btn" type="button" id="addBtn">В корзину</button><a class="btn ghost" href="#/showroom">Посмотреть в шоуруме</a></div>
-<ul><li>— Самовывоз из шоурума в Риге бесплатно</li><li>— ${esc(SHOP.delivery)}</li></ul>
-</div></section></div>
-
-<section class="band why"><svg class="sun-set" viewBox="0 0 400 200" aria-hidden="true" style="left:-60px;right:auto"><circle cx="200" cy="200" r="200" fill="${SUN}"/></svg>
-<div class="wrap"><h2 style="position:relative;font-size:clamp(28px,3.4vw,36px);font-weight:600;padding-top:64px">Почему мастер будет рад</h2>
-<div class="grid" style="padding-top:36px">${p.why.map((w,i)=>`<div class="item"><span class="num">0${i+1}</span><h3>${esc(w[0])}</h3><p>${esc(w[1])}</p></div>`).join('')}</div></div></section>
-
-<div class="wrap"><section class="specs">
-<div><h2>Откуда он</h2><p style="margin:0;color:var(--ink2)">${esc(p.story)}</p></div>
-<dl class="info" style="grid-template-columns:140px 1fr">${p.specs.map(s=>`<dt>${esc(s[0])}</dt><dd>${esc(s[1])}</dd>`).join('')}</dl>
-</section>
-${rel.length?`<section style="padding-bottom:88px"><h2 style="font-size:30px;font-weight:600;margin-bottom:24px">В пару к нему</h2><div class="cards">${rel.map(r=>`<a class="card" href="#/p/${r.id}">${art(r,{no:1})}<div class="body"><span class="name">${esc(r.name)}</span><span class="price">${eur(r.price)}</span></div></a>`).join('')}</div></section>`:''}
-</div>`;
-  document.title = p.name + ' — DŌGU';
-  $('#addBtn').addEventListener('click',()=>{ addToCart(p.id, $('#giftBox').checked); });
-  $('#app').querySelectorAll('[data-g]').forEach(b=>b.addEventListener('click',()=>{
-    const i=+b.dataset.g;
-    $('#mainMedia').innerHTML = i<0 ? art(p) : `<div class="art photo"><img src="${p.gallery[i][0]}" alt="${esc(p.gallery[i][1])}"></div>`;
-    $('#app').querySelectorAll('[data-g]').forEach(x=>x.setAttribute('aria-pressed', x===b));
-  }));
-  window.scrollTo(0,0);
-}
-
-/* ---- корзина ---- */
-let cart = [];
-try { cart = JSON.parse(localStorage.getItem('dogu-cart')||'[]'); } catch(e) { cart = []; }
-function save(){ try{ localStorage.setItem('dogu-cart', JSON.stringify(cart)); }catch(e){} renderCart(); }
-function addToCart(id, gift){
-  const line = cart.find(l=>l.id===id && l.gift===gift);
-  if (line) line.q++; else cart.push({id, gift, q:1});
-  save(); toast('Добавлено в корзину');
-}
-function renderCart(){
-  const n = cart.reduce((s,l)=>s+l.q,0);
-  $('#cartCount').textContent = n;
-  const total = cart.reduce((s,l)=>{const p=PRODUCTS.find(x=>x.id===l.id);return s+(p?p.price*l.q:0)},0);
-  $('#cartTotal').textContent = eur(total);
-  $('#cartItems').innerHTML = cart.length ? cart.map((l,i)=>{const p=PRODUCTS.find(x=>x.id===l.id); if(!p) return ''; return `<div class="ci">${art(p)}<div class="meta"><b>${esc(p.name)}</b><span class="note">${eur(p.price)}${l.gift?' · в подарочной коробке':''}</span></div><div class="qty"><button type="button" data-i="${i}" data-d="-1" aria-label="Меньше">−</button><span aria-live="polite">${l.q}</span><button type="button" data-i="${i}" data-d="1" aria-label="Больше">+</button></div></div>`}).join('') : '<p class="empty">Корзина пуста.</p>';
-  $('#cartItems').querySelectorAll('[data-i]').forEach(b=>b.addEventListener('click',()=>{const l=cart[+b.dataset.i]; l.q+=+b.dataset.d; if(l.q<=0) cart.splice(+b.dataset.i,1); save();}));
-  $('#orderForm').style.display = cart.length ? 'flex' : 'none';
-}
-function openCart(){ document.body.classList.add('open'); $('#cartClose').focus(); }
-function closeCart(){ document.body.classList.remove('open'); $('#cartOpen').focus(); }
-$('#cartOpen').addEventListener('click', openCart);
-$('#cartClose').addEventListener('click', closeCart);
-$('#overlay').addEventListener('click', closeCart);
-document.addEventListener('keydown', e=>{ if(e.key==='Escape' && document.body.classList.contains('open')) closeCart(); });
-$('#orderForm').addEventListener('submit', e=>{
-  e.preventDefault();
-  const f = new FormData(e.target);
-  const lines = cart.map(l=>{const p=PRODUCTS.find(x=>x.id===l.id);return `• ${p.name} ×${l.q} — ${eur(p.price*l.q)}${l.gift?' (подарочная упаковка)':''}`});
-  const total = cart.reduce((s,l)=>s+PRODUCTS.find(x=>x.id===l.id).price*l.q,0);
-  const msg = `Заказ DŌGU\n${lines.join('\n')}\nИтого: ${eur(total)}\n\nИмя: ${f.get('name')}\nТелефон: ${f.get('phone')}\nПолучение: ${f.get('delivery')}`;
-  window.open(`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-});
-let tt; function toast(t){ const el=$('#toast'); el.textContent=t; el.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove('show'),1800); }
-
-/* ---- роутер ---- */
-function route(){
-  const h = location.hash.replace(/^#\/?/,'');
-  if (h.startsWith('p/')) return product(h.slice(2));
-  home(['collection','video','gift','showroom'].includes(h) ? h : null);
-}
-window.addEventListener('hashchange', route);
-renderCart(); route();
-</script>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
