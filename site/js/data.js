@@ -5,7 +5,7 @@
 const T = (lv, en, ru) => ({ lv, en, ru });
 
 const SHOP = {
-  ver: '202610271930', // менять при замене фото — браузеры загрузят новые картинки
+  ver: '202610271935', // менять при замене фото — браузеры загрузят новые картинки
   company: 'SIA „Baltic Investments”',          // юр. лицо — показывается только в подвале и на юр. страницах
   regNo: '50103714581',
   legalAddress: 'Ernesta Birznieka-Upīša iela 20B-8, Rīga, LV-1050',
@@ -440,14 +440,19 @@ const PRODUCTS = [
    specs: [ [T('Modelis','Model','Модель'), T('Tajima LE-F502D GRATI-LITE','Tajima LE-F502D GRATI-LITE','Tajima LE-F502D GRATI-LITE')],
             [T('Spilgtums','Output','Яркость'), T('50 / 250 / 500 lm','50 / 250 / 500 lm','50 / 250 / 500 лм')],
             [T('Gaisma','Beam','Свет'), T('izkliedēta, platleņķa, bez mirgošanas','flood, wide-angle, flicker-free','рассеянный, широкоугольный, без мерцания')],
-            [T('Barošana','Power','Питание'), T('AA baterijas, atsevišķs nodalījums','AA batteries, separate compartment','батарейки AA, вынесенный отсек')],
-            [T('Stiprinājums','Mount','Крепление'), T('galvas siksna, klipši ķiverei','head strap, hard-hat clips','налобный ремень, клипсы на каску')],
+            [T('Barošana','Power','Питание'), T('3 × AA, atsevišķs nodalījums','3 × AA, separate compartment','3 × AA, вынесенный отсек')],
+            [T('Aizsardzība','Protection','Защита'), T('IPX4, kritiens no 2 m','IPX4, 2 m drop','IPX4, падение с 2 м')],
+            [T('Komplektā','In the box','В комплекте'), T('galvas siksna, 4 klipši ķiverei','head strap, 4 hard-hat clips','налобный ремень, 4 клипсы на каску')],
             [T('Svars','Weight','Вес'), T('230 g','230 g','230 г')],
             [T('Zīmols','Brand','Бренд'), T('Tajima, Japāna','Tajima, Japan','Tajima, Япония')] ],
    story: T('Tajima pazīst pēc mērlentēm un nažiem, bet GRATI-LITE ir viņu atbilde tiem, kas strādā bēniņos, šahtās un zem grīdas.',
             'Tajima is known for tapes and knives, but GRATI-LITE is their answer for those who work in attics, shafts and under floors.',
             'Tajima знают по рулеткам и ножам, а GRATI-LITE — их ответ тем, кто работает на чердаках, в шахтах и под полом.'),
-   gallery: [] },
+   gallery: [ ['img/19-a.jpg', T('Lukturis un bateriju nodalījums','Lamp and battery box','Фонарь и батарейный отсек')],
+              ['img/19-b.jpg', T('Uz ķiveres, cimdā','On a hard hat, with gloves','На каске, в перчатках')],
+              ['img/19-c.jpg', T('Nodalījums 3 × AA','3 × AA compartment','Отсек 3 × AA')],
+              ['img/19-d.jpg', T('Lukturis noliecas','Tilting head','Наклон фонаря')],
+              ['img/19-e.jpg', T('Iepakojums','Package','Упаковка')] ] },
 
  { id:'20', cat:'all', brand:'Showa', tag:'jp', model:'380 × 3', price:19, art:'glove', c:[60,90,170], img:'img/20.png',
    name: T('Darba cimdi Showa 380 — 3 pāri', 'Showa 380 work gloves — 3 pairs', 'Рабочие перчатки Showa 380 — 3 пары'),
