@@ -207,19 +207,29 @@ ${rel.length ? `<section style="padding-bottom:88px"><h2 style="font-size:28px;m
     const cc = $('#cartCount'); if (cc) cc.textContent = n;
     const T_ = totals();
     const form = $('#orderForm');
-    const keep = form ? { name: form.name.value, phone: form.phone.value, locker: form.locker ? form.locker.value : '', agree: form.agree.checked } : {};
+    const keep = form ? { name: form.name.value, phone: form.phone.value, address: form.address ? form.address.value : '', comment: form.comment.value, agree: form.agree.checked } : {};
+    const isPickup = deliveryId === 'pickup';
+    const carriers = SHOP.delivery.filter(d => d.id !== 'pickup');
+    if (!isPickup && !carriers.some(d => d.id === deliveryId)) deliveryId = carriers[0].id;
     $('#drawer').innerHTML = `
 <header><h2 id="cartTitle">${c.title}</h2><button class="icon-btn" type="button" id="cartClose" aria-label="×">×</button></header>
 <div class="scroll">
 <div class="items">${cart.length ? cart.map((l, i) => { const p = PRODUCTS.find(x => x.id === l.id); return `<div class="ci">${art(p)}<div class="meta"><b>${esc(t(p.name))}</b><span class="note">${eur(p.price)}${l.gift ? ` · ${c.inWrap} +${eur(SHOP.giftWrap)}` : ''}</span></div><div class="qty"><button type="button" data-i="${i}" data-d="-1" aria-label="${c.less}">−</button><span>${l.q}</span><button type="button" data-i="${i}" data-d="1" aria-label="${c.more}">+</button></div></div>`; }).join('') : `<p class="empty">${c.empty}</p>`}</div>
 ${cart.length ? `<form id="orderForm" novalidate>
-<label class="f">${c.method}<select name="delivery" id="deliverySel">${SHOP.delivery.map(d => `<option value="${d.id}"${d.id === deliveryId ? ' selected' : ''}>${esc(t(d.name))}${d.price === 0 ? ' — €0' : ''}</option>`).join('')}</select></label>
-${deliveryId !== 'pickup' ? `<label class="f">${c.locker}<input type="text" name="locker" placeholder="${esc(c.lockerPh)}" required></label>` : ''}
-<label class="f">${c.name}<input type="text" name="name" autocomplete="name" required></label>
-<label class="f">${c.phone}<input type="tel" name="phone" autocomplete="tel" required></label>
-<div class="sum"><span>${c.goods}</span><span>${eur(T_.goods)}</span>${T_.wrap ? `<span>${c.wrap}</span><span>${eur(T_.wrap)}</span>` : ''}<span>${c.delivery}</span><span>${T_.d.price === null ? c.tbd : eur(T_.d.price)}</span><span class="total">${c.total}</span><span class="total">${eur(T_.total)}${T_.d.price === null ? ' +' : ''}</span></div>
+<fieldset class="ways"><legend class="f">${c.method}</legend>
+<label class="check"><input type="radio" name="way" value="pickup"${isPickup ? ' checked' : ''}> <span>${c.pickupOpt}<br><span class="note">${esc(SHOP.address)} · ${esc(t(SHOP.hours))}</span></span></label>
+<label class="check"><input type="radio" name="way" value="delivery"${!isPickup ? ' checked' : ''}> <span>${c.deliveryOpt}</span></label>
+</fieldset>
+${!isPickup ? `<label class="f">${c.carrier}<select name="carrier" id="carrierSel">${carriers.map(d => `<option value="${d.id}"${d.id === deliveryId ? ' selected' : ''}>${esc(t(d.name))}</option>`).join('')}</select></label>
+<label class="f">${c.address}<input type="text" name="address" placeholder="${esc(c.addressPh)}" autocomplete="street-address" required></label>` : ''}
+<label class="f">${c.name}<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+<label class="f">${c.phone}<input type="tel" name="phone" autocomplete="tel" maxlength="40" placeholder="+371" required></label>
+<label class="f">${c.comment}<input type="text" name="comment" maxlength="500"></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<div class="sum"><span>${c.goods}</span><span>${eur(T_.goods)}</span>${T_.wrap ? `<span>${c.wrap}</span><span>${eur(T_.wrap)}</span>` : ''}<span>${c.delivery}</span><span>${isPickup ? '€0' : c.tbd}</span><span class="total">${c.total}</span><span class="total">${eur(T_.goods + T_.wrap)}${isPickup ? '' : ' +'}</span></div>
 <label class="check" style="font-size:13px"><input type="checkbox" name="agree" required> <span>${c.agree} <a href="#/info/terms">${c.terms}</a> ${c.and} <a href="#/info/privacy">${c.privacy}</a>.</span></label>
-<button class="btn red" type="submit">${c.send}</button>
+<p class="note" id="orderErr" role="alert" style="margin:0;color:var(--sun-btn)"></p>
+<button class="btn red" type="submit" id="orderSend">${c.send}</button>
 <p class="note" style="margin:0">${c.note}</p>
 </form>` : ''}
 </div>`;
@@ -228,22 +238,40 @@ ${deliveryId !== 'pickup' ? `<label class="f">${c.locker}<input type="text" name
     $$('#drawer a').forEach(a => a.addEventListener('click', closeCart));
     const f = $('#orderForm');
     if (f) {
-      if (keep.name !== undefined) { f.name.value = keep.name; f.phone.value = keep.phone; if (f.locker) f.locker.value = keep.locker; f.agree.checked = keep.agree; }
-      $('#deliverySel').addEventListener('change', e => { deliveryId = e.target.value; renderCart(); const s = $('#deliverySel'); if (s) s.focus(); });
+      if (keep.name !== undefined) { f.name.value = keep.name; f.phone.value = keep.phone; if (f.address) f.address.value = keep.address; f.comment.value = keep.comment; f.agree.checked = keep.agree; }
+      $$('input[name="way"]', f).forEach(r => r.addEventListener('change', () => { deliveryId = r.value === 'pickup' ? 'pickup' : (carriers[0].id); renderCart(); const x = $(`input[name="way"][value="${r.value}"]`); if (x) x.focus(); }));
+      const cs = $('#carrierSel'); if (cs) cs.addEventListener('change', e => { deliveryId = e.target.value; });
       f.addEventListener('submit', sendOrder);
     }
   }
-  function sendOrder(e) {
+  const pageLoaded = Date.now();
+  async function sendOrder(e) {
     e.preventDefault();
-    const f = e.target, c = U().cart;
+    const f = e.target, c = U().cart, err = $('#orderErr'), btn = $('#orderSend');
+    err.textContent = '';
     if (!f.reportValidity()) return;
-    const T_ = totals();
-    const lines = cart.map(l => { const p = PRODUCTS.find(x => x.id === l.id); return `• ${t(p.name)} ×${l.q} — ${eur(p.price * l.q)}${l.gift ? ` (${c.inWrap} +${eur(SHOP.giftWrap * l.q)})` : ''}`; });
-    const msg = [c.orderTitle, lines.join('\n'), '', `${c.goods}: ${eur(T_.goods)}`, T_.wrap ? `${c.wrap}: ${eur(T_.wrap)}` : null,
-      `${c.delivery}: ${t(T_.d.name)}${f.locker ? ' — ' + f.locker.value : ''} (${T_.d.price === null ? c.tbd : eur(T_.d.price)})`,
-      `${c.total}: ${eur(T_.total)}${T_.d.price === null ? ' + ' + c.delivery.toLowerCase() : ''}`, '',
-      `${c.name}: ${f.name.value}`, `${c.phone}: ${f.phone.value}`, `Lang: ${lang.toUpperCase()}`].filter(x => x !== null).join('\n');
-    window.open(`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    const isPickup = deliveryId === 'pickup';
+    const d = SHOP.delivery.find(x => x.id === deliveryId);
+    const payload = {
+      name: f.name.value, phone: f.phone.value, comment: f.comment.value, website: f.website.value,
+      method: isPickup ? 'pickup' : 'delivery', carrier: !isPickup && d ? d.name.ru : '', address: f.address ? f.address.value : '',
+      agree: f.agree.checked, lang, elapsed: Date.now() - pageLoaded,
+      items: cart.map(l => { const p = PRODUCTS.find(x => x.id === l.id); return { id: p.id, name: p.name.ru + (p.model && p.model !== '—' ? ' · ' + p.model : ''), q: l.q, price: p.price, gift: !!l.gift, wrap: l.gift ? SHOP.giftWrap : 0 }; })
+    };
+    btn.disabled = true; btn.textContent = c.sending;
+    try {
+      const r = await fetch('order.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error(j.error || r.status);
+      cart = []; store.set('dogu-cart', cart); deliveryId = 'pickup';
+      const cc = $('#cartCount'); if (cc) cc.textContent = 0;
+      $('#drawer').innerHTML = `<header><h2 id="cartTitle">${c.okTitle}</h2><button class="icon-btn" type="button" id="cartClose" aria-label="×">×</button></header>
+<div class="scroll"><div class="items"><p style="font-size:18px;margin:24px 0 8px"><b>${esc(j.id)}</b></p><p>${c.okText}</p><p class="note">${esc(SHOP.phone)}</p></div></div>`;
+      $('#cartClose').addEventListener('click', () => { closeCart(); renderCart(); });
+    } catch (x) {
+      btn.disabled = false; btn.textContent = c.send;
+      err.innerHTML = `${c.err} <a href="tel:${tel}">${esc(SHOP.phone)}</a>`;
+    }
   }
   function openCart() { document.body.classList.add('open'); const b = $('#cartClose'); if (b) b.focus(); }
   function closeCart() { document.body.classList.remove('open'); const b = $('#cartOpen'); if (b) b.focus(); }

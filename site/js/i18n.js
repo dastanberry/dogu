@@ -26,7 +26,7 @@ const UI = {
   back:'← Visa kolekcija', vat:'ar PVN', wrapCheck:'Iesaiņot dāvanai', add:'Ielikt grozā', addMore:'Grozā · pievienot vēl', seeShowroom:'Apskatīt salonā',
   pickupFree:'Saņemšana salonā — bez maksas', whyTitle:'Kāpēc meistars priecāsies', storyTitle:'No kurienes', related:'Der kopā ar', added:'Pievienots grozam',
   since:'kopš', jp:'Japāna', no:'Nr.',
-  cart:{title:'Grozs', empty:'Grozs ir tukšs.', goods:'Preces', wrap:'Dāvanu iesaiņojums', delivery:'Piegāde', tbd:'pēc tarifa — apstiprināsim', total:'Kopā', name:'Vārds', phone:'Tālrunis', method:'Saņemšanas veids', locker:'Pakomāts / punkts vai adrese', lockerPh:'piem., Omniva, Purvciema iela 1', send:'Nosūtīt pasūtījumu WhatsApp', note:'Pasūtījums atvērsies WhatsApp — apstiprināsim pieejamību, piegādes cenu un laiku. Apmaksa pēc rēķina vai saņemot.', agree:'Esmu iepazinies ar', terms:'lietošanas noteikumiem', and:'un', privacy:'privātuma politiku', less:'Mazāk', more:'Vairāk', inWrap:'dāvanu iesaiņojumā', orderTitle:'Pasūtījums DŌGU', itemsWord:'Preces'},
+  cart:{title:'Grozs', empty:'Grozs ir tukšs.', goods:'Preces', wrap:'Dāvanu iesaiņojums', delivery:'Piegāde', tbd:'pēc tarifa — apstiprināsim', total:'Kopā', name:'Vārds', phone:'Tālrunis', method:'Saņemšanas veids', locker:'Pakomāts / punkts vai adrese', lockerPh:'piem., Omniva, Purvciema iela 1', send:'Nosūtīt pasūtījumu', note:'Pēc pasūtījuma sazināsimies, lai apstiprinātu pieejamību, piegādes cenu un laiku. Apmaksa pēc rēķina vai saņemot.', pickupOpt:'Saņemšana birojā — bez maksas', deliveryOpt:'Piegāde', carrier:'Pārvadātājs', address:'Piegādes adrese vai pakomāts', addressPh:'iela, māja, pilsēta vai pakomāta nosaukums', comment:'Komentārs (nav obligāts)', sending:'Sūta…', okTitle:'Paldies! Pasūtījums saņemts', okText:'Drīzumā sazināsimies pa tālruni, lai apstiprinātu pasūtījumu, piegādi un apmaksu.', err:'Neizdevās nosūtīt pasūtījumu. Lūdzu, mēģiniet vēlreiz vai zvaniet:', agree:'Esmu iepazinies ar', terms:'lietošanas noteikumiem', and:'un', privacy:'privātuma politiku', less:'Mazāk', more:'Vairāk', inWrap:'dāvanu iesaiņojumā', orderTitle:'Pasūtījums DŌGU', itemsWord:'Preces'},
   cookie:{text:'Mēs izmantojam tikai nepieciešamo pārlūka krātuvi (grozs, valoda, jūsu izvēle). Ārējais saturs (piem., YouTube video) ielādējas tikai ar jūsu piekrišanu.', essential:'Tikai nepieciešamās', all:'Pieņemt visas', more:'Uzzināt vairāk', settings:'Sīkdatņu iestatījumi'},
   legal:{terms:'Lietošanas noteikumi', delivery:'Piegāde un apmaksa', returns:'Atgriešana un garantija', privacy:'Privātuma politika', cookies:'Sīkdatņu politika'},
   seller:'Pārdevējs'
@@ -54,7 +54,7 @@ const UI = {
   back:'← All products', vat:'incl. VAT', wrapCheck:'Gift wrap it', add:'Add to cart', addMore:'In cart · add another', seeShowroom:'See it in the showroom',
   pickupFree:'Showroom pickup — free', whyTitle:'Why a pro will love it', storyTitle:'Where it comes from', related:'Goes well with', added:'Added to cart',
   since:'since', jp:'Japan', no:'No.',
-  cart:{title:'Cart', empty:'Your cart is empty.', goods:'Products', wrap:'Gift wrapping', delivery:'Delivery', tbd:'carrier rate — we will confirm', total:'Total', name:'Name', phone:'Phone', method:'Delivery method', locker:'Parcel locker / point or address', lockerPh:'e.g. Omniva, Purvciema iela 1', send:'Send order via WhatsApp', note:'Your order opens in WhatsApp — we will confirm availability, delivery price and time. Payment by invoice or on collection.', agree:'I have read the', terms:'terms of use', and:'and', privacy:'privacy policy', less:'Less', more:'More', inWrap:'gift wrapped', orderTitle:'DŌGU order', itemsWord:'Items'},
+  cart:{title:'Cart', empty:'Your cart is empty.', goods:'Products', wrap:'Gift wrapping', delivery:'Delivery', tbd:'carrier rate — we will confirm', total:'Total', name:'Name', phone:'Phone', method:'Delivery method', locker:'Parcel locker / point or address', lockerPh:'e.g. Omniva, Purvciema iela 1', send:'Send order', note:'After you order, we will contact you to confirm availability, delivery price and time. Payment by invoice or on collection.', pickupOpt:'Pickup at the office — free', deliveryOpt:'Delivery', carrier:'Carrier', address:'Delivery address or parcel locker', addressPh:'street, house, city or locker name', comment:'Comment (optional)', sending:'Sending…', okTitle:'Thank you! Order received', okText:'We will call you shortly to confirm the order, delivery and payment.', err:'The order could not be sent. Please try again or call:', agree:'I have read the', terms:'terms of use', and:'and', privacy:'privacy policy', less:'Less', more:'More', inWrap:'gift wrapped', orderTitle:'DŌGU order', itemsWord:'Items'},
   cookie:{text:'We only use necessary browser storage (cart, language, your choice). External content (e.g. YouTube videos) loads only with your consent.', essential:'Necessary only', all:'Accept all', more:'Learn more', settings:'Cookie settings'},
   legal:{terms:'Terms of use', delivery:'Delivery and payment', returns:'Returns and warranty', privacy:'Privacy policy', cookies:'Cookie policy'},
   seller:'Seller'
@@ -82,7 +82,7 @@ const UI = {
   back:'← Вся коллекция', vat:'с НДС', wrapCheck:'Упаковать в подарок', add:'В корзину', addMore:'В корзине · добавить ещё', seeShowroom:'Посмотреть в шоуруме',
   pickupFree:'Самовывоз из шоурума — бесплатно', whyTitle:'Почему мастер будет рад', storyTitle:'Откуда он', related:'В пару к нему', added:'Добавлено в корзину',
   since:'с', jp:'Япония', no:'№',
-  cart:{title:'Корзина', empty:'Корзина пуста.', goods:'Товары', wrap:'Подарочная упаковка', delivery:'Доставка', tbd:'по тарифу — подтвердим', total:'Итого', name:'Имя', phone:'Телефон', method:'Способ получения', locker:'Пакомат / пункт или адрес', lockerPh:'напр., Omniva, Purvciema iela 1', send:'Отправить заказ в WhatsApp', note:'Заказ откроется в WhatsApp — подтвердим наличие, цену и срок доставки. Оплата по счёту или при получении.', agree:'Я ознакомлен(а) с', terms:'правилами', and:'и', privacy:'политикой конфиденциальности', less:'Меньше', more:'Больше', inWrap:'в подарочной упаковке', orderTitle:'Заказ DŌGU', itemsWord:'Товары'},
+  cart:{title:'Корзина', empty:'Корзина пуста.', goods:'Товары', wrap:'Подарочная упаковка', delivery:'Доставка', tbd:'по тарифу — подтвердим', total:'Итого', name:'Имя', phone:'Телефон', method:'Способ получения', locker:'Пакомат / пункт или адрес', lockerPh:'напр., Omniva, Purvciema iela 1', send:'Отправить заказ', note:'После заказа мы свяжемся с вами, чтобы подтвердить наличие, стоимость и срок доставки. Оплата по счёту или при получении.', pickupOpt:'Самовывоз из офиса — бесплатно', deliveryOpt:'Доставка', carrier:'Перевозчик', address:'Адрес доставки или пакомат', addressPh:'улица, дом, город или название пакомата', comment:'Комментарий (необязательно)', sending:'Отправляем…', okTitle:'Спасибо! Заказ принят', okText:'Скоро позвоним, чтобы подтвердить заказ, доставку и оплату.', err:'Не удалось отправить заказ. Попробуйте ещё раз или позвоните:', agree:'Я ознакомлен(а) с', terms:'правилами', and:'и', privacy:'политикой конфиденциальности', less:'Меньше', more:'Больше', inWrap:'в подарочной упаковке', orderTitle:'Заказ DŌGU', itemsWord:'Товары'},
   cookie:{text:'Мы используем только необходимое хранилище браузера (корзина, язык, ваш выбор). Внешний контент (например, видео YouTube) загружается только с вашего согласия.', essential:'Только необходимые', all:'Принять все', more:'Подробнее', settings:'Настройки куки'},
   legal:{terms:'Правила пользования', delivery:'Доставка и оплата', returns:'Возврат и гарантия', privacy:'Политика конфиденциальности', cookies:'Политика куки'},
   seller:'Продавец'
@@ -94,7 +94,7 @@ const LEGAL = {
   terms: `<h1>Lietošanas un pirkšanas noteikumi</h1>
 <p>Šie noteikumi attiecas uz pirkumiem DŌGU interneta veikalā un salonā. Pārdevējs: <b>{company}</b>, reģ. Nr. {regNo}, PVN Nr. {vatNo}, juridiskā adrese: {legalAddress}. Salons: {address}. Tālrunis: {phone}, e-pasts: {email}.</p>
 <h2>1. Pasūtījums un līgums</h2>
-<p>Pasūtījumu var veikt vietnē (pasūtījums tiek nosūtīts mums WhatsApp), pa tālruni vai salonā. Līgums tiek noslēgts brīdī, kad apstiprinām pasūtījumu, preču pieejamību, cenu un piegādes izmaksas.</p>
+<p>Pasūtījumu var veikt vietnē (pasūtījums tiek nosūtīts mums caur vietnes formu), pa tālruni vai salonā. Līgums tiek noslēgts brīdī, kad apstiprinām pasūtījumu, preču pieejamību, cenu un piegādes izmaksas.</p>
 <h2>2. Cenas</h2>
 <p>Visas cenas norādītas euro, ieskaitot PVN. Piegādes izmaksas nav iekļautas preču cenā, un tās paziņojam pirms pasūtījuma apstiprināšanas. Dāvanu iesaiņojums — €{giftWrap} par vienu preci.</p>
 <h2>3. Apmaksa</h2>
@@ -133,10 +133,10 @@ const LEGAL = {
 <h2>Kādus datus apstrādājam</h2>
 <p>Vārdu, tālruni, piegādes informāciju (pakomāts, punkts vai adrese), pasūtījuma saturu un saziņu par pasūtījumu.</p>
 <h2>Mērķi un tiesiskais pamats</h2>
-<ul><li>Pasūtījuma izpilde un piegāde — līguma izpilde (VDAR 6. panta 1. punkta b) apakšpunkts).</li>
+<ul><li>Pasūtījuma pieņemšana, izpilde un piegāde — līguma izpilde (VDAR 6. panta 1. punkta b) apakšpunkts).</li>
 <li>Grāmatvedība un nodokļi — juridisks pienākums (c) apakšpunkts).</li></ul>
 <h2>Saņēmēji</h2>
-<p>Izvēlētais pārvadātājs (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts vai kurjers), grāmatvedības pakalpojumu sniedzējs, vietnes mitināšanas pakalpojumu sniedzējs. Ja pasūtījumu sūtāt caur WhatsApp, datus apstrādā arī Meta Platforms Ireland Ltd. saskaņā ar saviem noteikumiem; tas var ietvert datu nodošanu ārpus ES.</p>
+<p>Izvēlētais pārvadātājs (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts vai kurjers), grāmatvedības pakalpojumu sniedzējs, vietnes mitināšanas pakalpojumu sniedzējs. Pasūtījums no vietnes tiek nosūtīts uz mūsu e-pastu un mūsu darba kanālu Telegram (Telegram Messenger Inc.); Telegram serveri var atrasties ārpus ES.</p>
 <h2>Glabāšana</h2>
 <p>Pasūtījuma datus glabājam tik ilgi, cik nepieciešams līguma izpildei un pretenziju izskatīšanai, bet grāmatvedības dokumentus — normatīvajos aktos noteikto termiņu.</p>
 <h2>Jūsu tiesības</h2>
@@ -154,7 +154,7 @@ const LEGAL = {
   terms: `<h1>Terms of use and sale</h1>
 <p>These terms apply to purchases in the DŌGU online store and showroom. Seller: <b>{company}</b>, reg. no. {regNo}, VAT no. {vatNo}, registered address: {legalAddress}. Showroom: {address}. Phone: {phone}, e-mail: {email}.</p>
 <h2>1. Order and contract</h2>
-<p>You can order on the website (the order is sent to us via WhatsApp), by phone or in the showroom. The contract is concluded when we confirm the order, availability, price and delivery cost.</p>
+<p>You can order on the website (the order is sent to us via the website form), by phone or in the showroom. The contract is concluded when we confirm the order, availability, price and delivery cost.</p>
 <h2>2. Prices</h2>
 <p>All prices are in euro and include VAT. Delivery costs are not included in product prices and are communicated before the order is confirmed. Gift wrapping — €{giftWrap} per item.</p>
 <h2>3. Payment</h2>
@@ -196,7 +196,7 @@ const LEGAL = {
 <ul><li>Fulfilling and delivering your order — performance of a contract (GDPR Art. 6(1)(b)).</li>
 <li>Accounting and tax — legal obligation (Art. 6(1)(c)).</li></ul>
 <h2>Recipients</h2>
-<p>The chosen carrier (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts or courier), our accounting service provider and website hosting provider. If you send your order via WhatsApp, Meta Platforms Ireland Ltd. also processes data under its own terms, which may involve transfers outside the EU.</p>
+<p>The chosen carrier (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts or courier), our accounting service provider and website hosting provider. Orders from the website are sent to our e-mail and to our internal Telegram channel (Telegram Messenger Inc.); Telegram servers may be located outside the EU.</p>
 <h2>Retention</h2>
 <p>Order data is kept as long as needed to fulfil the contract and handle claims; accounting records for the period required by law.</p>
 <h2>Your rights</h2>
@@ -214,7 +214,7 @@ const LEGAL = {
   terms: `<h1>Правила пользования и покупки</h1>
 <p>Эти правила действуют для покупок в интернет-магазине и шоуруме DŌGU. Продавец: <b>{company}</b>, рег. № {regNo}, № плательщика НДС {vatNo}, юридический адрес: {legalAddress}. Шоурум: {address}. Телефон: {phone}, e-mail: {email}.</p>
 <h2>1. Заказ и договор</h2>
-<p>Заказать можно на сайте (заказ отправляется нам в WhatsApp), по телефону или в шоуруме. Договор заключается, когда мы подтверждаем заказ, наличие, цену и стоимость доставки.</p>
+<p>Заказать можно на сайте (заказ отправляется нам через форму на сайте), по телефону или в шоуруме. Договор заключается, когда мы подтверждаем заказ, наличие, цену и стоимость доставки.</p>
 <h2>2. Цены</h2>
 <p>Все цены указаны в евро с НДС. Стоимость доставки не входит в цену товара и сообщается до подтверждения заказа. Подарочная упаковка — €{giftWrap} за одну позицию.</p>
 <h2>3. Оплата</h2>
@@ -256,7 +256,7 @@ const LEGAL = {
 <ul><li>Выполнение и доставка заказа — исполнение договора (ст. 6(1)(b) GDPR).</li>
 <li>Бухгалтерия и налоги — юридическая обязанность (ст. 6(1)(c)).</li></ul>
 <h2>Получатели</h2>
-<p>Выбранный перевозчик (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts или курьер), бухгалтерская служба, хостинг сайта. Если вы отправляете заказ через WhatsApp, данные обрабатывает также Meta Platforms Ireland Ltd. по своим правилам, что может включать передачу данных за пределы ЕС.</p>
+<p>Выбранный перевозчик (Omniva, DPD, Venipak, Smartposti, Latvijas Pasts или курьер), бухгалтерская служба, хостинг сайта. Заказ с сайта отправляется на нашу почту и в наш рабочий канал Telegram (Telegram Messenger Inc.); серверы Telegram могут находиться за пределами ЕС.</p>
 <h2>Срок хранения</h2>
 <p>Данные заказа храним столько, сколько нужно для исполнения договора и рассмотрения претензий, бухгалтерские документы — в течение срока, установленного законом.</p>
 <h2>Ваши права</h2>
