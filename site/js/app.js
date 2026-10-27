@@ -151,7 +151,7 @@
 <div class="price-row"><b>${eur(p.price)}</b><span>${u.vat}</span></div>
 ${p.cat !== 'gift' ? `<label class="check"><input type="checkbox" id="giftBox"> ${u.wrapCheck} (+${eur(SHOP.giftWrap)})</label>` : ''}
 <div class="row"><button class="btn" type="button" id="addBtn">${u.add}</button><a class="btn ghost" href="#/showroom">${u.seeShowroom}</a></div>
-<ul><li>— ${u.pickupFree}</li><li>— ${esc(u.deliveryShort)}</li></ul>
+<ul><li>— ${esc(u.deliveryShort)}</li></ul>
 </div></section></div>
 
 <section class="band why"><svg class="sun-set" viewBox="0 0 400 200" aria-hidden="true" style="left:-60px;right:auto"><circle cx="200" cy="200" r="200" fill="${SUN}"/></svg>
